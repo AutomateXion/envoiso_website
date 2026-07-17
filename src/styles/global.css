@@ -117,8 +117,8 @@
 .evx .evx-link-outer{stroke-dasharray:4 4;opacity:.4}
 .evx .evx-link-outer.lit{opacity:.85}
 .evx .evx-ring{fill:none;transform-box:fill-box;transform-origin:center}
-.evx .evx-ring-inner{stroke:var(--blue-lt);stroke-width:1;stroke-dasharray:1 9;opacity:.5;animation:evx-spin 50s linear infinite}
-.evx .evx-ring-outer{stroke:#13a89e;stroke-width:1;stroke-dasharray:1 13;opacity:.4;animation:evx-spin-rev 80s linear infinite}
+.evx .evx-ring-inner{stroke:var(--blue-lt);stroke-width:2;stroke-dasharray:5 9;opacity:.75;animation:evx-spin 36s linear infinite}
+.evx .evx-ring-outer{stroke:#13a89e;stroke-width:2;stroke-dasharray:5 11;opacity:.6;animation:evx-spin-rev 56s linear infinite}
 @keyframes evx-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @keyframes evx-spin-rev{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
 .evx .evx-node{cursor:pointer;transition:transform .18s;outline:none}
