@@ -114,11 +114,14 @@
 .evx .evx-const-svg{width:100%;height:auto;display:block}
 .evx .evx-link{stroke:var(--line);stroke-width:1;opacity:.55;transition:opacity .2s,stroke .2s,stroke-width .2s}
 .evx .evx-link.lit{stroke:var(--blue);opacity:.9;stroke-width:1.5}
+.evx .evx-link-outer{stroke-dasharray:4 4;opacity:.4}
+.evx .evx-link-outer.lit{opacity:.85}
 .evx .evx-node{cursor:pointer;transition:transform .18s;outline:none}
 .evx .evx-node:hover{transform:scale(1.06)}
 .evx .evx-node circle{transition:fill .18s}
 .evx .evx-node:focus-visible circle{stroke-width:2.5}
 .evx .evx-const-info{text-align:center;min-height:54px;margin-top:18px;max-width:440px;margin-left:auto;margin-right:auto}
+.evx .evx-const-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#0E8F79;background:#E4F9F5;border:1px solid #BFEEE4;padding:3px 10px;border-radius:100px;margin-bottom:8px}
 .evx .evx-const-info h4{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:4px}
 .evx .evx-const-info p{font-size:14px;color:var(--muted);line-height:1.55}
 
