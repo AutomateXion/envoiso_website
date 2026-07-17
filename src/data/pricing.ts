@@ -16,7 +16,7 @@ interface CurrencyBlock {
 }
 
 export const PRICES: Record<Currency, CurrencyBlock> = {
-  usd: { symbol: '$',      decimals: 0, monthly: [18, 35, 59, 107, 143],          annual: [15, 29, 49, 89, 119] },
+  usd: { symbol: '$',      decimals: 0, monthly: [15, 29, 49, 99, 129],          annual: [12, 24, 39, 79, 109] },
   omr: { symbol: '\uFDFC ', decimals: 3, monthly: [7.9, 14.9, 22.9, 41.9, 55.9],    annual: [5.9, 11.9, 18.9, 34.9, 45.9] },
   lkr: { symbol: 'Rs ',    decimals: 0, monthly: [4999, 9999, 15999, 28999, 38999], annual: [3999, 7999, 12999, 23999, 31999] },
 };
