@@ -116,6 +116,11 @@
 .evx .evx-link.lit{stroke:var(--blue);opacity:.9;stroke-width:1.5}
 .evx .evx-link-outer{stroke-dasharray:4 4;opacity:.4}
 .evx .evx-link-outer.lit{opacity:.85}
+.evx .evx-ring{fill:none;transform-box:fill-box;transform-origin:center}
+.evx .evx-ring-inner{stroke:var(--blue-lt);stroke-width:1;stroke-dasharray:1 9;opacity:.5;animation:evx-spin 50s linear infinite}
+.evx .evx-ring-outer{stroke:#13a89e;stroke-width:1;stroke-dasharray:1 13;opacity:.4;animation:evx-spin-rev 80s linear infinite}
+@keyframes evx-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes evx-spin-rev{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
 .evx .evx-node{cursor:pointer;transition:transform .18s;outline:none}
 .evx .evx-node:hover{transform:scale(1.06)}
 .evx .evx-node circle{transition:fill .18s}

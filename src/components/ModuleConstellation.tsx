@@ -5,9 +5,9 @@ type Sel = { ring: 'inner' | 'outer'; i: number } | null;
 
 export default function ModuleConstellation() {
   const [active, setActive] = useState<Sel>(null);
-  const cx = 360, cy = 320;
-  const R = 150, Ry = 140;       // inner ring
-  const OR = 300, ORy = 250;     // outer ring
+  const cx = 360, cy = 340;
+  const R = 150;   // inner ring radius (true circle, so the visible ring lines up exactly)
+  const OR = 280;  // outer ring radius
   const def = { n: 'One platform, every function', d: 'Hover or tap a module to see what it does. The outer ring is what most competitors don\u2019t bundle in \u2014 it\u2019s all included here.' };
 
   const info = active === null
@@ -16,24 +16,28 @@ export default function ModuleConstellation() {
 
   const innerPos = (i: number, n: number) => {
     const ang = (-90 + i * (360 / n)) * Math.PI / 180;
-    return { x: cx + R * Math.cos(ang), y: cy + Ry * Math.sin(ang), ang };
+    return { x: cx + R * Math.cos(ang), y: cy + R * Math.sin(ang) };
   };
   const outerPos = (i: number, n: number) => {
     // offset so outer nodes sit *between* inner ones, not directly behind them
     const ang = (-90 + (360 / n) / 2 + i * (360 / n)) * Math.PI / 180;
-    return { x: cx + OR * Math.cos(ang), y: cy + ORy * Math.sin(ang), ang };
+    return { x: cx + OR * Math.cos(ang), y: cy + OR * Math.sin(ang) };
   };
 
   return (
     <div className="evx-const">
-      <svg viewBox="0 0 720 640" className="evx-const-svg" role="img" aria-label="Envoiso modules connected to a central core, with a second ring of standout modules">
-        {/* outer ring lines (dashed) */}
+      <svg viewBox="0 0 720 700" className="evx-const-svg" role="img" aria-label="Envoiso modules connected to a central core, with a second ring of standout modules">
+        {/* visible, slowly-rotating orbit rings (decorative — nodes themselves stay fixed in place) */}
+        <circle cx={cx} cy={cy} r={R} className="evx-ring evx-ring-inner" />
+        <circle cx={cx} cy={cy} r={OR} className="evx-ring evx-ring-outer" />
+
+        {/* outer ring connector lines */}
         {EVX_MODULES_OUTER.map((_, i) => {
           const { x, y } = outerPos(i, EVX_MODULES_OUTER.length);
           const on = active?.ring === 'outer' && active.i === i;
           return <line key={'ol' + i} x1={cx} y1={cy} x2={x} y2={y} className={'evx-link evx-link-outer' + (on ? ' lit' : '')} />;
         })}
-        {/* inner ring lines */}
+        {/* inner ring connector lines */}
         {EVX_MODULES.map((_, i) => {
           const { x, y } = innerPos(i, EVX_MODULES.length);
           const on = active?.ring === 'inner' && active.i === i;
