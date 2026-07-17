@@ -1,5 +1,6 @@
 import { Check, Shield, FileCheck, Globe, Clock } from '../components/Icons';
 import { APP_SIGNUP_URL } from '../components/Nav';
+import { trackClick } from '../lib/analytics';
 
 const TIMELINE = [
   { mark: <Check />, done: true,  tag: 'Complete', title: 'OTA becomes a Peppol Authority', body: 'The Oman Tax Authority was approved as an official Peppol Authority, adopting the Peppol five-corner model as the backbone of Fawtara — supplier, supplier\u2019s service provider, buyer\u2019s service provider, buyer, with reporting to the OTA.' },
@@ -99,7 +100,7 @@ export default function Compliance() {
           <div className="final-card">
             <h2>Get your Fawtara readiness sorted early</h2>
             <p>Start a free trial and see how Envoiso structures your invoicing for Oman's e-invoicing mandate &mdash; well before your phase arrives.</p>
-            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL}>Start your free trial</a>
+            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('compliance_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>
         </div>

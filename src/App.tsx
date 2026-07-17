@@ -9,10 +9,12 @@ import Compliance from './pages/Compliance';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import './styles/global.css';
+import { initGA, trackPageview } from './lib/analytics';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
+    trackPageview(pathname);
     if (hash) {
       const el = document.getElementById(hash.replace('#', ''));
       if (el) {
@@ -37,6 +39,10 @@ export default function App() {
       l.href = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap';
       document.head.appendChild(l);
     }
+  }, []);
+
+  useEffect(() => {
+    initGA();
   }, []);
 
   return (

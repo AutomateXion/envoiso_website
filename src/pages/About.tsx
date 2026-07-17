@@ -1,4 +1,5 @@
 import { APP_SIGNUP_URL } from '../components/Nav';
+import { trackClick } from '../lib/analytics';
 import { Check } from '../components/Icons';
 
 const VALUES = [
@@ -78,7 +79,7 @@ export default function About() {
           <div className="final-card">
             <h2>Come see the platform for yourself</h2>
             <p>Start a free trial and run your own numbers through Envoiso — no credit card, no sales call required to get started.</p>
-            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL}>Start your free trial</a>
+            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('about_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />14-day free trial &middot; Cancel anytime</div>
           </div>
         </div>

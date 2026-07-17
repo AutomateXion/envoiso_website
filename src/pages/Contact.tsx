@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, Pin, Clock, Check } from '../components/Icons';
+import { trackClick } from '../lib/analytics';
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -9,6 +10,7 @@ export default function Contact() {
     // Static site: no backend wired up yet. Replace this with a POST to
     // your form endpoint (e.g. Formspree, a serverless function, or your
     // CRM's public lead-capture API) once one is available.
+    trackClick('contact_form_submit', 'Contact form submitted');
     setSent(true);
   }
 

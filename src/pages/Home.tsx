@@ -3,6 +3,7 @@ import ModuleConstellation from '../components/ModuleConstellation';
 import FeatureCategories from '../components/FeatureCategories';
 import HeroMockup from '../components/HeroMockup';
 import { APP_SIGNUP_URL } from '../components/Nav';
+import { trackClick } from '../lib/analytics';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -14,8 +15,8 @@ export default function Home() {
           <h1 className="hero-h">Your whole business, in <em>one</em> flow.</h1>
           <p className="hero-sub">Envoiso brings accounting, sales, inventory, CRM, projects and compliance into a single platform &mdash; so your numbers, stock and customers finally speak to each other. Built for growing GCC businesses, ready for e-invoicing.</p>
           <div className="hero-cta">
-            <a className="btn btn-primary btn-lg" href={APP_SIGNUP_URL}>Start free trial</a>
-            <Link className="btn btn-ghost btn-lg" to="/pricing">See pricing</Link>
+            <a className="btn btn-primary btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('hero_start_trial', 'Start free trial (hero)')}>Start free trial</a>
+            <Link className="btn btn-ghost btn-lg" to="/pricing" onClick={() => trackClick('hero_see_pricing', 'See pricing')}>See pricing</Link>
           </div>
           <div className="hero-note"><Check />14-day free trial &middot; No credit card required</div>
           <div className="hero-fawtara">
@@ -103,7 +104,7 @@ export default function Home() {
               <div className="cbadge"><Check />VAT &amp; tax reporting</div>
             </div>
             <div style={{ marginTop: 28 }}>
-              <Link className="btn btn-white" to="/compliance">See the Fawtara timeline &rarr;</Link>
+              <Link className="btn btn-white" to="/compliance" onClick={() => trackClick('home_fawtara_timeline', 'See the Fawtara timeline')}>See the Fawtara timeline &rarr;</Link>
             </div>
           </div>
           <div className="comp-stat">
@@ -120,7 +121,7 @@ export default function Home() {
           <div className="final-card">
             <h2>Bring your business into one flow</h2>
             <p>Join growing teams running finance, sales, stock and projects on a single platform. Set up in a day, free for two weeks &mdash; and take 50% off your first 6 months on any annual plan.</p>
-            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL}>Start your free trial</a>
+            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('home_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>
         </div>

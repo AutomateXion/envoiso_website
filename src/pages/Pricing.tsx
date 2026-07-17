@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, Plus } from '../components/Icons';
 import { APP_SIGNUP_URL } from '../components/Nav';
+import { trackClick } from '../lib/analytics';
 import { SEAT_TIERS, PRICES, PROMO, formatAmount, promoAmount, Currency } from '../data/pricing';
 
 const COMPARE_ROWS = [
@@ -85,7 +86,7 @@ export default function Pricing() {
                   </div>
                   <div className="tier-bill">{annual ? 'billed annually' : 'billed monthly'}</div>
                   {showPromo && <div className="tier-promo-note">for your first 6 months, then {p.symbol}{formatAmount(base, cur)}/mo</div>}
-                  <a className={'btn ' + (t.popular ? 'btn-primary' : 'btn-ghost')} href={`${APP_SIGNUP_URL}?plan=${t.name.toLowerCase()}&billing=${annual ? 'annual' : 'monthly'}`}>Start free trial</a>
+                  <a className={'btn ' + (t.popular ? 'btn-primary' : 'btn-ghost')} href={`${APP_SIGNUP_URL}?plan=${t.name.toLowerCase()}&billing=${annual ? 'annual' : 'monthly'}`} onClick={() => trackClick(`pricing_tier_${t.name.toLowerCase()}`, `${t.name} — Start free trial (${annual ? 'annual' : 'monthly'})`)}>Start free trial</a>
                   <div className="seat-tier-for">{t.sub}</div>
                 </div>
               );
@@ -95,7 +96,7 @@ export default function Pricing() {
               <div className="seat-users">15+ users</div>
               <div className="tier-price"><span className="amt" style={{ fontSize: 28 }}>Let&rsquo;s talk</span></div>
               <div className="tier-bill">tailored to your team</div>
-              <Link className="btn btn-ghost" to="/contact">Contact sales</Link>
+              <Link className="btn btn-ghost" to="/contact" onClick={() => trackClick('pricing_contact_sales', 'Contact sales (custom plan)')}>Contact sales</Link>
               <div className="seat-tier-for">For larger teams &amp; multi-entity groups needing custom onboarding.</div>
             </div>
           </div>
@@ -150,7 +151,7 @@ export default function Pricing() {
           <div className="final-card">
             <h2>Lock in 50% off before it ends</h2>
             <p>Start your 14-day free trial today, then choose any annual plan to secure half price for your first 6 months.</p>
-            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL}>Start your free trial</a>
+            <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('pricing_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>
         </div>
