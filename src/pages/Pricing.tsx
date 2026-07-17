@@ -85,7 +85,7 @@ export default function Pricing() {
                   </div>
                   <div className="tier-bill">{annual ? 'billed annually' : 'billed monthly'}</div>
                   {showPromo && <div className="tier-promo-note">for your first 6 months, then {p.symbol}{formatAmount(base, cur)}/mo</div>}
-                  <a className={'btn ' + (t.popular ? 'btn-primary' : 'btn-ghost')} href={APP_SIGNUP_URL}>Start free trial</a>
+                  <a className={'btn ' + (t.popular ? 'btn-primary' : 'btn-ghost')} href={`${APP_SIGNUP_URL}?plan=${t.name.toLowerCase()}&billing=${annual ? 'annual' : 'monthly'}`}>Start free trial</a>
                   <div className="seat-tier-for">{t.sub}</div>
                 </div>
               );

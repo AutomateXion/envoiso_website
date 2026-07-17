@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, XIcon } from './Icons';
 
-export const APP_LOGIN_URL = 'https://app.envoiso.com/login';
-export const APP_SIGNUP_URL = 'https://app.envoiso.com/signup';
+export const APP_LOGIN_URL = 'https://erp.envoiso.com/login';
+export const APP_SIGNUP_URL = 'https://erp.envoiso.com/signup';
 
 const LINKS = [
   { to: '/#features', label: 'Product', match: '/' },
