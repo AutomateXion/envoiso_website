@@ -1,5 +1,6 @@
 import { Check } from '../components/Icons';
 import ModuleConstellation from '../components/ModuleConstellation';
+import FeatureCategories from '../components/FeatureCategories';
 import HeroMockup from '../components/HeroMockup';
 import { APP_SIGNUP_URL } from '../components/Nav';
 import { Link } from 'react-router-dom';
@@ -75,6 +76,17 @@ export default function Home() {
             <p className="sec-sub">Not a pile of separate apps &mdash; one platform where every module shares the same data, so your numbers, stock and customers always agree.</p>
           </div>
           <ModuleConstellation />
+        </div>
+      </section>
+
+      <section className="mods" id="all-features">
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="sec-eyebrow">Beyond the basics</div>
+            <h2 className="sec-h">What you get that most all-in-one platforms don't bundle</h2>
+            <p className="sec-sub">These usually mean a separate app, a separate contract, or both. On Envoiso they're just part of the platform.</p>
+          </div>
+          <FeatureCategories />
         </div>
       </section>
 

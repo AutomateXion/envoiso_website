@@ -273,7 +273,30 @@
 .evx .foot-col a:hover{color:#fff}
 .evx .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#7e94aa}
 
-/* ---------- Responsive ---------- */
+/* ---------- Beyond the basics highlight strip ---------- */
+.evx .highlight-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+.evx .highlight-card{background:linear-gradient(160deg,#fff,#F7FBFA);border:1px solid #BFEEE4;border-radius:16px;padding:26px 22px}
+.evx .highlight-ico{width:38px;height:38px;border-radius:10px;background:#E4F9F5;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.evx .highlight-ico svg{width:19px;height:19px;color:var(--teal-dark)}
+.evx .highlight-card h3{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.evx .highlight-card p{font-size:13.5px;color:var(--muted);line-height:1.5}
+
+/* ---------- Full feature category accordion ---------- */
+.evx .cat-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.evx .cat-item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.evx .cat-item.open{border-color:var(--blue-lt)}
+.evx .cat-q{width:100%;text-align:left;background:none;border:none;padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:inherit}
+.evx .cat-q svg{width:18px;height:18px;color:var(--blue);flex-shrink:0;transition:transform .18s}
+.evx .cat-item.open .cat-q svg{transform:rotate(45deg)}
+.evx .cat-title{font-size:16px;font-weight:600;color:var(--navy);font-family:'Fraunces',serif;margin-right:10px}
+.evx .cat-badge{display:inline-block;font-size:11px;font-weight:600;color:var(--teal-dark);background:#E4F9F5;border:1px solid #BFEEE4;padding:2px 9px;border-radius:100px;margin-right:10px;vertical-align:middle}
+.evx .cat-blurb{display:block;font-size:13.5px;color:var(--muted);margin-top:4px;font-weight:400}
+.evx .cat-a{padding:0 24px 22px}
+.evx .cat-a ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 20px}
+.evx .cat-a li{display:flex;align-items:flex-start;gap:9px;font-size:14px;color:#33495d;line-height:1.4}
+.evx .cat-a li svg{width:15px;height:15px;color:var(--teal-dark);flex-shrink:0;margin-top:2px}
+
+
 @media(max-width:880px){
   .evx .nav-links{display:none}
   .evx .nav-toggle{display:block}
@@ -283,6 +306,8 @@
   .evx .mod-grid{grid-template-columns:1fr}
   .evx .seat-grid{grid-template-columns:1fr;gap:14px}
   .evx .fw-grid,.evx .value-grid,.evx .region-grid{grid-template-columns:1fr}
+  .evx .highlight-strip{grid-template-columns:1fr}
+  .evx .cat-a ul{grid-template-columns:1fr}
   .evx .foot-grid{grid-template-columns:1fr 1fr;gap:28px}
   .evx .form-row{grid-template-columns:1fr}
   .evx .compare-table{display:block;overflow-x:auto}
