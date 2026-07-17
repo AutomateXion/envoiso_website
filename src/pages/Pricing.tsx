@@ -120,6 +120,9 @@ export default function Pricing() {
               ))}
             </tbody>
           </table>
+          <p className="pricing-foot" style={{ marginTop: 24 }}>
+            This is a snapshot &mdash; Envoiso includes a full HRMS, recruitment/ATS, field sales app, and enterprise-grade approvals &amp; governance too. <Link to="/#features" style={{ color: 'var(--blue)', fontWeight: 600 }}>See the complete feature list &rarr;</Link>
+          </p>
         </div>
       </section>
 
