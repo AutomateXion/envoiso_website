@@ -24,11 +24,11 @@ export const PRICES: Record<Currency, CurrencyBlock> = {
   qar: { symbol: 'QR ',    decimals: 2, monthly: [55, 106, 178, 360, 470],         annual: [44, 87, 142, 288, 397] },
 };
 
-// Seasonal offer: 50% off the first 6 months on any annual plan.
+// Seasonal offer: 50% off the first year on any annual plan.
 export const PROMO = {
   active: true,
-  label: '50% off your first 6 months',
-  detail: 'Sign up for an annual plan and pay half price for your first 6 months — then the standard annual rate applies.',
+  label: '50% off your first year',
+  detail: 'Sign up for an annual plan and pay half price for your first 12 months — then the standard annual rate applies from year two.',
   discount: 0.5,
 };
 

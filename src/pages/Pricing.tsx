@@ -19,7 +19,7 @@ const COMPARE_ROWS = [
 ];
 
 const FAQS = [
-  { q: 'How does the 50% off first 6 months offer work?', a: 'Choose any annual plan at checkout and your first 6 months are billed at half the standard annual rate. From month 7 onward, billing continues at the regular annual rate for the remainder of your term. The offer applies to new subscriptions only and can\u2019t be combined with other discounts.' },
+  { q: 'How does the 50% off first year offer work?', a: 'Choose any annual plan at checkout and your first 12 months are billed at half the standard annual rate. From year two onward, billing continues at the regular annual rate. The offer applies to new subscriptions only and can\u2019t be combined with other discounts.' },
   { q: 'Do all plans include every module?', a: 'Yes. Every Envoiso plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
   { q: 'Is Envoiso really Fawtara-ready?', a: 'Envoiso generates e-invoices in UBL 2.1 / Peppol BIS 3.0 format, aligned with Oman\u2019s Fawtara e-invoicing requirements ahead of the OTA phased rollout. See our Compliance page for the full timeline.' },
   { q: 'Can I switch between monthly and annual billing?', a: 'Yes, you can switch billing frequency at any time from your account settings. Moving to annual billing at any point qualifies you for the then-current seasonal offer, if one is active.' },
@@ -60,7 +60,7 @@ export default function Pricing() {
             <span className={'bill-opt' + (!annual ? ' on' : '')}>Monthly</span>
             <button className={'toggle' + (annual ? ' annual' : '')} onClick={() => setAnnual(!annual)} aria-label="Toggle billing period"><span className="knob" /></button>
             <span className={'bill-opt' + (annual ? ' on' : '')}>Annual</span>
-            <span className="save-pill">{annual ? '50% off first 6 months' : '14 months for 12 on annual'}</span>
+            <span className="save-pill">{annual ? '50% off your first year' : '14 months for 12 on annual'}</span>
           </div>
           <div className="cur-toggle">
             <button className={'cur-btn' + (cur === 'usd' ? ' on' : '')} onClick={() => setCur('usd')}>USD $</button>
@@ -86,7 +86,7 @@ export default function Pricing() {
                     <span className="per">/ mo</span>
                   </div>
                   <div className="tier-bill">{annual ? 'billed annually' : 'billed monthly'}</div>
-                  {showPromo && <div className="tier-promo-note">for your first 6 months, then {p.symbol}{formatAmount(base, cur)}/mo</div>}
+                  {showPromo && <div className="tier-promo-note">for your first year, then {p.symbol}{formatAmount(base, cur)}/mo</div>}
                   <a className={'btn ' + (t.popular ? 'btn-primary' : 'btn-ghost')} href={`${APP_SIGNUP_URL}?plan=${t.name.toLowerCase()}&billing=${annual ? 'annual' : 'monthly'}`} onClick={() => trackClick(`pricing_tier_${t.name.toLowerCase()}`, `${t.name} — Start free trial (${annual ? 'annual' : 'monthly'})`)}>Start free trial</a>
                   <div className="seat-tier-for">{t.sub}</div>
                 </div>
@@ -151,7 +151,7 @@ export default function Pricing() {
         <div className="wrap">
           <div className="final-card">
             <h2>Lock in 50% off before it ends</h2>
-            <p>Start your 14-day free trial today, then choose any annual plan to secure half price for your first 6 months.</p>
+            <p>Start your 14-day free trial today, then choose any annual plan to secure half price for your first year.</p>
             <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('pricing_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>

@@ -21,7 +21,7 @@ export default function Home() {
           <div className="hero-note"><Check />14-day free trial &middot; No credit card required</div>
           <div className="hero-fawtara">
             <span className="ff-badge"><Check />Fawtara-ready</span>
-            <span className="promo-badge">50% off first 6 months, annual plans</span>
+            <span className="promo-badge">50% off your first year, annual plans</span>
             Built for Oman e-invoicing (UBL 2.1) ahead of the OTA rollout
           </div>
           <div className="hero-shot">
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="wrap">
           <div className="final-card">
             <h2>Bring your business into one flow</h2>
-            <p>Join growing teams running finance, sales, stock and projects on a single platform. Set up in a day, free for two weeks &mdash; and take 50% off your first 6 months on any annual plan.</p>
+            <p>Join growing teams running finance, sales, stock and projects on a single platform. Set up in a day, free for two weeks &mdash; and take 50% off your first year on any annual plan.</p>
             <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('home_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>

@@ -5,7 +5,7 @@ export default function AnnouncementBar() {
     <div className="annbar">
       <span className="ann-dot">
         <span className="ann-pulse" />
-        <strong>Seasonal offer:</strong>&nbsp;50% off your first 6 months on any annual plan.
+        <strong>Seasonal offer:</strong>&nbsp;50% off your first year on any annual plan.
       </span>
       <Link to="/pricing">See pricing &rarr;</Link>
     </div>
