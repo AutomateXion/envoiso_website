@@ -65,6 +65,7 @@ export default function Pricing() {
           <div className="cur-toggle">
             <button className={'cur-btn' + (cur === 'usd' ? ' on' : '')} onClick={() => setCur('usd')}>USD $</button>
             <button className={'cur-btn' + (cur === 'omr' ? ' on' : '')} onClick={() => setCur('omr')}>OMR &#xFDFC;</button>
+            <button className={'cur-btn' + (cur === 'qar' ? ' on' : '')} onClick={() => setCur('qar')}>QAR QR</button>
             <button className={'cur-btn' + (cur === 'lkr' ? ' on' : '')} onClick={() => setCur('lkr')}>LKR Rs</button>
           </div>
           <div className="seat-note">Every plan includes <strong>all modules</strong> &mdash; accounting, sales, CRM, inventory, purchase, projects, assets and GCC e-invoicing. You only choose your team size.</div>

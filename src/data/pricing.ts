@@ -1,4 +1,4 @@
-export type Currency = 'usd' | 'omr' | 'lkr';
+export type Currency = 'usd' | 'omr' | 'lkr' | 'qar';
 
 export const SEAT_TIERS = [
   { name: 'Solo',       users: '1 user',   sub: 'For founders & one-person businesses.' },
@@ -19,6 +19,9 @@ export const PRICES: Record<Currency, CurrencyBlock> = {
   usd: { symbol: '$',      decimals: 0, monthly: [15, 29, 49, 99, 129],          annual: [12, 24, 39, 79, 109] },
   omr: { symbol: '\uFDFC ', decimals: 3, monthly: [7.9, 14.9, 22.9, 41.9, 55.9],    annual: [5.9, 11.9, 18.9, 34.9, 45.9] },
   lkr: { symbol: 'Rs ',    decimals: 0, monthly: [4999, 9999, 15999, 28999, 38999], annual: [3999, 7999, 12999, 23999, 31999] },
+  // Proposed from the USD peg (~3.64 QAR/USD), rounded to whole riyals.
+  // TODO: confirm/adjust these against your intended Qatar go-to-market pricing.
+  qar: { symbol: 'QR ',    decimals: 2, monthly: [55, 106, 178, 360, 470],         annual: [44, 87, 142, 288, 397] },
 };
 
 // Seasonal offer: 50% off the first 6 months on any annual plan.
