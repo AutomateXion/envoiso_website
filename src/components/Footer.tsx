@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-grid">
           <div>
-            <Link to="/" className="foot-brand"><span className="mark">E</span>Envoiso</Link>
+            <Link to="/" className="foot-brand"><img src="/logo-horizontal-reversed.png" alt="Xion ERP" className="brand-logo" /></Link>
             <p className="foot-tag">The all-in-one business platform for growing GCC companies. Intelligence &middot; Flow &middot; Trust.</p>
           </div>
           <div className="foot-col">

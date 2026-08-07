@@ -21,7 +21,7 @@ export default function Nav() {
   return (
     <nav>
       <div className="wrap nav-in">
-        <Link to="/" className="brand"><span className="mark">E</span>Envoiso</Link>
+        <Link to="/" className="brand"><img src="/logo-horizontal.png" alt="Xion ERP" className="brand-logo" /></Link>
         <div className="nav-links">
           {LINKS.map(l => (
             <Link key={l.label} to={l.to} className={pathname === l.match ? 'active' : ''}>{l.label}</Link>

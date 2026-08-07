@@ -34,6 +34,7 @@
 .evx .brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:600;font-size:22px;color:var(--navy);letter-spacing:-.01em;text-decoration:none}
 .evx .brand .mark{width:34px;height:34px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--blue-lt);font-family:'Fraunces',serif;font-weight:700;font-size:20px;position:relative;flex-shrink:0}
 .evx .brand .mark::after{content:'';position:absolute;top:6px;right:6px;width:5px;height:5px;border-radius:50%;background:#fff}
+.evx .brand-logo{height:32px;width:auto;display:block}
 .evx .nav-links{display:flex;align-items:center;gap:30px}
 .evx .nav-links a{color:var(--muted);text-decoration:none;font-size:14.5px;font-weight:500}
 .evx .nav-links a:hover, .evx .nav-links a.active{color:var(--navy)}
