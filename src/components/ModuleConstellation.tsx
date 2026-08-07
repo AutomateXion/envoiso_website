@@ -46,12 +46,14 @@ export default function ModuleConstellation() {
 
         {/* core */}
         <g>
-          <circle cx={cx} cy={cy} r={44} fill="#103080" />
+          <defs>
+            <clipPath id="evx-core-clip">
+              <circle cx={cx} cy={cy} r={44} />
+            </clipPath>
+          </defs>
+          <image href="/mark-reversed.jpg" x={cx - 44} y={cy - 44} width={88} height={88}
+            clipPath="url(#evx-core-clip)" preserveAspectRatio="xMidYMid slice" />
           <circle cx={cx} cy={cy} r={44} fill="none" stroke="#5090F1" strokeWidth={1.5} />
-          <text x={cx} y={cy - 2} textAnchor="middle" dominantBaseline="central"
-            style={{ fontFamily: "'Fraunces',serif", fontWeight: 600, fontSize: 30, fill: '#7DACF4' }}>E</text>
-          <text x={cx} y={cy + 24} textAnchor="middle" dominantBaseline="central"
-            style={{ fontSize: 9, fill: '#9fc4e2', letterSpacing: '.5px' }}>ENVOISO</text>
         </g>
 
         {/* inner ring nodes */}
