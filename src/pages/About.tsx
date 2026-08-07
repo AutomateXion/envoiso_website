@@ -59,7 +59,7 @@ export default function About() {
           <div className="sec-head" style={{ maxWidth: 640 }}>
             <div className="sec-eyebrow" style={{ color: 'var(--blue-lt)' }}>Where we operate</div>
             <h2 className="sec-h" style={{ color: '#fff' }}>Built in the region, for the region</h2>
-            <p className="sec-sub" style={{ color: '#bccbdb' }}>Xion ERP is headquartered in Muscat, Oman, with an engineering base in Sri Lanka — close enough to the compliance requirements we build for, and to the talent that builds the platform.</p>
+            <p className="sec-sub" style={{ color: '#bccbdb' }}>Xion ERP is headquartered in Muscat, Oman, with an engineering base in Sri Lanka — and serves growing businesses across Oman, Qatar, the UAE and Sri Lanka.</p>
           </div>
           <div className="region-grid">
             <div className="region-card">
@@ -69,6 +69,14 @@ export default function About() {
             <div className="region-card">
               <h3>Sri Lanka</h3>
               <p>Engineering and platform development, building the accounting, ERP and e-invoicing core that powers every Xion ERP workspace.</p>
+            </div>
+            <div className="region-card">
+              <h3>Qatar</h3>
+              <p>Serving Qatar's growing businesses with the same multi-currency, GCC-compliant platform, ready as the country's own e-invoicing requirements take shape.</p>
+            </div>
+            <div className="region-card">
+              <h3>United Arab Emirates</h3>
+              <p>Supporting UAE businesses with multi-entity, multi-currency operations and full VAT-ready financial reporting.</p>
             </div>
           </div>
         </div>
