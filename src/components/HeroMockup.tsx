@@ -1,7 +1,7 @@
 export default function HeroMockup() {
   return (
     <div className="hero-shot-fallback">
-      <svg viewBox="0 0 1080 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Envoiso dashboard showing revenue, invoices and stock in one view" style={{ width: '100%', height: 'auto', display: 'block' }}>
+      <svg viewBox="0 0 1080 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Xion ERP dashboard showing revenue, invoices and stock in one view" style={{ width: '100%', height: 'auto', display: 'block' }}>
         <defs>
           <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="0" dy="18" stdDeviation="26" floodColor="#103080" floodOpacity="0.18" />
@@ -21,7 +21,7 @@ export default function HeroMockup() {
           <circle cx="64" cy="43" r="5.5" fill="#E7CFA0" />
           <circle cx="82" cy="43" r="5.5" fill="#A9D3B5" />
           <rect x="440" y="33" width="200" height="20" rx="6" fill="#fff" stroke="#D8E2EC" />
-          <text x="540" y="47" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="10.5" fill="#5B7186">app.envoiso.com</text>
+          <text x="540" y="47" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="10.5" fill="#5B7186">app.xionerp.com</text>
         </g>
 
         {/* sidebar */}

@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          <span>&copy; 2026 Envoiso. All rights reserved.</span>
+          <span>&copy; 2026 Xion ERP. All rights reserved.</span>
           <span>Privacy &middot; Terms</span>
         </div>
       </div>

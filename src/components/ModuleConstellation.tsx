@@ -26,7 +26,7 @@ export default function ModuleConstellation() {
 
   return (
     <div className="evx-const">
-      <svg viewBox="0 0 720 700" className="evx-const-svg" role="img" aria-label="Envoiso modules connected to a central core, with a second ring of standout modules">
+      <svg viewBox="0 0 720 700" className="evx-const-svg" role="img" aria-label="Xion ERP modules connected to a central core, with a second ring of standout modules">
         {/* visible, slowly-rotating orbit rings (decorative — nodes themselves stay fixed in place) */}
         <circle cx={cx} cy={cy} r={R} className="evx-ring evx-ring-inner" />
         <circle cx={cx} cy={cy} r={OR} className="evx-ring evx-ring-outer" />

@@ -99,7 +99,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <button type="submit" className="btn btn-primary form-submit">Send message</button>
-                <p className="form-note">By submitting, you agree to be contacted by Envoiso about your enquiry.</p>
+                <p className="form-note">By submitting, you agree to be contacted by Xion ERP about your enquiry.</p>
               </form>
             )}
           </div>

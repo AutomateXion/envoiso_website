@@ -13,7 +13,7 @@ export default function Home() {
         <div className="wrap">
           <span className="eyebrow"><span className="dot" />Intelligence &middot; Flow &middot; Trust</span>
           <h1 className="hero-h">Your whole business, in <em>one</em> flow.</h1>
-          <p className="hero-sub">Envoiso brings accounting, sales, inventory, CRM, projects and compliance into a single platform &mdash; so your numbers, stock and customers finally speak to each other. Built for growing GCC businesses, ready for e-invoicing.</p>
+          <p className="hero-sub">Xion ERP brings accounting, sales, inventory, CRM, projects and compliance into a single platform &mdash; so your numbers, stock and customers finally speak to each other. Built for growing GCC businesses, ready for e-invoicing.</p>
           <div className="hero-cta">
             <a className="btn btn-primary btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('hero_start_trial', 'Start free trial (hero)')}>Start free trial</a>
             <Link className="btn btn-ghost btn-lg" to="/pricing" onClick={() => trackClick('hero_see_pricing', 'See pricing')}>See pricing</Link>
@@ -42,7 +42,7 @@ export default function Home() {
       <section className="prob">
         <div className="wrap">
           <div className="sec-head">
-            <div className="sec-eyebrow">Why Envoiso</div>
+            <div className="sec-eyebrow">Why Xion ERP</div>
             <h2 className="sec-h">Stop running your business across six disconnected tools</h2>
             <p className="sec-sub">Spreadsheets for accounts, one app for invoices, another for stock, WhatsApp for the sales team. The data never lines up &mdash; and month-end becomes a guessing game.</p>
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="prob-after prob-col">
-              <h3>Business on Envoiso</h3>
+              <h3>Business on Xion ERP</h3>
               <ul className="prob-list">
                 <li><span className="c"><Check /></span>One platform from quote to cash to ledger</li>
                 <li><span className="c"><Check /></span>Sales reduce stock and post cost automatically</li>
@@ -85,7 +85,7 @@ export default function Home() {
           <div className="sec-head">
             <div className="sec-eyebrow">Beyond the basics</div>
             <h2 className="sec-h">What you get that most all-in-one platforms don't bundle</h2>
-            <p className="sec-sub">These usually mean a separate app, a separate contract, or both. On Envoiso they're just part of the platform.</p>
+            <p className="sec-sub">These usually mean a separate app, a separate contract, or both. On Xion ERP they're just part of the platform.</p>
           </div>
           <FeatureCategories />
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
           <div>
             <div className="sec-eyebrow" style={{ color: 'var(--blue-lt)' }}>Built for the region</div>
             <h2>Compliant in the GCC, by default</h2>
-            <p>Envoiso speaks the language of regional finance &mdash; Arabic e-invoicing, OMR to three decimals, multi-currency, and IFRS-standard reporting out of the box. No bolt-ons, no scramble before a deadline.</p>
+            <p>Xion ERP speaks the language of regional finance &mdash; Arabic e-invoicing, OMR to three decimals, multi-currency, and IFRS-standard reporting out of the box. No bolt-ons, no scramble before a deadline.</p>
             <div className="badge-row">
               <div className="cbadge"><Check />E-invoicing ready (Fawtara / UBL 2.1)</div>
               <div className="cbadge"><Check />IFRS financials</div>

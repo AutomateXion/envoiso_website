@@ -20,11 +20,11 @@ const COMPARE_ROWS = [
 
 const FAQS = [
   { q: 'How does the 50% off first year offer work?', a: 'Choose any annual plan at checkout and your first 12 months are billed at half the standard annual rate. From year two onward, billing continues at the regular annual rate. The offer applies to new subscriptions only and can\u2019t be combined with other discounts.' },
-  { q: 'Do all plans include every module?', a: 'Yes. Every Envoiso plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
-  { q: 'Is Envoiso really Fawtara-ready?', a: 'Envoiso generates e-invoices in UBL 2.1 / Peppol BIS 3.0 format, aligned with Oman\u2019s Fawtara e-invoicing requirements ahead of the OTA phased rollout. See our Compliance page for the full timeline.' },
+  { q: 'Do all plans include every module?', a: 'Yes. Every Xion ERP plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
+  { q: 'Is Xion ERP really Fawtara-ready?', a: 'Xion ERP generates e-invoices in UBL 2.1 / Peppol BIS 3.0 format, aligned with Oman\u2019s Fawtara e-invoicing requirements ahead of the OTA phased rollout. See our Compliance page for the full timeline.' },
   { q: 'Can I switch between monthly and annual billing?', a: 'Yes, you can switch billing frequency at any time from your account settings. Moving to annual billing at any point qualifies you for the then-current seasonal offer, if one is active.' },
   { q: 'What happens after my 14-day trial?', a: 'You can pick any plan and continue seamlessly, or your workspace pauses (your data is kept safely) until you\u2019re ready to subscribe. No credit card is required to start the trial.' },
-  { q: 'Do you support multiple currencies?', a: 'Yes. Envoiso supports OMR (to 3 decimal places), USD, LKR and other regional currencies, with real-time conversion for multi-entity and cross-border businesses.' },
+  { q: 'Do you support multiple currencies?', a: 'Yes. Xion ERP supports OMR (to 3 decimal places), USD, LKR and other regional currencies, with real-time conversion for multi-entity and cross-border businesses.' },
 ];
 
 export default function Pricing() {
@@ -110,7 +110,7 @@ export default function Pricing() {
           <div className="sec-head">
             <div className="sec-eyebrow">What's included</div>
             <h2 className="sec-h">Every plan, the full platform</h2>
-            <p className="sec-sub">There's no feature paywall at Envoiso &mdash; plans scale by team size, not by what you're allowed to use.</p>
+            <p className="sec-sub">There's no feature paywall at Xion ERP &mdash; plans scale by team size, not by what you're allowed to use.</p>
           </div>
           <table className="compare-table">
             <thead>
@@ -123,7 +123,7 @@ export default function Pricing() {
             </tbody>
           </table>
           <p className="pricing-foot" style={{ marginTop: 24 }}>
-            This is a snapshot &mdash; Envoiso includes a full HRMS, recruitment/ATS, field sales app, and enterprise-grade approvals &amp; governance too. <Link to="/#features" style={{ color: 'var(--blue)', fontWeight: 600 }}>See the complete feature list &rarr;</Link>
+            This is a snapshot &mdash; Xion ERP includes a full HRMS, recruitment/ATS, field sales app, and enterprise-grade approvals &amp; governance too. <Link to="/#features" style={{ color: 'var(--blue)', fontWeight: 600 }}>See the complete feature list &rarr;</Link>
           </p>
         </div>
       </section>

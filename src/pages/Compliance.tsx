@@ -13,8 +13,8 @@ const TIMELINE = [
 ];
 
 const CARDS = [
-  { icon: <Shield />, title: 'Peppol five-corner model', body: 'Invoices move from your ERP to your Accredited Service Provider, to your counterparty\u2019s provider, to them — with tax data reported to the OTA in parallel. Envoiso is built to plug into this model as an ASP integration becomes available.' },
-  { icon: <FileCheck />, title: 'UBL 2.1 & PINT-OM ready', body: 'Envoiso generates structured invoices aligned with the international UBL 2.1 standard and the Omani PINT-OM specification, so your data is in the shape Fawtara expects from day one.' },
+  { icon: <Shield />, title: 'Peppol five-corner model', body: 'Invoices move from your ERP to your Accredited Service Provider, to your counterparty\u2019s provider, to them — with tax data reported to the OTA in parallel. Xion ERP is built to plug into this model as an ASP integration becomes available.' },
+  { icon: <FileCheck />, title: 'UBL 2.1 & PINT-OM ready', body: 'Xion ERP generates structured invoices aligned with the international UBL 2.1 standard and the Omani PINT-OM specification, so your data is in the shape Fawtara expects from day one.' },
   { icon: <Globe />, title: 'Built for GCC finance', body: 'Three-decimal OMR, multi-currency, Arabic-ready invoicing and IFRS-standard reporting are native to the platform — not bolt-ons added for one regulation.' },
   { icon: <Clock />, title: '10-year digital archiving', body: 'Every e-invoice is stored securely and retrievable for the audit and retention periods regulators expect, without you having to manage a separate archive.' },
 ];
@@ -26,7 +26,7 @@ export default function Compliance() {
         <div className="wrap">
           <span className="eyebrow"><span className="dot" />Compliance</span>
           <h1 className="page-h">Fawtara, explained &mdash; and ready when you are</h1>
-          <p className="page-sub">Oman's national e-invoicing mandate rolls out in phases from 2026 to 2028. Here's what's confirmed, what's still provisional, and how Envoiso fits in.</p>
+          <p className="page-sub">Oman's national e-invoicing mandate rolls out in phases from 2026 to 2028. Here's what's confirmed, what's still provisional, and how Xion ERP fits in.</p>
         </div>
       </section>
 
@@ -99,7 +99,7 @@ export default function Compliance() {
         <div className="wrap">
           <div className="final-card">
             <h2>Get your Fawtara readiness sorted early</h2>
-            <p>Start a free trial and see how Envoiso structures your invoicing for Oman's e-invoicing mandate &mdash; well before your phase arrives.</p>
+            <p>Start a free trial and see how Xion ERP structures your invoicing for Oman's e-invoicing mandate &mdash; well before your phase arrives.</p>
             <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('compliance_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>
