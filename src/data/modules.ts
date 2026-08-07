@@ -1,7 +1,7 @@
 export const EVX_MODULES = [
-  { n: 'Accounting', d: 'General ledger, journals, trial balance — to three decimals.', c: '#2E6DA4', icon: 'M3 3v18h18 M7 14l4-4 3 3 5-6' },
-  { n: 'Invoicing', d: 'Sales invoices, receipts and GCC e-invoicing built in.', c: '#2E6DA4', icon: 'M9 7h6 M9 11h6 M9 15h4 M6 2h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z' },
-  { n: 'Banking', d: 'Bank accounts, PDC cheques and reconciliation.', c: '#4A9BD2', icon: 'M3 21h18 M5 21V10 M19 21V10 M3 10l9-6 9 6z' },
+  { n: 'Accounting', d: 'General ledger, journals, trial balance — to three decimals.', c: '#5090F1', icon: 'M3 3v18h18 M7 14l4-4 3 3 5-6' },
+  { n: 'Invoicing', d: 'Sales invoices, receipts and GCC e-invoicing built in.', c: '#5090F1', icon: 'M9 7h6 M9 11h6 M9 15h4 M6 2h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z' },
+  { n: 'Banking', d: 'Bank accounts, PDC cheques and reconciliation.', c: '#7DACF4', icon: 'M3 21h18 M5 21V10 M19 21V10 M3 10l9-6 9 6z' },
   { n: 'CRM', d: 'Leads, contacts and pipeline from first touch to close.', c: '#13a89e', icon: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M22 21v-2a4 4 0 0 0-3-3.87' },
   { n: 'Sales', d: 'Quotations and delivery notes through the full cycle.', c: '#13a89e', icon: 'M3 17l6-6 4 4 8-8 M21 7v6h-6' },
   { n: 'Purchase', d: 'POs, goods receipt and supplier invoices, matched.', c: '#e08a1e', icon: 'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z M3 6h18 M16 10a4 4 0 0 1-8 0' },

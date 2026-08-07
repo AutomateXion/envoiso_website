@@ -6,9 +6,9 @@
    ============================================================ */
 
 .evx{
-  --navy:#0C2446; --navy-2:#13315C; --blue:#2E6DA4; --blue-lt:#4A9BD2;
+  --navy:#103080; --navy-2:#0C2568; --blue:#5090F1; --blue-lt:#7DACF4;
   --teal:#00C9A7; --teal-dark:#0E8F79;
-  --ink:#0C2446; --paper:#F7F9FB; --paper-2:#EEF3F8; --line:#D8E2EC; --muted:#5B7186;
+  --ink:#103080; --paper:#F7F9FB; --paper-2:#EEF3F8; --line:#D8E2EC; --muted:#5B7186;
   font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--paper);
   line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;
 }
@@ -19,7 +19,7 @@
 .evx a{cursor:pointer}
 
 /* ---------- Announcement / promo bar ---------- */
-.evx .annbar{background:linear-gradient(90deg,#0C2446,#2E6DA4);color:#fff;font-size:13.5px;padding:9px 20px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
+.evx .annbar{background:linear-gradient(90deg,#103080,#5090F1);color:#fff;font-size:13.5px;padding:9px 20px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
 .evx .annbar .ann-dot{display:inline-flex;align-items:center;gap:8px}
 .evx .annbar .ann-pulse{width:7px;height:7px;border-radius:50%;background:#7CFFB2;box-shadow:0 0 0 0 rgba(124,255,178,.7);animation:annpulse 2s infinite}
 @keyframes annpulse{0%{box-shadow:0 0 0 0 rgba(124,255,178,.6)}70%{box-shadow:0 0 0 7px rgba(124,255,178,0)}100%{box-shadow:0 0 0 0 rgba(124,255,178,0)}}

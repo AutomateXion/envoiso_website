@@ -46,10 +46,10 @@ export default function ModuleConstellation() {
 
         {/* core */}
         <g>
-          <circle cx={cx} cy={cy} r={44} fill="#0C2446" />
-          <circle cx={cx} cy={cy} r={44} fill="none" stroke="#2E6DA4" strokeWidth={1.5} />
+          <circle cx={cx} cy={cy} r={44} fill="#103080" />
+          <circle cx={cx} cy={cy} r={44} fill="none" stroke="#5090F1" strokeWidth={1.5} />
           <text x={cx} y={cy - 2} textAnchor="middle" dominantBaseline="central"
-            style={{ fontFamily: "'Fraunces',serif", fontWeight: 600, fontSize: 30, fill: '#4A9BD2' }}>E</text>
+            style={{ fontFamily: "'Fraunces',serif", fontWeight: 600, fontSize: 30, fill: '#7DACF4' }}>E</text>
           <text x={cx} y={cy + 24} textAnchor="middle" dominantBaseline="central"
             style={{ fontSize: 9, fill: '#9fc4e2', letterSpacing: '.5px' }}>ENVOISO</text>
         </g>
