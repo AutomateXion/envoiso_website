@@ -8,6 +8,11 @@ export interface FeatureCategory {
 
 export const FEATURE_CATEGORIES: FeatureCategory[] = [
   {
+    title: 'Dashboard',
+    blurb: 'One command centre for the whole business, not eleven separate logins.',
+    features: ['Cross-module overview', 'Live KPIs at a glance', 'Role-based landing view'],
+  },
+  {
     title: 'Accounting & Finance',
     blurb: 'The financial core every other module posts back to.',
     features: ['Chart of Accounts', 'General Ledger', 'Journal Vouchers', 'Trial Balance', 'Multi-currency & exchange rates', 'Bank & cash accounts', 'Received cheques (PDC tracking)'],
@@ -50,6 +55,11 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
     features: ['Stock valuation', 'Stock movement & summary', 'Stock by location', 'Sales report', 'Sales vs. target', 'Salesman performance', 'Item profile report'],
   },
   {
+    title: 'Analytics Center',
+    blurb: 'Cross-department BI — trends, funnels and risk, not just static reports.',
+    features: ['KPI dashboards across finance, sales, inventory & HR', 'Risk scoring (low / medium / high)', 'Funnel & trend analysis', 'Department-level drill-down'],
+  },
+  {
     title: 'Fixed Assets',
     blurb: 'Assets tracked from purchase to depreciation to disposal.',
     features: ['Fixed asset register with GPS tracking', 'Automated depreciation journals', 'Maintenance scheduling', 'Consumables tracking'],
@@ -57,7 +67,14 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
     highlightNote: 'GPS-tracked assets with auto-depreciation journals — most ERPs stop at a static asset list.',
   },
   {
-    title: 'Projects',
+    title: 'Maintenance',
+    blurb: 'Service calls, contracts and technicians — run like a field-service business, not bolted onto inventory.',
+    features: ['Service calls & service board', 'Machine registry', 'Preventive maintenance (PM) visits', 'AMC contracts with billing & packages', 'Rental tracking', 'Technician productivity & job assignment', 'Spare parts'],
+    highlight: true,
+    highlightNote: 'A full maintenance / field-service management system — most ERPs don\u2019t offer this at all, let alone bundle it in.',
+  },
+  {
+    title: 'Project Management',
     blurb: 'Tasks, milestones and costing tied back to the job.',
     features: ['Project detail & milestones', 'Feasibility analysis', 'Project costing', 'PM dashboard'],
   },
