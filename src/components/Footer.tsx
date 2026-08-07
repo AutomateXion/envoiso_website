@@ -19,13 +19,13 @@ export default function Footer() {
             <h4>Company</h4>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
-            <a href="mailto:partners@envoiso.com">Partners</a>
+            <a href="mailto:info@automatexion.com">Partners</a>
           </div>
           <div className="foot-col">
             <h4>Resources</h4>
             <Link to="/compliance">Fawtara guide</Link>
-            <a href="mailto:hello@envoiso.com">Help centre</a>
-            <a href="mailto:hello@envoiso.com">API docs</a>
+            <a href="mailto:info@automatexion.com">Help centre</a>
+            <a href="mailto:info@automatexion.com">API docs</a>
           </div>
         </div>
         <div className="foot-bottom">

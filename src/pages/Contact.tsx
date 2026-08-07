@@ -31,11 +31,15 @@ export default function Contact() {
               <h3>Get in touch</h3>
               <div className="contact-row">
                 <Mail />
-                <div><div className="clbl">Email</div><div className="cval">hello@envoiso.com</div></div>
+                <div><div className="clbl">Email</div><div className="cval"><a href="mailto:info@automatexion.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@automatexion.com</a></div></div>
               </div>
               <div className="contact-row">
                 <Phone />
-                <div><div className="clbl">Phone</div><div className="cval">+968 XXXX XXXX</div></div>
+                <div><div className="clbl">Phone &mdash; Oman</div><div className="cval"><a href="tel:+96897696968" style={{ color: 'inherit', textDecoration: 'none' }}>+968 9769 6968</a></div></div>
+              </div>
+              <div className="contact-row">
+                <Phone />
+                <div><div className="clbl">Phone &mdash; Sri Lanka</div><div className="cval"><a href="tel:+94761949294" style={{ color: 'inherit', textDecoration: 'none' }}>+94 76 194 9294</a></div></div>
               </div>
               <div className="contact-row">
                 <Pin />
