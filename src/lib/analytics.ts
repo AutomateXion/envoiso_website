@@ -1,7 +1,7 @@
 // Lightweight analytics: GA4 (if configured) + our own backend event log.
 // Both are fire-and-forget — tracking must never block or break the UI.
 
-const TRACK_ENDPOINT = 'https://erp.envoiso.com/api/v1/public/track';
+const TRACK_ENDPOINT = 'https://cloud.xionerp.com/api/v1/public/track';
 const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined;
 
 declare global {
