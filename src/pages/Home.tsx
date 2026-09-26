@@ -31,10 +31,10 @@ export default function Home() {
         <div className="trust">
           <div className="wrap trust-in">
             <span className="trust-label">Trusted by teams across the GCC</span>
-            <div className="logo-slot">Your logo</div>
-            <div className="logo-slot">Your logo</div>
-            <div className="logo-slot">Your logo</div>
-            <div className="logo-slot">Your logo</div>
+            <img src="/logo-shell.png" alt="Shell Oman Marketing" className="logo-img" />
+            <img src="/logo-royce.jpeg" alt="Royce World Group" className="logo-img" />
+            <img src="/logo-hs.jpeg" alt="HS" className="logo-img" />
+            <img src="/logo-gs.png" alt="GS Group" className="logo-img" />
           </div>
         </div>
       </header>
