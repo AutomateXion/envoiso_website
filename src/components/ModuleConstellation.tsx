@@ -64,15 +64,12 @@ export default function ModuleConstellation() {
             <g key={'n' + i} className="evx-node" tabIndex={0} role="button" aria-label={m.n + ': ' + m.d}
               onMouseEnter={() => setActive({ ring: 'inner', i })} onMouseLeave={() => setActive(null)}
               onFocus={() => setActive({ ring: 'inner', i })} onBlur={() => setActive(null)} onClick={() => setActive({ ring: 'inner', i })}>
-              <circle cx={x} cy={y} r={25} fill={on ? m.c + '1a' : '#ffffff'} stroke={m.c} strokeWidth={1.5} />
-              <g transform={`translate(${x - 8.5}, ${y - 15.5})`}>
-                <svg width={17} height={17} viewBox="0 0 24 24" fill="none" stroke={m.c} strokeWidth={1.8}
-                  strokeLinecap="round" strokeLinejoin="round">
-                  {m.icon.split(' M').map((seg, k) => <path key={k} d={(k === 0 ? seg : 'M' + seg)} />)}
-                </svg>
-              </g>
-              <text x={x} y={y + 40} textAnchor="middle" dominantBaseline="central"
-                style={{ fontSize: 11, fontWeight: 500, fill: on ? m.c : '#5B7186' }}>{m.n}</text>
+              <circle cx={x} cy={y} r={27} fill="#ffffff" stroke={on ? '#5090F1' : '#D8E2EC'} strokeWidth={on ? 2 : 1.5}
+                style={{ filter: 'drop-shadow(0 2px 6px rgba(16,48,128,0.12))' }} />
+              <g transform={`translate(${x - 17}, ${y - 17}) scale(${34 / 48})`}
+                dangerouslySetInnerHTML={{ __html: m.svg }} />
+              <text x={x} y={y + 43} textAnchor="middle" dominantBaseline="central"
+                style={{ fontSize: 11, fontWeight: on ? 700 : 500, fill: on ? '#103080' : '#5B7186' }}>{m.n}</text>
             </g>
           );
         })}
@@ -85,18 +82,15 @@ export default function ModuleConstellation() {
             <g key={'on' + i} className="evx-node" tabIndex={0} role="button" aria-label={m.n + ' (differentiator): ' + m.d}
               onMouseEnter={() => setActive({ ring: 'outer', i })} onMouseLeave={() => setActive(null)}
               onFocus={() => setActive({ ring: 'outer', i })} onBlur={() => setActive(null)} onClick={() => setActive({ ring: 'outer', i })}>
-              <circle cx={x} cy={y} r={30} fill={on ? m.c + '1a' : '#ffffff'} stroke={m.c} strokeWidth={1.5} strokeDasharray="3 2.5" />
-              <g transform={`translate(${x - 10}, ${y - 17})`}>
-                <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke={m.c} strokeWidth={1.7}
-                  strokeLinecap="round" strokeLinejoin="round">
-                  {m.icon.split(' M').map((seg, k) => <path key={k} d={(k === 0 ? seg : 'M' + seg)} />)}
-                </svg>
-              </g>
-              <circle cx={x + 20} cy={y - 20} r={7} fill="#fff" stroke={m.c} strokeWidth={1.3} />
-              <text x={x + 20} y={y - 19.5} textAnchor="middle" dominantBaseline="central"
-                style={{ fontSize: 9, fontWeight: 700, fill: m.c }}>+</text>
-              <text x={x} y={y + 47} textAnchor="middle" dominantBaseline="central"
-                style={{ fontSize: 11.5, fontWeight: 600, fill: on ? m.c : '#33495d' }}>{m.n}</text>
+              <circle cx={x} cy={y} r={32} fill="#ffffff" stroke={on ? '#E4572E' : '#F4CBB5'} strokeWidth={on ? 2 : 1.5} strokeDasharray="3 2.5"
+                style={{ filter: 'drop-shadow(0 2px 6px rgba(16,48,128,0.12))' }} />
+              <g transform={`translate(${x - 19}, ${y - 19}) scale(${38 / 48})`}
+                dangerouslySetInnerHTML={{ __html: m.svg }} />
+              <circle cx={x + 22} cy={y - 22} r={7.5} fill="#fff" stroke="#E4572E" strokeWidth={1.3} />
+              <text x={x + 22} y={y - 21.5} textAnchor="middle" dominantBaseline="central"
+                style={{ fontSize: 9, fontWeight: 700, fill: '#E4572E' }}>+</text>
+              <text x={x} y={y + 49} textAnchor="middle" dominantBaseline="central"
+                style={{ fontSize: 11.5, fontWeight: 700, fill: on ? '#B8390F' : '#33495d' }}>{m.n}</text>
             </g>
           );
         })}

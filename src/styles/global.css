@@ -7,7 +7,7 @@
 
 .evx{
   --navy:#103080; --navy-2:#0C2568; --blue:#5090F1; --blue-lt:#7DACF4;
-  --teal:#00C9A7; --teal-dark:#0E8F79;
+  --teal:#E4572E; --teal-dark:#B8390F;
   --ink:#103080; --paper:#F7F9FB; --paper-2:#EEF3F8; --line:#D8E2EC; --muted:#5B7186;
   font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--paper);
   line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;
@@ -119,7 +119,7 @@
 .evx .evx-link-outer.lit{opacity:.85}
 .evx .evx-ring{fill:none;transform-box:fill-box;transform-origin:center}
 .evx .evx-ring-inner{stroke:var(--blue-lt);stroke-width:2;stroke-dasharray:5 9;opacity:.75;animation:evx-spin 36s linear infinite}
-.evx .evx-ring-outer{stroke:#13a89e;stroke-width:2;stroke-dasharray:5 11;opacity:.6;animation:evx-spin-rev 56s linear infinite}
+.evx .evx-ring-outer{stroke:#E4572E;stroke-width:2;stroke-dasharray:5 11;opacity:.5;animation:evx-spin-rev 56s linear infinite}
 @keyframes evx-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @keyframes evx-spin-rev{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
 .evx .evx-node{cursor:pointer;transition:transform .18s;outline:none}
@@ -127,7 +127,7 @@
 .evx .evx-node circle{transition:fill .18s}
 .evx .evx-node:focus-visible circle{stroke-width:2.5}
 .evx .evx-const-info{text-align:center;min-height:54px;margin-top:18px;max-width:440px;margin-left:auto;margin-right:auto}
-.evx .evx-const-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#0E8F79;background:#E4F9F5;border:1px solid #BFEEE4;padding:3px 10px;border-radius:100px;margin-bottom:8px}
+.evx .evx-const-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#B8390F;background:#FDEEE7;border:1px solid #F4CBB5;padding:3px 10px;border-radius:100px;margin-bottom:8px}
 .evx .evx-const-info h4{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:4px}
 .evx .evx-const-info p{font-size:14px;color:var(--muted);line-height:1.55}
 
@@ -214,7 +214,7 @@
 .evx .fw-step.done .fw-step-num{background:var(--teal-dark)}
 .evx .fw-step-body h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:6px}
 .evx .fw-step-body p{font-size:14.5px;color:var(--muted);line-height:1.55;margin-bottom:8px}
-.evx .fw-step-tag{display:inline-block;font-size:12px;font-weight:600;color:var(--teal-dark);background:#E4F9F5;border:1px solid #BFEEE4;padding:3px 10px;border-radius:100px}
+.evx .fw-step-tag{display:inline-block;font-size:12px;font-weight:600;color:var(--teal-dark);background:#FDEEE7;border:1px solid #F4CBB5;padding:3px 10px;border-radius:100px}
 .evx .fw-grid{padding:96px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .evx .fw-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px}
 .evx .fw-card h3{font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:10px}
@@ -284,8 +284,8 @@
 
 /* ---------- Beyond the basics highlight strip ---------- */
 .evx .highlight-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
-.evx .highlight-card{background:linear-gradient(160deg,#fff,#F7FBFA);border:1px solid #BFEEE4;border-radius:16px;padding:26px 22px}
-.evx .highlight-ico{width:38px;height:38px;border-radius:10px;background:#E4F9F5;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.evx .highlight-card{background:linear-gradient(160deg,#fff,#FDF8F5);border:1px solid #F4CBB5;border-radius:16px;padding:26px 22px}
+.evx .highlight-ico{width:38px;height:38px;border-radius:10px;background:#FDEEE7;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
 .evx .highlight-ico svg{width:19px;height:19px;color:var(--teal-dark)}
 .evx .highlight-card h3{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:8px}
 .evx .highlight-card p{font-size:13.5px;color:var(--muted);line-height:1.5}
@@ -298,7 +298,7 @@
 .evx .cat-q svg{width:18px;height:18px;color:var(--blue);flex-shrink:0;transition:transform .18s}
 .evx .cat-item.open .cat-q svg{transform:rotate(45deg)}
 .evx .cat-title{font-size:16px;font-weight:600;color:var(--navy);font-family:'Fraunces',serif;margin-right:10px}
-.evx .cat-badge{display:inline-block;font-size:11px;font-weight:600;color:var(--teal-dark);background:#E4F9F5;border:1px solid #BFEEE4;padding:2px 9px;border-radius:100px;margin-right:10px;vertical-align:middle}
+.evx .cat-badge{display:inline-block;font-size:11px;font-weight:600;color:var(--teal-dark);background:#FDEEE7;border:1px solid #F4CBB5;padding:2px 9px;border-radius:100px;margin-right:10px;vertical-align:middle}
 .evx .cat-blurb{display:block;font-size:13.5px;color:var(--muted);margin-top:4px;font-weight:400}
 .evx .cat-a{padding:0 24px 22px}
 .evx .cat-a ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 20px}
