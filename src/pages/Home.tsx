@@ -35,6 +35,7 @@ export default function Home() {
             <img src="/logo-royce.jpeg" alt="Royce World Group" className="logo-img" />
             <img src="/logo-hs.jpeg" alt="HS" className="logo-img" />
             <img src="/logo-gs.png" alt="GS Group" className="logo-img" />
+            <img src="/logo-notebooklk.png" alt="notebook.lk" className="logo-img logo-img--badge" />
           </div>
         </div>
       </header>

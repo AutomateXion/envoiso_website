@@ -75,6 +75,7 @@
 .evx .trust-label{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
 .evx .logo-img{height:34px;width:auto;max-width:130px;object-fit:contain;opacity:.85;transition:opacity .15s}
 .evx .logo-img:hover{opacity:1}
+.evx .logo-img--badge{height:52px;width:52px;border-radius:10px;object-fit:cover}
 
 
 /* ---------- Interior page hero (Pricing/Compliance/About/Contact) ---------- */
