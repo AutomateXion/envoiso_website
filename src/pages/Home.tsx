@@ -37,6 +37,7 @@ export default function Home() {
             <img src="/logo-gs.png" alt="GS Group" className="logo-img" />
             <img src="/logo-notebooklk.png" alt="notebook.lk" className="logo-img logo-img--badge" />
             <img src="/logo-gulfcoat.png" alt="Gulf Coat Paints" className="logo-img" />
+            <img src="/logo-noir.png" alt="NOIR" className="logo-img" />
           </div>
         </div>
       </header>
