@@ -239,7 +239,7 @@
 .evx .about-stats{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
 .evx .about-stat{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--line)}
 .evx .about-stat:last-child{border-bottom:none}
-.evx .about-stat .big{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--navy)}
+.evx .about-stat .big{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--navy);white-space:nowrap;flex-shrink:0}
 .evx .about-stat .lbl{font-size:13.5px;color:var(--muted);max-width:22ch;text-align:right}
 .evx .values{padding:0 0 96px}
 .evx .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}

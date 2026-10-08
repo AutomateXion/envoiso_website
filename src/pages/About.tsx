@@ -23,12 +23,12 @@ export default function About() {
         <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60 }}>
           <div>
             <h2>Our story</h2>
-            <p>Xion ERP was founded by a team with more than 20 years of combined experience delivering digital transformation and enterprise consulting across the Middle East, South Asia and Asia-Pacific — work that repeatedly surfaced the same problem: growing companies outgrow spreadsheets long before they can justify an enterprise ERP price tag or a six-month implementation.</p>
-            <p>We built Xion ERP to close that gap — a single cloud platform covering accounting, sales, CRM, inventory, purchase, projects and assets, with GCC compliance (including Oman's Fawtara e-invoicing mandate) built in from day one rather than added later as a costly integration.</p>
+            <p>Xion ERP was founded in Sri Lanka in 2024 by a team with more than 20 years of combined experience delivering digital transformation and enterprise consulting across the Middle East, South Asia and Asia-Pacific — work that repeatedly surfaced the same problem: growing companies outgrow spreadsheets long before they can justify an enterprise ERP price tag or a six-month implementation.</p>
+            <p>We built Xion ERP to close that gap — a single cloud platform covering accounting, sales, CRM, inventory, purchase, projects and assets, with GCC compliance (including Oman's Fawtara e-invoicing mandate) built in from day one rather than added later as a costly integration. The company has since grown into the GCC, with its head office now in Muscat, Oman.</p>
             <p>The name reflects the mission: Intelligence to see your business clearly, Flow so work moves without friction between teams, and Trust so compliance and financial reporting are never a scramble.</p>
           </div>
           <div className="about-stats">
-            <div className="about-stat"><span className="big">2026</span><span className="lbl">Founded, Muscat, Oman</span></div>
+            <div className="about-stat"><span className="big">2024</span><span className="lbl">Founded in Sri Lanka</span></div>
             <div className="about-stat"><span className="big">10+</span><span className="lbl">Core business modules in one platform</span></div>
             <div className="about-stat"><span className="big">20+ yrs</span><span className="lbl">Combined regional operating experience</span></div>
             <div className="about-stat"><span className="big">2</span><span className="lbl">Countries: Oman &amp; Sri Lanka</span></div>
