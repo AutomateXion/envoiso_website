@@ -20,7 +20,7 @@ export default function About() {
       </section>
 
       <section className="about-story">
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60 }}>
+        <div className="wrap about-grid">
           <div>
             <h2>Our story</h2>
             <p>Xion ERP was founded in Sri Lanka in 2024 by a team with more than 20 years of combined experience delivering digital transformation and enterprise consulting across the Middle East, South Asia and Asia-Pacific — work that repeatedly surfaced the same problem: growing companies outgrow spreadsheets long before they can justify an enterprise ERP price tag or a six-month implementation.</p>
