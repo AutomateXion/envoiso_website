@@ -236,11 +236,16 @@
 .evx .about-story{padding:88px 0;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .evx .about-story h2{font-family:'Fraunces',serif;font-size:clamp(26px,3.2vw,34px);font-weight:600;color:var(--navy);margin-bottom:16px;letter-spacing:-.01em}
 .evx .about-story p{font-size:15.5px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.evx .about-side{display:flex;flex-direction:column;gap:24px;height:100%}
 .evx .about-stats{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
 .evx .about-stat{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--line)}
 .evx .about-stat:last-child{border-bottom:none}
 .evx .about-stat .big{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--navy);white-space:nowrap;flex-shrink:0}
 .evx .about-stat .lbl{font-size:13.5px;color:var(--muted);max-width:22ch;text-align:right}
+.evx .about-quote{flex:1;position:relative;display:flex;align-items:center;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:18px;padding:36px 32px 32px;min-height:160px}
+.evx .about-quote-mark{position:absolute;top:8px;left:24px;font-family:'Fraunces',serif;font-size:72px;line-height:1;color:rgba(255,255,255,.25)}
+.evx .about-quote p{position:relative;font-family:'Fraunces',serif;font-size:19px;font-weight:500;line-height:1.5;color:#fff;letter-spacing:-.01em;margin:0}
+.evx .about-quote p strong{color:#fff;font-weight:700}
 .evx .values{padding:0 0 96px}
 .evx .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .evx .value-card{padding:30px;border-radius:16px;background:#fff;border:1px solid var(--line)}
