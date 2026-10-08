@@ -71,11 +71,19 @@
 .evx .hero-shot-fallback{margin:0 auto;max-width:1080px;position:relative;z-index:1}
 
 .evx .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;margin-top:56px}
-.evx .trust-in{padding:26px 0;display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center}
-.evx .trust-label{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.evx .trust-in{padding:26px 0;display:flex;align-items:center;gap:30px}
+.evx .trust-label{flex-shrink:0;font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
 .evx .logo-img{height:34px;width:auto;max-width:130px;object-fit:contain;opacity:.85;transition:opacity .15s}
 .evx .logo-img:hover{opacity:1}
 .evx .logo-img--badge{height:52px;width:52px;border-radius:10px;object-fit:cover}
+
+.evx .trust-marquee{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
+.evx .trust-track{display:flex;align-items:center;width:max-content;animation:evx-trust-scroll 28s linear infinite}
+.evx .trust-marquee:hover .trust-track{animation-play-state:paused}
+.evx .trust-group{display:flex;align-items:center;gap:40px;padding-right:40px;flex-shrink:0}
+@keyframes evx-trust-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.evx .trust-track{animation:none}}
+@media (max-width:720px){.evx .trust-in{gap:16px}.evx .trust-label{display:none}}
 
 
 /* ---------- Interior page hero (Pricing/Compliance/About/Contact) ---------- */

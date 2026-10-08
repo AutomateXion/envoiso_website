@@ -6,6 +6,17 @@ import { APP_SIGNUP_URL } from '../components/Nav';
 import { trackClick } from '../lib/analytics';
 import { Link } from 'react-router-dom';
 
+const TRUST_LOGOS = [
+  { src: '/logo-shell.png', alt: 'Shell Oman Marketing' },
+  { src: '/logo-royce.jpeg', alt: 'Royce World Group' },
+  { src: '/logo-hs.jpeg', alt: 'HS' },
+  { src: '/logo-gs.png', alt: 'GS Group' },
+  { src: '/logo-notebooklk.png', alt: 'notebook.lk', cls: 'logo-img logo-img--badge' },
+  { src: '/logo-gulfcoat.png', alt: 'Gulf Coat Paints' },
+  { src: '/logo-noir.png', alt: 'NOIR' },
+  { src: '/logo-sabaragamuwa.png', alt: 'Sabaragamuwa Enterprises' },
+];
+
 export default function Home() {
   return (
     <>
@@ -31,14 +42,20 @@ export default function Home() {
         <div className="trust">
           <div className="wrap trust-in">
             <span className="trust-label">Trusted by teams across the GCC</span>
-            <img src="/logo-shell.png" alt="Shell Oman Marketing" className="logo-img" />
-            <img src="/logo-royce.jpeg" alt="Royce World Group" className="logo-img" />
-            <img src="/logo-hs.jpeg" alt="HS" className="logo-img" />
-            <img src="/logo-gs.png" alt="GS Group" className="logo-img" />
-            <img src="/logo-notebooklk.png" alt="notebook.lk" className="logo-img logo-img--badge" />
-            <img src="/logo-gulfcoat.png" alt="Gulf Coat Paints" className="logo-img" />
-            <img src="/logo-noir.png" alt="NOIR" className="logo-img" />
-            <img src="/logo-sabaragamuwa.png" alt="Sabaragamuwa Enterprises" className="logo-img" />
+            <div className="trust-marquee">
+              <div className="trust-track">
+                <div className="trust-group">
+                  {TRUST_LOGOS.map((l) => (
+                    <img key={l.src} src={l.src} alt={l.alt} className={l.cls || 'logo-img'} />
+                  ))}
+                </div>
+                <div className="trust-group" aria-hidden="true">
+                  {TRUST_LOGOS.map((l) => (
+                    <img key={l.src + '-dup'} src={l.src} alt="" className={l.cls || 'logo-img'} />
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
