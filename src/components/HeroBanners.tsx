@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BANNERS } from '../data/banners';
 import { trackClick } from '../lib/analytics';
+import { openWhatsAppChat } from './WhatsAppButton';
 
 const INTERVAL_MS = 6000;
 
@@ -76,7 +77,9 @@ export default function HeroBanners() {
                   <span className="hb-eyebrow">{b.eyebrow}</span>
                   <h2 className="hb-title">{b.title}</h2>
                   <p className="hb-text">{b.text}</p>
-                  {b.cta.to ? (
+                  {b.cta.action === 'whatsapp-chat' ? (
+                    <button type="button" className={ctaCls} onClick={() => { onCta(); openWhatsAppChat(); }} tabIndex={k === i ? 0 : -1}>{b.cta.label}</button>
+                  ) : b.cta.to ? (
                     <Link className={ctaCls} to={b.cta.to} onClick={onCta} tabIndex={k === i ? 0 : -1}>{b.cta.label}</Link>
                   ) : (
                     <a className={ctaCls} href={b.cta.href} target="_blank" rel="noopener noreferrer" onClick={onCta} tabIndex={k === i ? 0 : -1}>{b.cta.label}</a>

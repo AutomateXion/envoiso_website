@@ -1,5 +1,4 @@
 import { MODULE_ICONS } from './moduleIcons';
-import { whatsappUrl } from '../lib/whatsapp';
 
 /**
  * Home-page announcement carousel.
@@ -9,7 +8,8 @@ import { whatsappUrl } from '../lib/whatsapp';
  *  - title    : headline (keep to ~8 words)
  *  - text     : one or two short sentences
  *  - cta      : button label + destination. Use `to` for a page on this site
- *               (e.g. '/pricing') or `href` for an external link.
+ *               (e.g. '/pricing'), `href` for an external link, or
+ *               `action: 'whatsapp-chat'` to open the on-site WhatsApp chat box.
  *  - icon     : optional key from MODULE_ICONS, drawn large on the right
  *  - image    : optional background image (put the file in /public and
  *               reference it as '/banner-name.jpg'). ~1600×520 works well.
@@ -20,7 +20,7 @@ export interface Banner {
   eyebrow: string;
   title: string;
   text: string;
-  cta: { label: string; to?: string; href?: string };
+  cta: { label: string; to?: string; href?: string; action?: 'whatsapp-chat' };
   icon?: string;
   image?: string;
   theme?: 'navy' | 'blue' | 'orange';
@@ -49,7 +49,7 @@ export const BANNERS: Banner[] = [
     eyebrow: 'New integration',
     title: 'WhatsApp API is live.',
     text: 'Invoices, payment reminders and order updates sent to customers on WhatsApp — straight from Xion ERP.',
-    cta: { label: 'Chat on WhatsApp', href: whatsappUrl('Hi Xion ERP, I\u2019d like to know more about the WhatsApp integration.') },
+    cta: { label: 'Chat with us', action: 'whatsapp-chat' },
     icon: MODULE_ICONS['CRM'],
     image: '/banner-3.jpg',
     theme: 'blue',

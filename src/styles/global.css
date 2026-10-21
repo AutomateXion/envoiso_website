@@ -377,8 +377,33 @@
 }
 @media(prefers-reduced-motion:reduce){.evx *{animation:none!important;transition:none!important}}
 
-/* ---------- Floating WhatsApp button ---------- */
-.evx .wa-fab{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border-radius:100px;background:#25D366;color:#fff;font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 12px 30px -10px rgba(37,211,102,.7),0 2px 6px rgba(0,0,0,.12);transition:transform .15s,box-shadow .15s}
-.evx .wa-fab:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(37,211,102,.8),0 2px 6px rgba(0,0,0,.14);color:#fff}
+/* ---------- WhatsApp chat (floating button + panel) ---------- */
+.evx .wa-fab{position:fixed;right:20px;bottom:20px;z-index:61;display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border:0;border-radius:100px;background:#25D366;color:#fff;font-weight:600;font-size:14px;font-family:inherit;cursor:pointer;box-shadow:0 12px 30px -10px rgba(37,211,102,.7),0 2px 6px rgba(0,0,0,.12);transition:transform .15s,box-shadow .15s,background .15s}
+.evx .wa-fab:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(37,211,102,.8),0 2px 6px rgba(0,0,0,.14)}
+.evx .wa-fab.is-open{width:52px;padding:0;justify-content:center;background:var(--navy)}
 .evx .wa-fab svg{width:26px;height:26px;flex-shrink:0}
-@media (max-width:720px){.evx .wa-fab{right:14px;bottom:14px;height:54px;width:54px;padding:0;justify-content:center}.evx .wa-fab-label{display:none}}
+.evx .wa-panel{position:fixed;right:20px;bottom:84px;z-index:60;width:360px;max-width:calc(100vw - 28px);background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 70px -24px rgba(16,48,128,.45),0 4px 14px rgba(0,0,0,.08);overflow:hidden;opacity:0;transform:translateY(12px) scale(.98);pointer-events:none;transition:opacity .2s,transform .2s}
+.evx .wa-panel.is-open{opacity:1;transform:none;pointer-events:auto}
+.evx .wa-head{display:flex;align-items:center;gap:12px;padding:14px 16px;background:linear-gradient(120deg,var(--navy-2),var(--navy));color:#fff}
+.evx .wa-avatar{width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(255,255,255,.35)}
+.evx .wa-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.evx .wa-title{font-weight:700;font-size:15px}
+.evx .wa-status{font-size:12px;color:#cdd9e6;display:flex;align-items:center;gap:6px;margin-top:2px}
+.evx .wa-dot{width:7px;height:7px;border-radius:50%;background:#25D366;box-shadow:0 0 0 3px rgba(37,211,102,.25)}
+.evx .wa-body{padding:16px;background:#eef3f8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23d7e0ea'/%3E%3C/svg%3E")}
+.evx .wa-bubble{position:relative;background:#fff;border-radius:12px 12px 12px 3px;padding:11px 13px;font-size:14px;line-height:1.5;color:#1f2d3d;max-width:92%;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.evx .wa-form{padding:12px 14px 12px;display:flex;flex-direction:column;gap:8px;background:#fff}
+.evx .wa-input{width:100%;font:inherit;font-size:14px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--paper-2);color:var(--navy);outline:none;transition:border-color .15s,box-shadow .15s}
+.evx .wa-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(80,144,241,.18);background:#fff}
+.evx .wa-textarea{resize:none;line-height:1.45}
+.evx .wa-send{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;height:44px;border:0;border-radius:10px;background:#25D366;color:#fff;font:inherit;font-weight:700;font-size:14.5px;cursor:pointer;transition:background .15s,opacity .15s}
+.evx .wa-send:hover{background:#1fb859}
+.evx .wa-send:disabled{opacity:.5;cursor:not-allowed}
+.evx .wa-send svg{width:18px;height:18px}
+.evx .wa-hint{font-size:11.5px;color:var(--muted);text-align:center}
+@media (max-width:720px){
+  .evx .wa-fab{right:14px;bottom:14px;height:54px;width:54px;padding:0;justify-content:center}
+  .evx .wa-fab-label{display:none}
+  .evx .wa-panel{right:14px;left:14px;bottom:78px;width:auto;max-width:none}
+}
+@media (prefers-reduced-motion:reduce){.evx .wa-panel{transition:none}}
