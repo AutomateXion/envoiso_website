@@ -2,6 +2,7 @@ import { Check } from '../components/Icons';
 import ModuleConstellation from '../components/ModuleConstellation';
 import FeatureCategories from '../components/FeatureCategories';
 import HeroMockup from '../components/HeroMockup';
+import HeroBanners from '../components/HeroBanners';
 import { APP_SIGNUP_URL } from '../components/Nav';
 import { trackClick } from '../lib/analytics';
 import { Link } from 'react-router-dom';
@@ -23,6 +24,7 @@ export default function Home() {
     <>
       <header className="hero">
         <div className="wrap">
+          <HeroBanners />
           <span className="eyebrow"><span className="dot" />Intelligence &middot; Flow &middot; Trust</span>
           <h1 className="hero-h">Your whole business, in <em>one</em> flow.</h1>
           <p className="hero-sub">Xion ERP brings accounting, sales, inventory, CRM, manufacturing, projects and compliance into a single platform &mdash; so your numbers, stock and customers finally speak to each other. Built for growing GCC businesses, ready for e-invoicing.</p>
