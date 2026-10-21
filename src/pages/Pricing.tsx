@@ -20,7 +20,7 @@ const COMPARE_ROWS = [
 
 const FAQS = [
   { q: 'How does the 50% off first year offer work?', a: 'Choose any annual plan at checkout and your first 12 months are billed at half the standard annual rate. From year two onward, billing continues at the regular annual rate. The offer applies to new subscriptions only and can\u2019t be combined with other discounts.' },
-  { q: 'Do all plans include every module?', a: 'Yes. Every Xion ERP plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
+  { q: 'Do all plans include every module?', a: 'Yes. Every Xion ERP plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, manufacturing, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
   { q: 'Is Xion ERP really Fawtara-ready?', a: 'Xion ERP generates e-invoices in UBL 2.1 / Peppol BIS 3.0 format, aligned with Oman\u2019s Fawtara e-invoicing requirements ahead of the OTA phased rollout. See our Compliance page for the full timeline.' },
   { q: 'Can I switch between monthly and annual billing?', a: 'Yes, you can switch billing frequency at any time from your account settings. Moving to annual billing at any point qualifies you for the then-current seasonal offer, if one is active.' },
   { q: 'What happens after my 14-day trial?', a: 'You can pick any plan and continue seamlessly, or your workspace pauses (your data is kept safely) until you\u2019re ready to subscribe. No credit card is required to start the trial.' },
@@ -68,7 +68,7 @@ export default function Pricing() {
             <button className={'cur-btn' + (cur === 'qar' ? ' on' : '')} onClick={() => setCur('qar')}>QAR QR</button>
             <button className={'cur-btn' + (cur === 'lkr' ? ' on' : '')} onClick={() => setCur('lkr')}>LKR Rs</button>
           </div>
-          <div className="seat-note">Every plan includes <strong>all modules</strong> &mdash; accounting, sales, CRM, inventory, purchase, projects, assets and GCC e-invoicing. You only choose your team size.</div>
+          <div className="seat-note">Every plan includes <strong>all modules</strong> &mdash; accounting, sales, CRM, inventory, purchase, manufacturing, projects, assets and GCC e-invoicing. You only choose your team size.</div>
 
           <div className="seat-grid">
             {SEAT_TIERS.map((t, idx) => {
@@ -123,7 +123,7 @@ export default function Pricing() {
             </tbody>
           </table>
           <p className="pricing-foot" style={{ marginTop: 24 }}>
-            This is a snapshot &mdash; Xion ERP includes a full HRMS, recruitment/ATS, field sales app, and enterprise-grade approvals &amp; governance too. <Link to="/#features" style={{ color: 'var(--blue)', fontWeight: 600 }}>See the complete feature list &rarr;</Link>
+            This is a snapshot &mdash; Xion ERP includes a full HRMS, recruitment/ATS, manufacturing, a field sales app, and enterprise-grade approvals &amp; governance too. <Link to="/#features" style={{ color: 'var(--blue)', fontWeight: 600 }}>See the complete feature list &rarr;</Link>
           </p>
         </div>
       </section>

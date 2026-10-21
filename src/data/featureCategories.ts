@@ -89,6 +89,14 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
     highlightNote: 'A full maintenance / field-service management system — most ERPs don\u2019t offer this at all, let alone bundle it in.',
   },
   {
+    title: 'Manufacturing',
+    icon: MODULE_ICONS['Manufacturing'],
+    blurb: 'From raw material to finished goods — BOMs, work orders and production costing on the same stock and ledger.',
+    features: ['Multi-level bill of materials (BOM)', 'Work / production orders', 'Production planning & scheduling', 'Work centres, routing & operations', 'WIP tracking', 'Production costing — material, labour & overhead', 'Quality control inspections', 'Shop-floor job tracking, scrap & rework'],
+    highlight: true,
+    highlightNote: 'A real manufacturing module — BOM to finished goods with WIP costing — included in every plan, not sold as an add-on.',
+  },
+  {
     title: 'Project Management',
     icon: MODULE_ICONS['Project Management'],
     blurb: 'Tasks, milestones and costing tied back to the job.',

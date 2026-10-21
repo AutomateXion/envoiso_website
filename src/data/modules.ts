@@ -23,4 +23,5 @@ export const EVX_MODULES_OUTER: EvxModule[] = [
   { n: 'Maintenance', d: 'Service calls, AMC contracts, PM visits and technician productivity — run field service like a business, not a bolt-on to inventory.', svg: MODULE_ICONS['Maintenance'] },
   { n: 'Field Sales', d: 'A mobile-first rep app — quick orders, collections and live stock, built for reps working outside the office.', svg: MODULE_ICONS['Field Sales'] },
   { n: 'Point of Sale', d: 'A real point-of-sale, not a workaround — built for retail and counter sales, connected to the same stock and accounts.', svg: MODULE_ICONS['Point of Sale'] },
+  { n: 'Manufacturing', d: 'BOMs, work orders, routing and production costing — from raw material to finished goods, with WIP flowing straight into the same stock and ledger.', svg: MODULE_ICONS['Manufacturing'] },
 ];
