@@ -59,8 +59,8 @@
 .evx .hb-navy{background-image:linear-gradient(120deg,var(--navy-2) 0%,var(--navy) 55%,var(--blue) 140%)}
 .evx .hb-blue{background-image:linear-gradient(120deg,var(--navy) 0%,var(--blue) 70%,var(--blue-lt) 130%)}
 .evx .hb-orange{background-image:linear-gradient(120deg,var(--navy-2) 0%,#8f2d12 60%,var(--teal) 130%)}
-.evx .hb-has-img::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,37,104,.9) 0%,rgba(12,37,104,.72) 55%,rgba(12,37,104,.25) 100%)}
-.evx .hb-body{position:relative;max-width:620px}
+.evx .hb-has-img::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,31,92,.5) 0%,rgba(11,31,92,.3) 40%,rgba(11,31,92,0) 60%)}
+.evx .hb-body{position:relative;max-width:540px}
 .evx .hb-eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:5px 12px;border-radius:100px;margin-bottom:16px}
 .evx .hb-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,3.4vw,40px);line-height:1.08;letter-spacing:-.02em;margin:0 0 12px}
 .evx .hb-text{font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.86);margin:0 0 22px;max-width:56ch}
@@ -80,6 +80,8 @@
   .evx .hb{border-radius:16px;margin:16px 0 44px}
   .evx .hb-slide{grid-template-columns:1fr;padding:36px 24px 56px;min-height:0}
   .evx .hb-art{display:none}
+  .evx .hb-slide{background-position:left center}
+  .evx .hb-has-img::before{background:rgba(11,31,92,.3)}
   .evx .hb-arrow{display:none}
   .evx .hb-text{font-size:14.5px}
 }
