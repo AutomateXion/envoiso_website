@@ -1,4 +1,5 @@
 import { MODULE_ICONS } from './moduleIcons';
+import { whatsappUrl } from '../lib/whatsapp';
 
 /**
  * Home-page announcement carousel.
@@ -48,7 +49,7 @@ export const BANNERS: Banner[] = [
     eyebrow: 'New integration',
     title: 'WhatsApp API is live.',
     text: 'Invoices, payment reminders and order updates sent to customers on WhatsApp — straight from Xion ERP.',
-    cta: { label: 'Talk to us', to: '/contact' },
+    cta: { label: 'Chat on WhatsApp', href: whatsappUrl('Hi Xion ERP, I\u2019d like to know more about the WhatsApp integration.') },
     icon: MODULE_ICONS['CRM'],
     image: '/banner-3.jpg',
     theme: 'blue',

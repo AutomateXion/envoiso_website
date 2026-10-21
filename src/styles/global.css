@@ -376,3 +376,9 @@
   .evx .compare-table{display:block;overflow-x:auto}
 }
 @media(prefers-reduced-motion:reduce){.evx *{animation:none!important;transition:none!important}}
+
+/* ---------- Floating WhatsApp button ---------- */
+.evx .wa-fab{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border-radius:100px;background:#25D366;color:#fff;font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 12px 30px -10px rgba(37,211,102,.7),0 2px 6px rgba(0,0,0,.12);transition:transform .15s,box-shadow .15s}
+.evx .wa-fab:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(37,211,102,.8),0 2px 6px rgba(0,0,0,.14);color:#fff}
+.evx .wa-fab svg{width:26px;height:26px;flex-shrink:0}
+@media (max-width:720px){.evx .wa-fab{right:14px;bottom:14px;height:54px;width:54px;padding:0;justify-content:center}.evx .wa-fab-label{display:none}}

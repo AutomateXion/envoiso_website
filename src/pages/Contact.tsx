@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Mail, Phone, Pin, Clock, Check } from '../components/Icons';
+import { Mail, Phone, Pin, Clock, Check, Chat } from '../components/Icons';
 import { trackClick } from '../lib/analytics';
+import { whatsappUrl, WHATSAPP_DISPLAY } from '../lib/whatsapp';
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -40,6 +41,10 @@ export default function Contact() {
               <div className="contact-row">
                 <Phone />
                 <div><div className="clbl">Phone &mdash; Sri Lanka</div><div className="cval"><a href="tel:+94761949294" style={{ color: 'inherit', textDecoration: 'none' }}>+94 76 194 9294</a></div></div>
+              </div>
+              <div className="contact-row">
+                <Chat />
+                <div><div className="clbl">WhatsApp</div><div className="cval"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackClick('contact_whatsapp', 'WhatsApp (contact page)')} style={{ color: 'inherit', textDecoration: 'none' }}>{WHATSAPP_DISPLAY} &mdash; chat with us</a></div></div>
               </div>
               <div className="contact-row">
                 <Pin />

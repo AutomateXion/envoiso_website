@@ -79,7 +79,7 @@ export default function HeroBanners() {
                   {b.cta.to ? (
                     <Link className={ctaCls} to={b.cta.to} onClick={onCta} tabIndex={k === i ? 0 : -1}>{b.cta.label}</Link>
                   ) : (
-                    <a className={ctaCls} href={b.cta.href} onClick={onCta} tabIndex={k === i ? 0 : -1}>{b.cta.label}</a>
+                    <a className={ctaCls} href={b.cta.href} target="_blank" rel="noopener noreferrer" onClick={onCta} tabIndex={k === i ? 0 : -1}>{b.cta.label}</a>
                   )}
                 </div>
                 {b.icon && !b.image && (
