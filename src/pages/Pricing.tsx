@@ -74,7 +74,7 @@ export default function Pricing() {
             {SEAT_TIERS.map((t, idx) => {
               const base = priceList[idx];
               const showPromo = annual && PROMO.active;
-              const promo = promoAmount(base);
+              const promo = promoAmount(base, cur, idx);
               return (
                 <div className={'seat-tier' + (t.popular ? ' feat' : '')} key={t.name}>
                   {t.popular && <span className="tier-badge">Most popular</span>}

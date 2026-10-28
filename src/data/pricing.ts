@@ -40,6 +40,17 @@ export function formatAmount(value: number, currency: Currency): string {
   return value.toFixed(decimals);
 }
 
-export function promoAmount(value: number): number {
+// First-year prices that differ from the flat 50% discount, by currency and
+// tier index (0 Solo … 4 Enterprise). Anything not listed here gets PROMO.discount.
+export const PROMO_FIRST_YEAR: Partial<Record<Currency, Record<number, number>>> = {
+  qar: { 3: 199, 4: 349 },        // Growth, Enterprise (standard 288 / 397)
+  lkr: { 3: 19000, 4: 29000 },    // Growth, Enterprise (standard 23,999 / 31,999)
+};
+
+export function promoAmount(value: number, currency?: Currency, tierIndex?: number): number {
+  if (currency !== undefined && tierIndex !== undefined) {
+    const fixed = PROMO_FIRST_YEAR[currency]?.[tierIndex];
+    if (fixed !== undefined) return fixed;
+  }
   return value * (1 - PROMO.discount);
 }
