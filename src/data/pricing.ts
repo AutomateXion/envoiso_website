@@ -46,7 +46,7 @@ export const PROMO_FIRST_YEAR: Partial<Record<Currency, Record<number, number>>>
   usd: { 2: 23, 3: 55, 4: 96 },   // Business, Growth, Enterprise (standard 39 / 79 / 109)
   qar: { 2: 82, 3: 199, 4: 349 }, // Business, Growth, Enterprise (standard 142 / 288 / 397)
   omr: { 2: 10.9, 3: 21.9, 4: 36.9 }, // Business, Growth, Enterprise (standard 18.9 / 34.9 / 45.9)
-  lkr: { 2: 7500, 3: 19000, 4: 29000 }, // Business, Growth, Enterprise (standard 12,999 / 23,999 / 31,999)
+  lkr: { 2: 7500, 3: 17500, 4: 26250 }, // Business 7,500; Growth & Enterprise at Rs 1,750/user (standard 12,999 / 23,999 / 31,999)
 };
 
 export function promoAmount(value: number, currency?: Currency, tierIndex?: number): number {
