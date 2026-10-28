@@ -133,6 +133,22 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
     features: ['UBL 2.1 / PINT-OM structured invoices', 'Peppol-ready architecture', 'VAT reporting'],
   },
   {
+    title: 'WhatsApp Integration',
+    icon: MODULE_ICONS['WhatsApp'],
+    blurb: 'Your documents and your customer chats on WhatsApp — sent from, and answered in, Xion ERP.',
+    features: ['Send invoices, quotations & statements on WhatsApp', 'Payment reminders & account statements', 'E-signature & approval links delivered on WhatsApp', 'WhatsApp inbox — every chat, answered from Xion ERP', 'Photos, voice notes & documents in chat', 'Meta-approved message templates', 'Keep your WhatsApp Business app working on the same number', 'A number per salesman, with a shared company number'],
+    highlight: true,
+    highlightNote: 'Built on the official WhatsApp Business Platform (Meta Cloud API) — not a wa.me shortcut. Your number, your templates, your inbox.',
+  },
+  {
+    title: 'Claude AI Connector',
+    icon: MODULE_ICONS['Claude'],
+    blurb: 'Add Xion ERP to your own Claude as a connector and talk to your business data in plain language.',
+    features: ['Ask Claude: overdue receivables, sales summary, stock on hand', 'Customer statements, open invoices & recent receipts', 'Find customers & products by asking', 'Draft quotations, invoices, delivery notes & receipts', 'Every write is previewed, then confirmed — nothing posts by accident', 'Your own permissions apply, exactly as on screen', 'Uses your own Claude subscription — no extra AI fee', 'Writing is a per-company switch, off by default'],
+    highlight: true,
+    highlightNote: 'Your ERP as a Claude connector: sign in once, then ask questions or draft documents in chat. Reads are instant; writes need your confirmation.',
+  },
+  {
     title: 'Admin & Configuration',
     icon: MODULE_ICONS['Admin'],
     blurb: 'The settings that let you run this your way.',

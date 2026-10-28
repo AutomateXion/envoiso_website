@@ -24,4 +24,6 @@ export const EVX_MODULES_OUTER: EvxModule[] = [
   { n: 'Field Sales', d: 'A mobile-first rep app — quick orders, collections and live stock, built for reps working outside the office.', svg: MODULE_ICONS['Field Sales'] },
   { n: 'Point of Sale', d: 'A real point-of-sale, not a workaround — built for retail and counter sales, connected to the same stock and accounts.', svg: MODULE_ICONS['Point of Sale'] },
   { n: 'Manufacturing', d: 'BOMs, work orders, routing and production costing — from raw material to finished goods, with WIP flowing straight into the same stock and ledger.', svg: MODULE_ICONS['Manufacturing'] },
+  { n: 'WhatsApp', d: 'Send invoices, quotations, statements and reminders on WhatsApp straight from the document — and answer every customer chat from an inbox inside Xion ERP, on your own WhatsApp Business number.', svg: MODULE_ICONS['WhatsApp'] },
+  { n: 'Claude AI', d: 'Connect your own Claude to Xion ERP and ask it anything about your business — overdue receivables, sales, stock, statements — and even draft quotations and invoices, with every write previewed and confirmed first.', svg: MODULE_ICONS['Claude'] },
 ];
