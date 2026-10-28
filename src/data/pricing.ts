@@ -43,6 +43,7 @@ export function formatAmount(value: number, currency: Currency): string {
 // First-year prices that differ from the flat 50% discount, by currency and
 // tier index (0 Solo … 4 Enterprise). Anything not listed here gets PROMO.discount.
 export const PROMO_FIRST_YEAR: Partial<Record<Currency, Record<number, number>>> = {
+  usd: { 3: 55, 4: 96 },          // Growth, Enterprise (standard 79 / 109) — QAR figures at 3.64
   qar: { 3: 199, 4: 349 },        // Growth, Enterprise (standard 288 / 397)
   lkr: { 3: 19000, 4: 29000 },    // Growth, Enterprise (standard 23,999 / 31,999)
 };
