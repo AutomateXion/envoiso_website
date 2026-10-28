@@ -45,6 +45,7 @@ export function formatAmount(value: number, currency: Currency): string {
 export const PROMO_FIRST_YEAR: Partial<Record<Currency, Record<number, number>>> = {
   usd: { 3: 55, 4: 96 },          // Growth, Enterprise (standard 79 / 109) — QAR figures at 3.64
   qar: { 3: 199, 4: 349 },        // Growth, Enterprise (standard 288 / 397)
+  omr: { 3: 21.9, 4: 36.9 },      // Growth, Enterprise (standard 34.9 / 45.9) — USD 55 / 96 at 0.385
   lkr: { 3: 19000, 4: 29000 },    // Growth, Enterprise (standard 23,999 / 31,999)
 };
 
