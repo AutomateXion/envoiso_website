@@ -18,7 +18,8 @@ interface CurrencyBlock {
 export const PRICES: Record<Currency, CurrencyBlock> = {
   usd: { symbol: '$',      decimals: 0, monthly: [15, 29, 49, 99, 129],          annual: [12, 24, 39, 79, 109] },
   omr: { symbol: '\uFDFC ', decimals: 3, monthly: [7.9, 14.9, 22.9, 41.9, 55.9],    annual: [5.9, 11.9, 18.9, 34.9, 45.9] },
-  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [4999, 9999, 15999, 28999, 38999], annual: [3999, 7999, 12999, 23999, 31999] },
+  // LKR annual list = users x Rs 3,999 (Solo rate), so the strike-through shows the real per-user discount.
+  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [4999, 9999, 15999, 28999, 38999], annual: [3999, 11997, 19995, 39990, 59985] },
   // Proposed from the USD peg (~3.64 QAR/USD), rounded to whole riyals.
   // TODO: confirm/adjust these against your intended Qatar go-to-market pricing.
   qar: { symbol: 'QR ',    decimals: 2, monthly: [55, 106, 178, 360, 470],         annual: [44, 87, 142, 288, 397] },
@@ -46,7 +47,7 @@ export const PROMO_FIRST_YEAR: Partial<Record<Currency, Record<number, number>>>
   usd: { 2: 23, 3: 55, 4: 96 },   // Business, Growth, Enterprise (standard 39 / 79 / 109)
   qar: { 2: 82, 3: 199, 4: 349 }, // Business, Growth, Enterprise (standard 142 / 288 / 397)
   omr: { 2: 10.9, 3: 21.9, 4: 36.9 }, // Business, Growth, Enterprise (standard 18.9 / 34.9 / 45.9)
-  lkr: { 2: 7500, 3: 17500, 4: 26250 }, // Business 7,500; Growth & Enterprise at Rs 1,750/user (standard 12,999 / 23,999 / 31,999)
+  lkr: { 1: 4000, 2: 7500, 3: 17500, 4: 26250 }, // Team 4,000; Business 7,500; Growth & Enterprise at Rs 1,750/user
 };
 
 export function promoAmount(value: number, currency?: Currency, tierIndex?: number): number {
