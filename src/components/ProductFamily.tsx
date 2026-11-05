@@ -1,30 +1,10 @@
 /* ProductFamily — Xion product suite section for xionerp.com
-   Shows all three Xion products with correct mark geometry.
-   Mark: two fat pills + one thin bar, same rotation, pill offset up/down.
-   Only accent colors change per product.
+   Uses the real XionERP artwork (logo-horizontal.png). Connect/Transform marks are
+   the same artwork recoloured (mark-connect.png / mark-transform.png).
 */
 
-const Mark = ({
-  pill,
-  bar,
-  size = 48,
-}: {
-  pill: string;
-  bar: string;
-  size?: number;
-}) => (
-  <svg
-    viewBox="0 0 100 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    style={{ flexShrink: 0 }}
-  >
-    <rect x="22" y="10" width="40" height="22" rx="11" transform="rotate(40 50 50)" fill={pill} />
-    <rect x="38" y="68" width="40" height="22" rx="11" transform="rotate(40 50 50)" fill={pill} />
-    <rect x="10" y="45" width="80" height="10" rx="5" transform="rotate(40 50 50)" fill={bar} />
-  </svg>
+const Mark = ({ src, size = 48 }: { src: string; size?: number }) => (
+  <img src={src} alt="" width={size} height={size} style={{ flexShrink: 0, objectFit: 'contain' }} />
 );
 
 const PRODUCTS = [
@@ -32,8 +12,7 @@ const PRODUCTS = [
     name: 'XionERP',
     xion: 'Xion',
     suffix: 'ERP',
-    pill: '#6b9fe4',
-    bar: '#1a2f6e',
+    logo: '/logo-horizontal.png',
     accentColor: '#5B7186',
     badge: 'LIVE · SAAS ERP',
     badgeStyle: { background: 'rgba(16,48,128,0.1)', color: '#103080' },
@@ -47,8 +26,7 @@ const PRODUCTS = [
     name: 'XionConnect',
     xion: 'Xion',
     suffix: 'Connect',
-    pill: '#34d399',
-    bar: '#065f46',
+    mark: '/mark-connect.png',
     accentColor: '#10b981',
     badge: 'NEW · OMNICHANNEL',
     badgeStyle: { background: 'rgba(6,95,70,0.1)', color: '#065f46' },
@@ -62,8 +40,7 @@ const PRODUCTS = [
     name: 'XionTransform',
     xion: 'Xion',
     suffix: 'Transform',
-    pill: '#a78bfa',
-    bar: '#3b0764',
+    mark: '/mark-transform.png',
     accentColor: '#7c3aed',
     badge: 'PLATFORM · CDO TOOL',
     badgeStyle: { background: 'rgba(59,7,100,0.1)', color: '#3b0764' },
@@ -110,20 +87,17 @@ export default function ProductFamily() {
               }}
             >
               {/* Logo row */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                <Mark pill={p.pill} bar={p.bar} size={48} />
-                <div
-                  style={{
-                    fontSize: 24,
-                    fontWeight: 800,
-                    letterSpacing: '-0.02em',
-                    lineHeight: 1,
-                  }}
-                >
-                  <span style={{ color: '#103080' }}>{p.xion}</span>
-                  <span style={{ color: p.accentColor }}>{p.suffix}</span>
+              {p.logo ? (
+                <img src={p.logo} alt={p.name} style={{ height: 48, width: 'auto', alignSelf: 'flex-start' }} />
+              ) : (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                  <Mark src={p.mark!} size={48} />
+                  <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1 }}>
+                    <span style={{ color: '#103080' }}>{p.xion}</span>
+                    <span style={{ color: p.accentColor }}>{p.suffix}</span>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Badge */}
               <div
