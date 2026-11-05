@@ -10,6 +10,7 @@ const LINKS = [
   { to: '/#features', label: 'Product', match: '/' },
   { to: '/pricing', label: 'Pricing', match: '/pricing' },
   { to: '/compliance', label: 'Compliance', match: '/compliance' },
+  { to: '/#products', label: 'Products', match: '/' },
   { to: '/about', label: 'About', match: '/about' },
   { to: '/contact', label: 'Contact', match: '/contact' },
 ];

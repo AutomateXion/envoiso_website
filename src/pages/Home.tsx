@@ -6,6 +6,7 @@ import HeroBanners from '../components/HeroBanners';
 import { APP_SIGNUP_URL } from '../components/Nav';
 import { trackClick } from '../lib/analytics';
 import { Link } from 'react-router-dom';
+import ProductFamily from '../components/ProductFamily';
 
 const TRUST_LOGOS = [
   { src: '/logo-shell.png', alt: 'Shell Oman Marketing' },
@@ -139,6 +140,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ProductFamily />
 
       <section className="final">
         <div className="wrap">
