@@ -360,6 +360,19 @@
 .evx .cat-a li svg{width:15px;height:15px;color:var(--teal-dark);flex-shrink:0;margin-top:2px}
 
 
+@media(max-width:480px){
+  .evx .wrap{padding:0 16px}
+  .evx .nav-in{gap:8px}
+  .evx .brand-logo{height:26px}
+  .evx .nav-in .btn{padding:8px 12px;font-size:13px;white-space:nowrap}
+  .evx .nav-toggle{padding:6px}
+}
+
+@media(max-width:360px){
+  .evx .brand-logo{height:22px}
+  .evx .nav-in .btn{padding:7px 10px;font-size:12.5px}
+}
+
 @media(max-width:880px){
   .evx .nav-links{display:none}
   .evx .nav-toggle{display:block}
