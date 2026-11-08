@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, Pin, Clock, Check, Chat } from '../components/Icons';
 import { trackClick } from '../lib/analytics';
-import { whatsappUrl, WHATSAPP_DISPLAY } from '../lib/whatsapp';
-import { openWhatsAppChat } from '../components/WhatsAppButton';
+import { whatsappUrl, WHATSAPP_DISPLAY, openWhatsAppChat } from '../lib/whatsapp';
 
 export default function Contact() {
   const [sent, setSent] = useState(false);

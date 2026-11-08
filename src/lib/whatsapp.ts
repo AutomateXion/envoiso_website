@@ -12,3 +12,8 @@ const DEFAULT_MESSAGE = 'Hi XionERP';
 export function whatsappUrl(message: string = DEFAULT_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
+
+/** Opens WhatsApp with "Hi XionERP" pre-filled, which starts the enquiry flow. */
+export function openWhatsAppChat() {
+  window.open(whatsappUrl(), '_blank', 'noopener');
+}

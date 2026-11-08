@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
 import AnnouncementBar from './components/AnnouncementBar';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
@@ -59,7 +58,6 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 }

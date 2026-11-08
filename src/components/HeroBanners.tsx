@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BANNERS } from '../data/banners';
 import { trackClick } from '../lib/analytics';
-import { openWhatsAppChat } from './WhatsAppButton';
+import { openWhatsAppChat } from '../lib/whatsapp';
 
 const INTERVAL_MS = 6000;
 
