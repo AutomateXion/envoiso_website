@@ -40,10 +40,6 @@ export default function Contact() {
                 <div><div className="clbl">Phone &mdash; Oman</div><div className="cval"><a href="tel:+96897696968" style={{ color: 'inherit', textDecoration: 'none' }}>+968 9769 6968</a></div></div>
               </div>
               <div className="contact-row">
-                <Phone />
-                <div><div className="clbl">Phone &mdash; Sri Lanka</div><div className="cval"><a href="tel:+94761949294" style={{ color: 'inherit', textDecoration: 'none' }}>+94 76 194 9294</a></div></div>
-              </div>
-              <div className="contact-row">
                 <Chat />
                 <div><div className="clbl">WhatsApp</div><div className="cval"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); trackClick('contact_whatsapp', 'WhatsApp (contact page)'); openWhatsAppChat(); }} style={{ color: 'inherit', textDecoration: 'none' }}>{WHATSAPP_DISPLAY} &mdash; chat with us</a></div></div>
               </div>
