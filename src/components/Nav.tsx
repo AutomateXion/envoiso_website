@@ -12,6 +12,7 @@ const LINKS = [
   { to: '/compliance', label: 'Compliance', match: '/compliance' },
   { to: '/#products', label: 'Products', match: '/' },
   { to: '/about', label: 'About', match: '/about' },
+  { to: '/careers', label: 'Careers', match: '/careers' },
   { to: '/contact', label: 'Contact', match: '/contact' },
 ];
 

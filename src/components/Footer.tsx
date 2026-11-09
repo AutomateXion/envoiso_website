@@ -18,6 +18,7 @@ export default function Footer() {
           <div className="foot-col">
             <h4>Company</h4>
             <Link to="/about">About</Link>
+            <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
             <a href="mailto:info@automatexion.com">Partners</a>
           </div>
