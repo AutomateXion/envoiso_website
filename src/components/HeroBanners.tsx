@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BANNERS } from '../data/banners';
 import { trackClick } from '../lib/analytics';
-import { openWhatsAppChat } from '../lib/whatsapp';
+import { openWhatsAppChat, openWebChat } from '../lib/whatsapp';
 
 const INTERVAL_MS = 6000;
 
@@ -74,10 +74,17 @@ export default function HeroBanners() {
                 style={b.image ? { backgroundImage: `url(${b.image})` } : undefined}
               >
                 <div className="hb-body">
+                  {b.logo && (
+                    <a className="hb-logo" href={b.logo.href} target="_blank" rel="noopener noreferrer" aria-label={b.logo.alt} tabIndex={k === i ? 0 : -1} onClick={() => trackClick(`banner_${k + 1}_logo`, `Banner logo: ${b.logo!.alt}`)}>
+                      <img src={b.logo.src} alt={b.logo.alt} />
+                    </a>
+                  )}
                   <span className="hb-eyebrow">{b.eyebrow}</span>
                   <h2 className="hb-title">{b.title}</h2>
                   <p className="hb-text">{b.text}</p>
-                  {b.cta.action === 'whatsapp-chat' ? (
+                  {b.cta.action === 'web-chat' ? (
+                    <button type="button" className={ctaCls} onClick={() => { onCta(); openWebChat(); }} tabIndex={k === i ? 0 : -1}>{b.cta.label}</button>
+                  ) : b.cta.action === 'whatsapp-chat' ? (
                     <button type="button" className={ctaCls} onClick={() => { onCta(); openWhatsAppChat(); }} tabIndex={k === i ? 0 : -1}>{b.cta.label}</button>
                   ) : b.cta.to ? (
                     <Link className={ctaCls} to={b.cta.to} onClick={onCta} tabIndex={k === i ? 0 : -1}>{b.cta.label}</Link>

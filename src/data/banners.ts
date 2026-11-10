@@ -20,7 +20,9 @@ export interface Banner {
   eyebrow: string;
   title: string;
   text: string;
-  cta: { label: string; to?: string; href?: string; action?: 'whatsapp-chat' };
+  cta: { label: string; to?: string; href?: string; action?: 'whatsapp-chat' | 'web-chat' };
+  /** optional product logo shown above the eyebrow, linking to `logo.href` */
+  logo?: { src: string; alt: string; href: string };
   icon?: string;
   image?: string;
   theme?: 'navy' | 'blue' | 'orange';
@@ -49,7 +51,8 @@ export const BANNERS: Banner[] = [
     eyebrow: 'New integration',
     title: 'WhatsApp API is live.',
     text: 'Invoices, payment reminders and order updates sent to customers on WhatsApp — straight from Xion ERP.',
-    cta: { label: 'Chat with us', action: 'whatsapp-chat' },
+    cta: { label: 'Chat with us', action: 'web-chat' },
+    logo: { src: '/logo-connect-horizontal.png', alt: 'XionConnect', href: 'https://www.automatexion.com/xionconnect.html' },
     icon: MODULE_ICONS['CRM'],
     image: '/banner-3.jpg',
     theme: 'blue',

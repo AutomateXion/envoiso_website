@@ -17,3 +17,14 @@ export function whatsappUrl(message: string = DEFAULT_MESSAGE): string {
 export function openWhatsAppChat() {
   window.open(whatsappUrl(), '_blank', 'noopener');
 }
+
+/**
+ * Opens the XionERP website chat widget (the floating bubble loaded from cloud.xionerp.com)
+ * by pressing its launcher. If the widget is not on the page yet, falls back to WhatsApp.
+ */
+export function openWebChat() {
+  const root = document.querySelector('.xwc-root');
+  const launcher = root?.querySelector<HTMLElement>('[class*="bubble"], [class*="launcher"], [class*="fab"], button');
+  if (launcher) launcher.click();
+  else openWhatsAppChat();
+}
