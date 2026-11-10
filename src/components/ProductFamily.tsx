@@ -33,7 +33,7 @@ const PRODUCTS = [
     desc: 'A unified omnichannel social platform connecting WhatsApp, Instagram, Facebook, and beyond into a single intelligent inbox — with automation, analytics, and AI-driven engagement built in.',
     tags: ['WhatsApp Business', 'Instagram DMs', 'Facebook Messenger', 'AI Automation'],
     cta: 'Learn more →',
-    ctaHref: 'https://www.automatexion.com/#xionconnect',
+    ctaHref: 'https://www.automatexion.com/xionconnect.html',
     ctaStyle: { color: '#10b981' },
   },
   {
