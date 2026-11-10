@@ -58,6 +58,16 @@ export const BANNERS: Banner[] = [
     theme: 'blue',
   },
   {
+    eyebrow: 'New module',
+    title: 'Your online shop, run from XionERP.',
+    text: 'Xion Webstore shows the items, prices and stock already in XionERP, and web orders land as sales documents.',
+    cta: { label: 'See Xion Webstore', href: 'https://www.automatexion.com/xionwebstore.html' },
+    logo: { src: '/logo-webstore-horizontal.png', alt: 'Xion Webstore', href: 'https://www.automatexion.com/xionwebstore.html' },
+    icon: MODULE_ICONS['CRM'],
+    image: '/banner-6.jpg',
+    theme: 'blue',
+  },
+  {
     eyebrow: 'Included, no extra cost',
     title: 'HRMS and field sales, built in.',
     text: 'Payroll, attendance and leave, plus a mobile app for reps on the road — modules most ERPs sell separately.',
