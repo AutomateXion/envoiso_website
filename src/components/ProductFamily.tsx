@@ -50,6 +50,20 @@ const PRODUCTS = [
     ctaHref: 'https://www.automatexion.com/#products',
     ctaStyle: { color: '#7c3aed' },
   },
+  {
+    name: 'Xion Webstore',
+    xion: 'Xion',
+    suffix: 'Webstore',
+    mark: '/mark-webstore.png',
+    accentColor: '#ea580c',
+    badge: 'NEW · ONLINE STORE MODULE',
+    badgeStyle: { background: 'rgba(194,65,12,0.1)', color: '#c2410c' },
+    desc: 'An online shop run from the XionERP you already use. Items, prices and stock come straight from XionERP, and web orders land as sales orders and quotations — no second system to keep up to date.',
+    tags: ['Prices & stock from XionERP', 'Cash on delivery', 'Request a quote', 'WooCommerce import'],
+    cta: 'Learn more →',
+    ctaHref: 'https://www.automatexion.com/xionwebstore.html',
+    ctaStyle: { color: '#ea580c' },
+  },
 ];
 
 export default function ProductFamily() {
@@ -58,7 +72,7 @@ export default function ProductFamily() {
       <div className="wrap">
         <div className="sec-head">
           <div className="sec-eyebrow">The Xion Family</div>
-          <h2 className="sec-h">Three products. One mission.</h2>
+          <h2 className="sec-h">Four products. One mission.</h2>
           <p className="sec-sub">
             AutomateXion builds purpose-built software for the challenges modern businesses face —
             each product solving a distinct problem, all sharing the same commitment to automation and intelligence.
