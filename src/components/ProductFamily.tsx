@@ -87,6 +87,7 @@ export default function ProductFamily() {
               }}
             >
               {/* Logo row */}
+              <a href={p.ctaHref} aria-label={p.name} style={{ textDecoration: 'none', alignSelf: 'flex-start', display: 'block' }}>
               {p.logo ? (
                 <img src={p.logo} alt={p.name} style={{ height: 48, width: 'auto', alignSelf: 'flex-start' }} />
               ) : (
@@ -98,6 +99,7 @@ export default function ProductFamily() {
                   </div>
                 </div>
               )}
+              </a>
 
               {/* Badge */}
               <div
