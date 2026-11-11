@@ -11,6 +11,7 @@ import ProductFamily from '../components/ProductFamily';
 const TRUST_LOGOS = [
   { src: '/logo-shell.png', alt: 'Shell Oman Marketing' },
   { src: '/logo-royce.jpeg', alt: 'Royce World Group' },
+  { src: '/logo-viking.png', alt: 'Viking' },
   { src: '/logo-hs.jpeg', alt: 'HS' },
   { src: '/logo-gs.png', alt: 'GS Group' },
   { src: '/logo-notebooklk.png', alt: 'notebook.lk', cls: 'logo-img logo-img--badge' },
@@ -18,7 +19,6 @@ const TRUST_LOGOS = [
   { src: '/logo-noir.png', alt: 'NOIR' },
   { src: '/logo-sabaragamuwa.png', alt: 'Sabaragamuwa Enterprises' },
   { src: '/logo-trichy.png', alt: 'Trichy Trading' },
-  { src: '/logo-viking.png', alt: 'Viking' },
 ];
 
 export default function Home() {
