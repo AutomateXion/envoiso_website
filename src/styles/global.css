@@ -173,11 +173,11 @@
 .evx .evx-ring-outer{stroke:#E4572E;stroke-width:2;stroke-dasharray:5 11;opacity:.5;animation:evx-spin-rev 56s linear infinite}
 @keyframes evx-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @keyframes evx-spin-rev{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
-.evx .evx-node{cursor:pointer;transition:transform .18s;outline:none}
+.evx .evx-node{cursor:pointer;transition:transform .18s;outline:none;transform-box:fill-box;transform-origin:center}
 .evx .evx-node:hover{transform:scale(1.06)}
 .evx .evx-node circle{transition:fill .18s}
 .evx .evx-node:focus-visible circle{stroke-width:2.5}
-.evx .evx-const-info{text-align:center;min-height:54px;margin-top:18px;max-width:440px;margin-left:auto;margin-right:auto}
+.evx .evx-const-info{text-align:center;min-height:150px;margin-top:18px;max-width:440px;margin-left:auto;margin-right:auto}
 .evx .evx-const-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#B8390F;background:#FDEEE7;border:1px solid #F4CBB5;padding:3px 10px;border-radius:100px;margin-bottom:8px}
 .evx .evx-const-info h4{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:4px}
 .evx .evx-const-info p{font-size:14px;color:var(--muted);line-height:1.55}
