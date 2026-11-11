@@ -18,6 +18,7 @@ const TRUST_LOGOS = [
   { src: '/logo-noir.png', alt: 'NOIR' },
   { src: '/logo-sabaragamuwa.png', alt: 'Sabaragamuwa Enterprises' },
   { src: '/logo-trichy.png', alt: 'Trichy Trading' },
+  { src: '/logo-viking.png', alt: 'Viking' },
 ];
 
 export default function Home() {
