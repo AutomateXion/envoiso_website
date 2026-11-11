@@ -11,6 +11,9 @@ export default function AnnouncementBar() {
       <a href="https://www.automatexion.com/xionconnect.html" className="ann-connect" aria-label="XionConnect" title="Also from Xion: XionConnect">
         <img src="/logo-connect-horizontal.png" alt="XionConnect" />
       </a>
+      <a href="https://www.automatexion.com/xionwebstore.html" className="ann-connect" aria-label="Xion Webstore" title="Also from Xion: Xion Webstore">
+        <img src="/logo-webstore-horizontal.png" alt="Xion Webstore" />
+      </a>
     </div>
   );
 }
