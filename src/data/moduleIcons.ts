@@ -28,6 +28,8 @@ export const MODULE_ICONS: Record<string, string> = {
   'Manufacturing': '<path d="M6 42V22l10-7v7l10-7v7l10-7v7l8-5v25Z" fill="#103080"></path><rect x="10" y="4" width="6" height="14" rx="2" fill="#5090F0"></rect><rect x="11" y="30" width="6" height="6" rx="1.5" fill="#ffffff"></rect><rect x="21" y="30" width="6" height="6" rx="1.5" fill="#ffffff"></rect><rect x="31" y="30" width="6" height="6" rx="1.5" fill="#ffffff"></rect><circle cx="38" cy="12" r="7" fill="#E4572E" stroke="#ffffff" stroke-width="2.5"></circle><circle cx="38" cy="12" r="2.2" fill="#ffffff"></circle>',
   // Official WhatsApp app icon (Meta brand asset), used as-is.
   'WhatsApp': '<image href="/logo-whatsapp.png" x="4" y="4" width="40" height="40"></image>',
+  // Xion Webstore: the XionERP mark in the Webstore colours (existing brand file).
+  'Xion Webstore': '<image href="/mark-webstore.png" x="2" y="2" width="44" height="44"></image>',
   // Official Claude app icon (Anthropic brand asset), used as-is.
   'Claude': '<image href="/logo-claude.png" x="4" y="4" width="40" height="40"></image>',
   'Documents': '<path d="M4 12C4 9.8 5.8 8 8 8H18L22 12H40C42.2 12 44 13.8 44 16V36C44 38.2 42.2 40 40 40H8C5.8 40 4 38.2 4 36V12Z" fill="#103080"></path><rect x="4" y="16" width="40" height="4" fill="#5090F0"></rect><circle cx="35" cy="30" r="7" fill="#E4572E" stroke="#ffffff" stroke-width="2.5"></circle>',
