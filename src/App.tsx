@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Solution from './pages/Solution';
 import Seo from './components/Seo';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
@@ -60,6 +61,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/solutions/:slug" element={<Solution />} />
       </Routes>
       <Footer />
     </div>

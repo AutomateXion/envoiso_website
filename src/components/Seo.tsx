@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import seo from '../data/seo.json';
+import sol from '../data/solutions.json';
 
 type Entry = { title: string; description: string };
-const routes = seo.routes as Record<string, Entry>;
+const routes: Record<string, Entry> = { ...(seo.routes as Record<string, Entry>) };
+for (const s of sol.solutions) routes['/solutions/' + s.slug] = { title: s.title, description: s.description };
 
 function setMeta(sel: string, attr: string, val: string, create: () => HTMLElement) {
   let el = document.head.querySelector(sel) as HTMLElement | null;

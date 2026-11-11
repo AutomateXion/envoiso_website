@@ -5,10 +5,21 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const seo = JSON.parse(readFileSync('src/data/seo.json', 'utf8'));
+const sol = JSON.parse(readFileSync('src/data/solutions.json', 'utf8'));
+for (const s of sol.solutions) {
+  seo.routes['/solutions/' + s.slug] = {
+    title: s.title, description: s.description, h1: s.h1,
+    summary: s.intro + ' ' + s.groups.map((g) => g.heading + ': ' + g.items.join(', ') + '.').join(' ') + ' ' + s.faqs.map((f) => f.q + ' ' + f.a).join(' '),
+    solution: true,
+  };
+}
 const dist = 'dist';
 const base = readFileSync(join(dist, 'index.html'), 'utf8');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 const nav = Object.entries(seo.routes).map(([p, r]) => `<a href="${p}">${esc(r.h1)}</a>`).join(' ');
+const today = new Date().toISOString().slice(0, 10);
+const prio = { '/': '1.0', '/pricing': '0.9', '/compliance': '0.9' };
+writeFileSync(join(dist, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + Object.entries(seo.routes).map(([p, r]) => `  <url><loc>${seo.origin}${p}</loc><lastmod>${today}</lastmod><priority>${prio[p] || (r.solution ? '0.8' : '0.6')}</priority></url>`).join('\n') + '\n</urlset>\n');
 
 function page(path, r) {
   const url = seo.origin + (path === '/' ? '/' : path);

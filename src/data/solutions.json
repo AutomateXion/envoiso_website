@@ -1,0 +1,143 @@
+{
+  "solutions": [
+    {
+      "slug": "accounting-and-e-invoicing",
+      "title": "Accounting & E-Invoicing Software for the GCC | XionERP",
+      "description": "Cloud accounting, invoicing and e-invoicing for GCC businesses: general ledger, VAT returns, multi-currency and OMR to three decimals, in one ERP.",
+      "eyebrow": "Accounting & e-invoicing",
+      "h1": "Accounting and e-invoicing software built for the GCC",
+      "intro": "XionERP gives growing GCC businesses a general ledger that every other module posts back to, invoicing that runs from quotation to receipt, and e-invoicing built for Oman's requirements. Multi-currency and three-decimal OMR are native, not bolted on.",
+      "groups": [
+        { "heading": "Accounting & finance", "blurb": "The financial core every other module posts back to.", "items": ["Chart of accounts", "General ledger", "Journal vouchers", "Trial balance", "Multi-currency and exchange rates", "Bank and cash accounts", "Received cheques (PDC) tracking"] },
+        { "heading": "Invoicing & billing", "blurb": "From quote to cash, fully connected to the ledger.", "items": ["Quotations", "Sales invoices", "Receipts", "Sales returns", "GCC e-invoicing in UBL 2.1 format"] },
+        { "heading": "Financial reporting", "blurb": "Reports generated live, not exported and patched up.", "items": ["Profit and loss", "Balance sheet", "Cash flow", "VAT return", "AR and AP aging", "Bank reconciliation", "Budget vs. actual", "Day book"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP support three-decimal OMR?", "a": "Yes. The general ledger and trial balance work to three decimals, and XionERP also supports USD, LKR and other regional currencies with exchange rates." },
+        { "q": "Which e-invoice format does XionERP generate?", "a": "XionERP generates structured e-invoices in UBL 2.1 format, with Peppol BIS 3.0 and PINT-OM alignment for Oman. See the compliance guide for the rollout timeline." },
+        { "q": "Can I produce a VAT return from XionERP?", "a": "Yes. VAT return is one of the financial reports, alongside profit and loss, balance sheet, cash flow, AR and AP aging and bank reconciliation." },
+        { "q": "Do sales and purchases post to the ledger automatically?", "a": "Yes. Accounting is the financial core that every other module posts back to, so invoices, receipts and supplier bills land in the same ledger." }
+      ],
+      "related": ["inventory-and-warehouse-management", "whatsapp-erp-integration", "field-sales-and-crm"]
+    },
+    {
+      "slug": "inventory-and-warehouse-management",
+      "title": "Inventory & Warehouse Management Software | XionERP",
+      "description": "Multi-warehouse inventory, purchasing and stock analytics in one cloud ERP, with FIFO or average costing and stock that stays in step with sales and accounts.",
+      "eyebrow": "Inventory & warehouse",
+      "h1": "Inventory and warehouse management that stays accurate",
+      "intro": "XionERP tracks stock across multiple warehouses and locations with FIFO or average costing, and connects purchasing, delivery and sales to the same stock and ledger, so you do not need a recount to trust the numbers.",
+      "groups": [
+        { "heading": "Inventory & warehouse", "blurb": "Multi-location stock that stays accurate without a recount.", "items": ["Products", "Delivery notes", "Multiple warehouses and locations", "Stock transfers", "Stock adjustments", "Reorder management"] },
+        { "heading": "Purchase & procurement", "blurb": "RFQ through to supplier payment, matched at every step.", "items": ["RFQs", "Vendor quotes", "Purchase orders", "Goods receipt (GRN)", "Purchase invoices and returns", "Payment vouchers", "Supplier management"] },
+        { "heading": "Stock & sales analytics", "blurb": "See what is moving, what is not, and who sold it.", "items": ["Stock valuation", "Stock movement and summary", "Stock by location", "Sales vs. target", "Salesman performance", "Item profile report"] }
+      ],
+      "faqs": [
+        { "q": "Can XionERP manage more than one warehouse?", "a": "Yes. XionERP supports multiple warehouses and locations, stock transfers between them, and delivery tracking that is kept separate from stock counts." },
+        { "q": "Which inventory costing methods are supported?", "a": "XionERP supports FIFO and average costing for multi-location stock." },
+        { "q": "Does purchasing match goods received against supplier invoices?", "a": "Yes. Purchase orders, goods receipt and supplier invoices are matched, from RFQ through to supplier payment." },
+        { "q": "Can I see stock valuation and movement reports?", "a": "Yes. Stock valuation, stock movement and summary, and stock by location are available as live reports." }
+      ],
+      "related": ["accounting-and-e-invoicing", "manufacturing-erp", "online-store-for-erp"]
+    },
+    {
+      "slug": "field-sales-and-crm",
+      "title": "Field Sales App & CRM for Sales Teams | XionERP",
+      "description": "A mobile-first field sales app with quick orders, collections and live stock, plus CRM for leads, contacts and pipeline, all connected to your ERP.",
+      "eyebrow": "Field sales & CRM",
+      "h1": "A field sales app and CRM connected to your stock and accounts",
+      "intro": "Reps working outside the office get quick order entry, collections and live product availability on their phones, while the office sees leads, contacts and the sales pipeline in the same system that holds stock and the ledger.",
+      "groups": [
+        { "heading": "Field sales", "blurb": "A mobile-first toolkit for reps working outside the office.", "items": ["Rep dashboard", "Quick order entry", "My orders", "Collections and collection vouchers", "Customer snapshot", "Live product availability"] },
+        { "heading": "Sales & CRM", "blurb": "Pipeline, contacts and activity in one thread.", "items": ["CRM dashboard", "Leads", "Contacts", "Activities and tasks", "Sales pipeline"] },
+        { "heading": "Sales analytics", "blurb": "See who sold what against target.", "items": ["Sales report", "Sales vs. target", "Salesman performance"] }
+      ],
+      "faqs": [
+        { "q": "Is there a separate mobile app for sales reps?", "a": "Field Sales is a mobile-first rep app inside XionERP, covering quick orders, collections and live stock for reps working outside the office." },
+        { "q": "Can reps see live stock before taking an order?", "a": "Yes. Live product availability is part of the field sales toolkit, so reps quote against the stock you actually have." },
+        { "q": "Does XionERP include a CRM?", "a": "Yes. CRM covers leads, contacts, activities and tasks, and a sales pipeline from first touch to close." },
+        { "q": "Can I track how each salesperson is performing?", "a": "Yes. Sales vs. target and salesman performance reports are included." }
+      ],
+      "related": ["whatsapp-erp-integration", "inventory-and-warehouse-management", "accounting-and-e-invoicing"]
+    },
+    {
+      "slug": "hr-payroll-and-recruitment",
+      "title": "HR, Payroll & Recruitment Software | XionERP",
+      "description": "A full HRMS with attendance, leave, payroll and performance, plus recruitment and approval workflows, included in your ERP rather than sold separately.",
+      "eyebrow": "HR, payroll & recruitment",
+      "h1": "HR, payroll and recruitment in the same system as your accounts",
+      "intro": "XionERP includes a complete HR system with employee records, attendance, leave, payroll and performance, an applicant-tracking system for hiring, and configurable approvals with a full audit trail.",
+      "groups": [
+        { "heading": "HR & payroll", "blurb": "A full HR system, not a bolt-on employee list.", "items": ["Employee records", "Attendance and shifts", "Leave types, requests and approvals", "Payroll and payroll components", "Organization structure", "Performance goals, cycles and reviews"] },
+        { "heading": "Recruitment", "blurb": "From job description to signed offer, tracked end to end.", "items": ["Candidate pipeline", "Interview scheduling", "Job descriptions and JD library", "Offer management", "Onboarding", "Public careers and apply page", "Manpower requisitions"] },
+        { "heading": "Approvals & governance", "blurb": "Control who can do what, and see who did what.", "items": ["Configurable approval workflows", "Approval inbox", "Full audit trail", "Granular permission matrix", "User groups and roles"] }
+      ],
+      "faqs": [
+        { "q": "Is HR included in XionERP or sold separately?", "a": "HR and payroll are part of the platform. Every XionERP plan includes the full platform, and plans differ only by the number of user seats." },
+        { "q": "Can XionERP run payroll?", "a": "Yes. HR includes payroll and payroll components alongside employee records, attendance and shifts." },
+        { "q": "Does it include an applicant-tracking system?", "a": "Yes. Recruitment covers the candidate pipeline, interview scheduling, offers, onboarding and a public careers page." },
+        { "q": "Can I require approvals for leave and other requests?", "a": "Yes. Configurable approval workflows and an approval inbox are included, with a full audit trail of who did what." }
+      ],
+      "related": ["accounting-and-e-invoicing", "field-sales-and-crm", "manufacturing-erp"]
+    },
+    {
+      "slug": "manufacturing-erp",
+      "title": "Manufacturing ERP with BOM & Costing | XionERP",
+      "description": "Cloud manufacturing ERP with multi-level BOMs, work orders, routing and production costing, on the same stock and ledger as the rest of your business.",
+      "eyebrow": "Manufacturing & maintenance",
+      "h1": "Manufacturing ERP, from raw material to finished goods",
+      "intro": "XionERP's manufacturing module runs bills of materials, production orders and routing, and flows work in progress straight into the same stock and ledger. For service-led businesses, a maintenance module covers service calls, AMC contracts and technicians.",
+      "groups": [
+        { "heading": "Manufacturing", "blurb": "BOMs, work orders and production costing on the same stock and ledger.", "items": ["Multi-level bill of materials (BOM)", "Work and production orders", "Production planning and scheduling", "Work centres, routing and operations", "WIP tracking", "Production costing for material, labour and overhead", "Quality control inspections", "Shop-floor job tracking, scrap and rework"] },
+        { "heading": "Maintenance & field service", "blurb": "Service calls, contracts and technicians run as a business.", "items": ["Service calls and service board", "Machine registry", "Preventive maintenance visits", "AMC contracts with billing and packages", "Rental tracking", "Technician productivity and job assignment", "Spare parts"] },
+        { "heading": "Fixed assets", "blurb": "Assets tracked from purchase to depreciation to disposal.", "items": ["Fixed asset register with GPS tracking", "Automated depreciation journals", "Maintenance scheduling", "Consumables tracking"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP support multi-level BOMs?", "a": "Yes. Manufacturing includes multi-level bills of materials, work and production orders, routing and operations." },
+        { "q": "Does it cost production?", "a": "Yes. Production costing covers material, labour and overhead, and work in progress flows into the same stock and ledger." },
+        { "q": "Is manufacturing an add-on?", "a": "No. Every XionERP plan includes every module, and plans differ only by the number of user seats." },
+        { "q": "Can XionERP manage AMC contracts and service visits?", "a": "Yes. The maintenance module covers service calls, preventive maintenance visits, AMC contracts with billing, rental tracking and technician job assignment." }
+      ],
+      "related": ["inventory-and-warehouse-management", "accounting-and-e-invoicing", "hr-payroll-and-recruitment"]
+    },
+    {
+      "slug": "whatsapp-erp-integration",
+      "title": "WhatsApp ERP Integration | Send Invoices from XionERP",
+      "description": "Send invoices, quotations and reminders on WhatsApp straight from your ERP and answer customer chats from one inbox, on the official WhatsApp Business Platform.",
+      "eyebrow": "WhatsApp integration",
+      "h1": "WhatsApp built into your ERP",
+      "intro": "XionERP sends documents on WhatsApp straight from the invoice or quotation, and gives your team an inbox inside XionERP to answer every customer chat on your own WhatsApp Business number. It uses the official WhatsApp Business Platform, not a shortcut link.",
+      "groups": [
+        { "heading": "Send from the document", "blurb": "Your documents on WhatsApp in one click.", "items": ["Invoices, quotations and statements on WhatsApp", "Payment reminders and account statements", "E-signature and approval links delivered on WhatsApp", "Meta-approved message templates"] },
+        { "heading": "Answer from one inbox", "blurb": "Every chat, answered from XionERP.", "items": ["WhatsApp inbox inside XionERP", "Photos, voice notes and documents in chat", "Keep your WhatsApp Business app working on the same number", "A number per salesman, with a shared company number"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP use the official WhatsApp Business Platform?", "a": "Yes. It is built on the official WhatsApp Business Platform (Meta Cloud API), on your own number and templates, not a wa.me shortcut." },
+        { "q": "Can I still use the WhatsApp Business app?", "a": "Yes. You can keep your WhatsApp Business app working on the same number." },
+        { "q": "Can each salesperson have their own number?", "a": "Yes. XionERP supports a number per salesman, alongside a shared company number." },
+        { "q": "Is there a standalone team inbox for more channels?", "a": "Yes. XionConnect brings WhatsApp, Instagram, Messenger, Telegram, email and SMS into one shared team inbox, and works with XionERP." }
+      ],
+      "related": ["field-sales-and-crm", "online-store-for-erp", "accounting-and-e-invoicing"]
+    },
+    {
+      "slug": "online-store-for-erp",
+      "title": "Online Store Connected to Your ERP | Xion Webstore",
+      "description": "Xion Webstore gives your company its own online shop, run from XionERP: prices and stock come from your ERP and web orders land as sales documents.",
+      "eyebrow": "Online store",
+      "h1": "An online shop that runs from your ERP",
+      "intro": "Xion Webstore is the Online Store module for companies on XionERP. The items, prices and stock in XionERP are what the shop shows, and web orders land as sales documents, so there is no second stock count and no order retyped by hand.",
+      "groups": [
+        { "heading": "What shoppers get", "blurb": "A real shop that looks like your company.", "items": ["Home, shop and item pages with filters by category, brand and price", "Price on enquiry and Get a quote on WhatsApp", "Cart and cash on delivery", "A WhatsApp chat box on every page", "Pages for About, Delivery, and Returns", "Titles and descriptions for Google on every item"] },
+        { "heading": "What your team controls", "blurb": "Three screens under Online Store in XionERP.", "items": ["Store items", "Store settings", "Web orders and quote requests", "Make sales order and Make quotation in one click"] }
+      ],
+      "faqs": [
+        { "q": "Where do prices and stock in the shop come from?", "a": "From XionERP. Change a price in XionERP and the shop shows it, and XionERP works out price, delivery and stock again for every order." },
+        { "q": "What happens when someone orders?", "a": "A web order becomes a sales order and a quote request becomes a quotation, both in XionERP, then delivered, invoiced and posted the usual way." },
+        { "q": "Can I move from WordPress or WooCommerce?", "a": "Yes. Import your WordPress product CSV, and old web addresses permanently redirect to the new pages so Google moves its ranking to them." },
+        { "q": "Is Xion Webstore included in the plan?", "a": "Xion Webstore is a paid add-on for companies on XionERP." }
+      ],
+      "related": ["inventory-and-warehouse-management", "whatsapp-erp-integration", "accounting-and-e-invoicing"],
+      "external": { "label": "See Xion Webstore", "href": "https://automatexion.com/xionwebstore.html" }
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import sol from '../data/solutions.json';
 
 export default function Footer() {
   return (
@@ -14,6 +15,10 @@ export default function Footer() {
             <Link to="/#features">Modules</Link>
             <Link to="/pricing">Pricing</Link>
             <Link to="/compliance">Compliance</Link>
+          </div>
+          <div className="foot-col">
+            <h4>Solutions</h4>
+            {sol.solutions.map((s) => (<Link key={s.slug} to={`/solutions/${s.slug}`}>{s.eyebrow}</Link>))}
           </div>
           <div className="foot-col">
             <h4>Company</h4>

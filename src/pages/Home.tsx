@@ -1,3 +1,4 @@
+import solutions from '../data/solutions.json';
 import { Check } from '../components/Icons';
 import ModuleConstellation from '../components/ModuleConstellation';
 import FeatureCategories from '../components/FeatureCategories';
@@ -29,7 +30,7 @@ export default function Home() {
           <HeroBanners />
           <span className="eyebrow"><span className="dot" />Intelligence &middot; Flow &middot; Trust</span>
           <h1 className="hero-h">Your whole business, in <em>one</em> flow.</h1>
-          <p className="hero-sub">Xion ERP brings accounting, sales, inventory, CRM, manufacturing, projects and compliance into a single platform &mdash; so your numbers, stock and customers finally speak to each other. Built for growing GCC businesses, ready for e-invoicing.</p>
+          <p className="hero-sub">XionERP is a cloud ERP for growing GCC businesses. It brings accounting, sales, inventory, CRM, manufacturing, HR, projects and e-invoicing into a single platform &mdash; so your numbers, stock and customers finally speak to each other.</p>
           <div className="hero-cta">
             <a className="btn btn-primary btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('hero_start_trial', 'Start free trial (hero)')}>Start free trial</a>
             <Link className="btn btn-ghost btn-lg" to="/pricing" onClick={() => trackClick('hero_see_pricing', 'See pricing')}>See pricing</Link>
@@ -68,7 +69,7 @@ export default function Home() {
       <section className="prob">
         <div className="wrap">
           <div className="sec-head">
-            <div className="sec-eyebrow">Why Xion ERP</div>
+            <div className="sec-eyebrow">Why XionERP</div>
             <h2 className="sec-h">Stop running your business across six disconnected tools</h2>
             <p className="sec-sub">Spreadsheets for accounts, one app for invoices, another for stock, WhatsApp for the sales team. The data never lines up &mdash; and month-end becomes a guessing game.</p>
           </div>
@@ -111,7 +112,7 @@ export default function Home() {
           <div className="sec-head">
             <div className="sec-eyebrow">Beyond the basics</div>
             <h2 className="sec-h">What you get that most all-in-one platforms don't bundle</h2>
-            <p className="sec-sub">These usually mean a separate app, a separate contract, or both. On Xion ERP they're just part of the platform.</p>
+            <p className="sec-sub">These usually mean a separate app, a separate contract, or both. On XionERP they're just part of the platform.</p>
           </div>
           <FeatureCategories />
         </div>
@@ -143,6 +144,24 @@ export default function Home() {
       </section>
 
       <ProductFamily />
+
+      <section className="mods" id="solutions">
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="sec-eyebrow">Solutions</div>
+            <h2 className="sec-h">What you can run on XionERP</h2>
+            <p className="sec-sub">Pick the part of the business you want to fix first. Every area runs on the same data, so adding the next one does not mean another system.</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {solutions.solutions.map((s) => (
+              <Link className="fw-card" key={s.slug} to={`/solutions/${s.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <h3>{s.eyebrow}</h3>
+                <p>{s.h1}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="final">
         <div className="wrap">
