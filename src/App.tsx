@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Seo from './components/Seo';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -48,6 +49,7 @@ export default function App() {
 
   return (
     <div className="evx">
+      <Seo />
       <ScrollManager />
       <AnnouncementBar />
       <Nav />

@@ -1,0 +1,41 @@
+{
+  "origin": "https://xionerp.com",
+  "routes": {
+    "/": {
+      "title": "XionERP | Cloud ERP with Fawtara E-Invoicing for the GCC",
+      "description": "XionERP is the all-in-one cloud ERP for growing GCC businesses: accounting, sales, inventory, CRM, manufacturing, projects and Fawtara-ready e-invoicing.",
+      "h1": "Your whole business, in one flow.",
+      "summary": "XionERP is a Fawtara-accredited, multi-tenant cloud ERP for growing businesses across the GCC and South Asia, covering accounting, sales, inventory, purchase, CRM, manufacturing, projects, assets and HR on one platform."
+    },
+    "/pricing": {
+      "title": "XionERP Pricing | Simple ERP Plans That Grow With You",
+      "description": "Compare XionERP plans and pricing, start with a free trial, and choose the plan that fits your team and the modules you need.",
+      "h1": "Simple plans that grow with you",
+      "summary": "Compare XionERP plans and start a free trial."
+    },
+    "/compliance": {
+      "title": "Fawtara E-Invoicing Explained | XionERP Compliance Guide",
+      "description": "A plain-English guide to Oman's Fawtara e-invoicing mandate, its phases and dates, and how XionERP, a Fawtara-accredited ERP, gets your business ready.",
+      "h1": "Fawtara, explained and ready when you are",
+      "summary": "What Fawtara e-invoicing means for your business, the rollout phases, and how XionERP helps you comply."
+    },
+    "/about": {
+      "title": "About XionERP | ERP Built by People Who Ran GCC Operations",
+      "description": "XionERP is built by AutomateXion, a digital transformation consultancy in Muscat with an engineering team in Sri Lanka, serving Oman, Qatar, UAE and Sri Lanka.",
+      "h1": "Built by people who've run GCC operations, not just software",
+      "summary": "XionERP is built by AutomateXion, based in Muscat, Oman, with engineering in Sri Lanka."
+    },
+    "/contact": {
+      "title": "Contact XionERP | Talk to Our Team in Oman and Sri Lanka",
+      "description": "Talk to the XionERP team about a free trial, onboarding, data migration or Fawtara readiness. Call Oman +968 97696968, Sri Lanka +94 761 949294, or email.",
+      "h1": "Let's talk about your business",
+      "summary": "Contact the XionERP team: Oman +968 97696968, Sri Lanka +94 761 949294, info@automatexion.com."
+    },
+    "/careers": {
+      "title": "Careers at XionERP | Open Roles at AutomateXion",
+      "description": "Join the team building XionERP. See open vacancies at AutomateXion in Oman and Sri Lanka and apply online.",
+      "h1": "Help growing businesses run on one flow",
+      "summary": "Open vacancies at AutomateXion in Oman and Sri Lanka."
+    }
+  }
+}
