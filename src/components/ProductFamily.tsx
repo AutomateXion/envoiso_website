@@ -33,7 +33,7 @@ const PRODUCTS = [
     desc: 'A unified omnichannel social platform connecting WhatsApp, Instagram, Facebook, and beyond into a single intelligent inbox — with automation, analytics, and AI-driven engagement built in.',
     tags: ['WhatsApp Business', 'Instagram DMs', 'Facebook Messenger', 'AI Automation'],
     cta: 'Learn more →',
-    ctaHref: 'https://www.automatexion.com/xionconnect.html',
+    ctaHref: 'https://automatexion.com/xionconnect.html',
     ctaStyle: { color: '#10b981' },
   },
   {
@@ -47,7 +47,7 @@ const PRODUCTS = [
     desc: 'A structured digital transformation platform that guides organisations from assessment through roadmap to measurable benefits — purpose-built for CDOs and transformation consultancies.',
     tags: ['Maturity Assessment', 'Transformation Roadmap', 'Benefits Tracking', 'CDO Dashboard'],
     cta: 'Explore platform →',
-    ctaHref: 'https://www.automatexion.com/#products',
+    ctaHref: 'https://automatexion.com/#products',
     ctaStyle: { color: '#7c3aed' },
   },
   {
@@ -61,7 +61,7 @@ const PRODUCTS = [
     desc: 'An online shop run from the XionERP you already use. Items, prices and stock come straight from XionERP, and web orders land as sales orders and quotations — no second system to keep up to date.',
     tags: ['Prices & stock from XionERP', 'Cash on delivery', 'Request a quote', 'WooCommerce import'],
     cta: 'Learn more →',
-    ctaHref: 'https://www.automatexion.com/xionwebstore.html',
+    ctaHref: 'https://automatexion.com/xionwebstore.html',
     ctaStyle: { color: '#ea580c' },
   },
 ];
