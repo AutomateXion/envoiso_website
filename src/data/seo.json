@@ -2,10 +2,10 @@
   "origin": "https://xionerp.com",
   "routes": {
     "/": {
-      "title": "XionERP | Cloud ERP with Fawtara E-Invoicing for the GCC",
-      "description": "XionERP is the all-in-one cloud ERP for growing GCC businesses: accounting, sales, inventory, CRM, manufacturing, projects and Fawtara-ready e-invoicing.",
+      "title": "XionERP | Cloud ERP with E-Invoicing for the GCC",
+      "description": "XionERP is the all-in-one cloud ERP for growing GCC businesses: accounting, sales, inventory, CRM, manufacturing, projects and e-invoicing for the GCC.",
       "h1": "Your whole business, in one flow.",
-      "summary": "XionERP is a Fawtara-accredited, multi-tenant cloud ERP for growing businesses across the GCC and South Asia, covering accounting, sales, inventory, purchase, CRM, manufacturing, projects, assets and HR on one platform."
+      "summary": "XionERP is a multi-tenant cloud ERP for growing businesses across the GCC and South Asia, covering accounting, sales, inventory, purchase, CRM, manufacturing, projects, assets and HR on one platform."
     },
     "/pricing": {
       "title": "XionERP Pricing | Simple ERP Plans That Grow With You",
@@ -14,10 +14,10 @@
       "summary": "Compare XionERP plans and start a free trial."
     },
     "/compliance": {
-      "title": "Fawtara E-Invoicing Explained | XionERP Compliance Guide",
-      "description": "A plain-English guide to Oman's Fawtara e-invoicing mandate, its phases and dates, and how XionERP, a Fawtara-accredited ERP, gets your business ready.",
-      "h1": "Fawtara, explained and ready when you are",
-      "summary": "What Fawtara e-invoicing means for your business, the rollout phases, and how XionERP helps you comply."
+      "title": "E-Invoicing Explained | XionERP Compliance Guide for the GCC",
+      "description": "A plain-English guide to Oman's e-invoicing mandate, its phases and dates and how XionERP gets your business ready.",
+      "h1": "E-invoicing, explained and ready when you are",
+      "summary": "What e-invoicing means for your business, the rollout phases, and how XionERP helps you comply."
     },
     "/about": {
       "title": "About XionERP | ERP Built by People Who Ran GCC Operations",
@@ -27,7 +27,7 @@
     },
     "/contact": {
       "title": "Contact XionERP | Talk to Our Team in Oman and Sri Lanka",
-      "description": "Talk to the XionERP team about a free trial, onboarding, data migration or Fawtara readiness. Call Oman +968 97696968, Sri Lanka +94 761 949294, or email.",
+      "description": "Talk to the XionERP team about a free trial, onboarding, data migration or e-invoicing readiness. Call Oman +968 97696968, Sri Lanka +94 761 949294, or email.",
       "h1": "Let's talk about your business",
       "summary": "Contact the XionERP team: Oman +968 97696968, Sri Lanka +94 761 949294, info@automatexion.com."
     },
