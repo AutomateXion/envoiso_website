@@ -7,7 +7,7 @@ export const APP_LOGIN_URL = 'https://cloud.xionerp.com/login';
 export const APP_SIGNUP_URL = 'https://cloud.xionerp.com/signup';
 
 const LINKS = [
-  { to: '/#features', label: 'Product', match: '/' },
+  { to: '/#features', label: 'Features', match: '/' },
   { to: '/pricing', label: 'Pricing', match: '/pricing' },
   { to: '/partners', label: 'Partners', match: '/partners' },
   { to: '/#products', label: 'Products', match: '/' },
