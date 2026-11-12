@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { certificatePdf, certificatePng, drawCertificate, saveBlob } from '../lib/certificate';
+import { linkedInLinks } from '../lib/linkedin';
 
 const API = 'https://cloud.xionerp.com/api/v1/public/academy';
 type V = { valid: boolean; code: string; name?: string; course?: string; issuedAt?: string };
@@ -64,6 +65,22 @@ export default function AcademyVerify() {
             <button type="button" className="btn btn-primary" onClick={() => dl('pdf')} disabled={!!busy}>{busy === 'pdf' ? 'Preparing…' : 'Download PDF'}</button>
             <button type="button" className="btn btn-ghost" onClick={() => dl('png')} disabled={!!busy}>{busy === 'png' ? 'Preparing…' : 'Download image'}</button>
           </div>
+          {fresh && (() => {
+            const li = linkedInLinks({ code: v.code, course: v.course!, issuedAt: v.issuedAt! });
+            return (
+              <div style={{ marginTop: 22, padding: '18px 20px', border: '1px solid var(--line)', borderRadius: 10 }}>
+                <h2 style={{ fontSize: 18, margin: '0 0 6px' }}>Show it on LinkedIn</h2>
+                <p style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.6, color: 'var(--muted)' }}>
+                  Add it to your profile under Licenses &amp; certifications: the name, issuer, date, code and link are filled in for you.
+                  Then post it on your feed; download the image above if you want the certificate itself in the post.
+                </p>
+                <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                  <a className="btn" href={li.addToProfile} target="_blank" rel="noopener noreferrer" style={{ background: '#0A66C2', color: '#fff', borderColor: '#0A66C2' }}>Add to LinkedIn profile</a>
+                  <a className="btn btn-ghost" href={li.shareOnFeed} target="_blank" rel="noopener noreferrer">Post on my LinkedIn feed</a>
+                </div>
+              </div>
+            );
+          })()}
           <p style={{ fontSize: 14, color: 'var(--muted)', marginTop: 14 }}>Share this page so anyone can check the certificate: xionerp.com/academy/verify/{v.code}</p>
         </>
       )}
