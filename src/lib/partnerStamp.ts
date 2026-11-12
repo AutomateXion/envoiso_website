@@ -36,6 +36,35 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, maxW: number, maxLine
   return lines;
 }
 
+/* Logos arrive with their own white or transparent margins. Cut those away (the mark itself is
+   untouched) so the logo fills its box instead of floating small inside it. */
+const trimCache = new WeakMap<HTMLImageElement, CanvasImageSource & { width: number; height: number }>();
+function trimmed(img: HTMLImageElement): CanvasImageSource & { width: number; height: number } {
+  const hit = trimCache.get(img); if (hit) return hit;
+  let out: CanvasImageSource & { width: number; height: number } = img;
+  try {
+    const W = img.naturalWidth || img.width, H = img.naturalHeight || img.height;
+    const c = document.createElement('canvas'); c.width = W; c.height = H;
+    const x = c.getContext('2d', { willReadFrequently: true })!; x.drawImage(img, 0, 0);
+    const px = x.getImageData(0, 0, W, H).data;
+    let x0 = W, y0 = H, x1 = -1, y1 = -1;
+    for (let yy = 0; yy < H; yy++) for (let xx = 0; xx < W; xx++) {
+      const i = (yy * W + xx) * 4;
+      if (px[i + 3] > 24 && (px[i] < 238 || px[i + 1] < 238 || px[i + 2] < 238)) {
+        if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; if (yy < y0) y0 = yy; if (yy > y1) y1 = yy;
+      }
+    }
+    if (x1 > x0 && y1 > y0) {
+      const pad = Math.round(Math.max(W, H) * 0.01);
+      x0 = Math.max(0, x0 - pad); y0 = Math.max(0, y0 - pad); x1 = Math.min(W - 1, x1 + pad); y1 = Math.min(H - 1, y1 + pad);
+      const t = document.createElement('canvas'); t.width = x1 - x0 + 1; t.height = y1 - y0 + 1;
+      t.getContext('2d')!.drawImage(c, x0, y0, t.width, t.height, 0, 0, t.width, t.height);
+      out = t;
+    }
+  } catch { /* a logo we cannot read is used as it is */ }
+  trimCache.set(img, out); return out;
+}
+
 /** A transparent canvas, w x h in the units of the template (points or pixels), drawn at `scale`. */
 export function renderStamp(d: KitDisplay, logo: HTMLImageElement | null, meta: KitMeta, w: number, h: number, scale: number): HTMLCanvasElement {
   const c = document.createElement('canvas');
@@ -51,9 +80,10 @@ export function renderStamp(d: KitDisplay, logo: HTMLImageElement | null, meta: 
   /* Logo, or the company name as a wordmark when there is none. */
   const boxW = lw - p, boxH = h - 2 * p;
   if (logo) {
-    const k = Math.min(boxW / logo.width, boxH / logo.height);
-    const lwid = logo.width * k, lhei = logo.height * k;
-    ctx.drawImage(logo, p, (h - lhei) / 2, lwid, lhei);
+    const lg = trimmed(logo);
+    const k = Math.min(boxW / lg.width, boxH / lg.height);
+    const lwid = lg.width * k, lhei = lg.height * k;
+    ctx.drawImage(lg, p, (h - lhei) / 2, lwid, lhei);
   } else {
     const size = fit(ctx, d.companyName, boxW, h * 0.2, h * 0.09, 700);
     ctx.font = `700 ${size}px ${FONT}`; ctx.fillStyle = NAVY;
