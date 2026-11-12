@@ -23,11 +23,11 @@ interface CurrencyBlock {
      LKR monthly 4,999 / 9,999 / 15,999 / 28,999 / 38,999   annual users x Rs 3,999
      QAR monthly 55 / 106 / 178 / 360 / 470   annual 44 / 87 / 142 / 288 / 397 */
 export const PRICES: Record<Currency, CurrencyBlock> = {
-  usd: { symbol: '$',      decimals: 0, monthly: [12, 23, 39, 79, 103],           annual: [10, 19, 31, 63, 87] },
-  omr: { symbol: '\uFDFC ', decimals: 3, monthly: [6.3, 11.9, 18.3, 33.5, 44.7],    annual: [4.7, 9.5, 15.1, 27.9, 36.7] },
-  // LKR annual list = users x Rs 3,199 (Solo rate), as before with the old Solo rate.
-  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [3999, 7999, 12799, 23199, 31199], annual: [3199, 9597, 15995, 31990, 47985] },
-  qar: { symbol: 'QR ',    decimals: 2, monthly: [44, 85, 142, 288, 376],          annual: [35, 70, 114, 230, 318] },
+  usd: { symbol: '$',      decimals: 1, monthly: [14.9, 19, 39, 79, 99],           annual: [9, 19, 29, 59, 89] },
+  omr: { symbol: '\uFDFC ', decimals: 3, monthly: [6.299, 11.899, 18.299, 33.499, 44.699],    annual: [4.699, 9.499, 15.099, 27.899, 36.699] },
+  // LKR annual list is about users x Rs 3,199, rounded to end in 9.
+  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [3999, 7999, 12799, 23199, 31199], annual: [3199, 9599, 15999, 31989, 47989] },
+  qar: { symbol: 'QR ',    decimals: 2, monthly: [49, 89, 139, 289, 379],          annual: [39, 69, 119, 229, 319] },
 };
 
 // Seasonal offer: 50% off the first year on any annual plan. Ended 12 Nov 2026.
@@ -42,7 +42,7 @@ export const PROMO = {
 
 export function formatAmount(value: number, currency: Currency): string {
   const { decimals } = PRICES[currency];
-  if (decimals === 0) {
+  if (decimals === 0 || (decimals === 1 && Number.isInteger(value))) {
     return Math.round(value).toLocaleString('en-US');
   }
   return value.toFixed(decimals);
