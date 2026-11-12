@@ -65,11 +65,11 @@ export default function AcademyVerify() {
             <button type="button" className="btn btn-primary" onClick={() => dl('pdf')} disabled={!!busy}>{busy === 'pdf' ? 'Preparing…' : 'Download PDF'}</button>
             <button type="button" className="btn btn-ghost" onClick={() => dl('png')} disabled={!!busy}>{busy === 'png' ? 'Preparing…' : 'Download image'}</button>
           </div>
-          {fresh && (() => {
+          {(() => {
             const li = linkedInLinks({ code: v.code, course: v.course!, issuedAt: v.issuedAt! });
             return (
               <div style={{ marginTop: 22, padding: '18px 20px', border: '1px solid var(--line)', borderRadius: 10 }}>
-                <h2 style={{ fontSize: 18, margin: '0 0 6px' }}>Show it on LinkedIn</h2>
+                <h2 style={{ fontSize: 18, margin: '0 0 6px' }}>{fresh ? 'Show it on LinkedIn' : 'Is this your certificate? Show it on LinkedIn'}</h2>
                 <p style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.6, color: 'var(--muted)' }}>
                   Add it to your profile under Licenses &amp; certifications: the name, issuer, date, code and link are filled in for you.
                   Then post it on your feed; download the image above if you want the certificate itself in the post.
