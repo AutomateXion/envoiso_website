@@ -15,6 +15,7 @@ import Partners from './pages/Partners';
 import PartnerDirectory from './pages/PartnerDirectory';
 import PartnerKit from './pages/PartnerKit';
 import Academy from './pages/Academy';
+import Legal from './pages/Legal';
 import AcademyCourse from './pages/AcademyCourse';
 import AcademyVerify from './pages/AcademyVerify';
 import './styles/global.css';
@@ -74,6 +75,8 @@ export default function App() {
         <Route path="/academy/verify" element={<AcademyVerify />} />
         <Route path="/academy/verify/:code" element={<AcademyVerify />} />
         <Route path="/academy/:courseId" element={<AcademyCourse />} />
+        <Route path="/privacy" element={<Legal kind="privacy" />} />
+        <Route path="/terms" element={<Legal kind="terms" />} />
         <Route path="/solutions/:slug" element={<Solution />} />
       </Routes>
       <Footer />
