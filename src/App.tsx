@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Careers from './pages/Careers';
 import Partners from './pages/Partners';
 import PartnerDirectory from './pages/PartnerDirectory';
+import PartnerKit from './pages/PartnerKit';
 import './styles/global.css';
 import { initGA, trackPageview } from './lib/analytics';
 
@@ -65,6 +66,7 @@ export default function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/partners/directory" element={<PartnerDirectory />} />
+        <Route path="/partners/kit" element={<PartnerKit />} />
         <Route path="/solutions/:slug" element={<Solution />} />
       </Routes>
       <Footer />

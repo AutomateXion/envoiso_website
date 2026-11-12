@@ -1,0 +1,164 @@
+{
+ "generated": "2026-11-12",
+ "files": [
+  {
+   "id": "brochure",
+   "group": "Brochure",
+   "title": "XionERP brochure",
+   "desc": "6 pages, A4",
+   "file": "xionerp-brochure.pdf",
+   "kind": "pdf",
+   "stamps": [
+    {
+     "page": 5,
+     "x": 42.5,
+     "y": 68,
+     "w": 510.3,
+     "h": 142,
+     "layout": "card"
+    }
+   ]
+  },
+  {
+   "id": "leaflet",
+   "group": "Leaflet",
+   "title": "XionERP leaflet",
+   "desc": "1 page, A4",
+   "file": "xionerp-leaflet.pdf",
+   "kind": "pdf",
+   "stamps": [
+    {
+     "page": 0,
+     "x": 42.5,
+     "y": 6,
+     "w": 510.3,
+     "h": 62,
+     "layout": "wide"
+    }
+   ]
+  },
+  {
+   "id": "ds-erp",
+   "group": "Data sheets",
+   "title": "XionERP data sheet",
+   "desc": "4 pages, A4",
+   "file": "datasheet-xionerp.pdf",
+   "kind": "pdf",
+   "stamps": [
+    {
+     "page": 0,
+     "x": 42.5,
+     "y": 6,
+     "w": 510.3,
+     "h": 62,
+     "layout": "wide"
+    },
+    {
+     "page": 1,
+     "x": 42.5,
+     "y": 6,
+     "w": 510.3,
+     "h": 62,
+     "layout": "wide"
+    },
+    {
+     "page": 2,
+     "x": 42.5,
+     "y": 6,
+     "w": 510.3,
+     "h": 62,
+     "layout": "wide"
+    },
+    {
+     "page": 3,
+     "x": 42.5,
+     "y": 6,
+     "w": 510.3,
+     "h": 62,
+     "layout": "wide"
+    }
+   ]
+  },
+  {
+   "id": "ds-connect",
+   "group": "Data sheets",
+   "title": "XionConnect data sheet",
+   "desc": "1 page, A4",
+   "file": "datasheet-xionconnect.pdf",
+   "kind": "pdf",
+   "stamps": [
+    {
+     "page": 0,
+     "x": 42.5,
+     "y": 6,
+     "w": 510.3,
+     "h": 62,
+     "layout": "wide"
+    }
+   ]
+  },
+  {
+   "id": "ds-web",
+   "group": "Data sheets",
+   "title": "Xion Webstore data sheet",
+   "desc": "1 page, A4",
+   "file": "datasheet-xionwebstore.pdf",
+   "kind": "pdf",
+   "stamps": [
+    {
+     "page": 0,
+     "x": 42.5,
+     "y": 6,
+     "w": 510.3,
+     "h": 62,
+     "layout": "wide"
+    }
+   ]
+  },
+  {
+   "id": "poster-1",
+   "group": "Posters",
+   "title": "One platform",
+   "desc": "1080 × 1350 px, for social media",
+   "file": "poster-1.png",
+   "kind": "png",
+   "stamp": {
+    "x": 0,
+    "y": 1160,
+    "w": 1080,
+    "h": 190,
+    "layout": "wide"
+   }
+  },
+  {
+   "id": "poster-2",
+   "group": "Posters",
+   "title": "E-invoicing ready",
+   "desc": "1080 × 1350 px, for social media",
+   "file": "poster-2.png",
+   "kind": "png",
+   "stamp": {
+    "x": 0,
+    "y": 1160,
+    "w": 1080,
+    "h": 190,
+    "layout": "wide"
+   }
+  },
+  {
+   "id": "poster-3",
+   "group": "Posters",
+   "title": "WhatsApp and AI",
+   "desc": "1080 × 1350 px, for social media",
+   "file": "poster-3.png",
+   "kind": "png",
+   "stamp": {
+    "x": 0,
+    "y": 1160,
+    "w": 1080,
+    "h": 190,
+    "layout": "wide"
+   }
+  }
+ ]
+}

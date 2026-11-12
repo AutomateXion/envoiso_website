@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /partners/kit
+Disallow: /media-kit/
 
 Sitemap: https://xionerp.com/sitemap.xml
