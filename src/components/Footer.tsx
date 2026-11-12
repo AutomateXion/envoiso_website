@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <div className="foot-bottom">
           <span>&copy; 2026 Xion ERP. All rights reserved.</span>
-          <span>Privacy &middot; Terms</span>
+          <span><Link to="/privacy">Privacy</Link> &middot; <Link to="/terms">Terms</Link></span>
         </div>
       </div>
     </footer>

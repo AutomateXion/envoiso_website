@@ -102,6 +102,18 @@
       "description": "For partners: the Help Center, reporting a problem, common access and document questions, healthy books and growing the account. Free, with a certificate.",
       "h1": "XionERP Certified Support Specialist",
       "summary": "Six lessons on supporting XionERP customers, a ten-question quiz and a free certificate."
+    },
+    "/privacy": {
+      "title": "Privacy Policy | XionERP",
+      "description": "How XionERP, made by AutomateXion, handles company data, WhatsApp messages and Google Search Console data, and how to have information deleted.",
+      "h1": "Privacy Policy",
+      "summary": "XionERP privacy policy: what information is held, how it is used, who can see it, how long it is kept and how to delete it."
+    },
+    "/terms": {
+      "title": "Terms of Service | XionERP",
+      "description": "The terms that apply to companies and people using XionERP, the online business software from AutomateXion.",
+      "h1": "Terms of Service",
+      "summary": "XionERP terms of service: accounts, fair use, WhatsApp and Google connections, fees, availability and ending a subscription."
     }
   }
 }
