@@ -37,7 +37,7 @@ export default function Home() {
           </div>
           <div className="hero-note"><Check />30-day free trial &middot; No credit card required</div>
           <div className="hero-fawtara">
-            <span className="ff-badge"><Check />Fawtara-ready</span>
+            <span className="ff-badge"><Check />Fawtara e-invoice files</span>
             Built for Oman e-invoicing (UBL 2.1) ahead of the OTA rollout
           </div>
           <div className="hero-shot">
