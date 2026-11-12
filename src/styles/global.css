@@ -440,3 +440,10 @@
 .evx .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
 .evx .hero-video::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(255,255,255,.72),rgba(255,255,255,.35) 60%,rgba(255,255,255,0) 100%)}
 @media (prefers-reduced-motion:reduce){.evx .hero-video video{display:none}.evx .hero-video{background:url(/partners-hero.jpg) center/cover no-repeat}}
+
+/* Academy course pages: a short top, so the course itself is on the first screen. Title on two lines at most. */
+.evx .page-hero.academy-hero{padding:26px 0 22px}
+.evx .academy-hero .eyebrow{margin-bottom:10px}
+.evx .academy-hero h1.page-h{font-size:clamp(26px,3.1vw,38px);line-height:1.12;max-width:32ch}
+.evx .academy-hero .page-sub{font-size:16px;margin-top:8px;max-width:78ch;line-height:1.5}
+.evx .academy-hero + .sol-sec{padding-top:28px}

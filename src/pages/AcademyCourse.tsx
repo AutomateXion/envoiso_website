@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { COURSES, courseById, courseMinutes, PASS_MARK, type Block, type Course } from '../data/academy';
 import { INTROS, UPDATED } from '../data/academy-intros';
@@ -96,7 +96,14 @@ export default function AcademyCourse() {
   }, []);
   useEffect(() => { if (learner && !name) setName(learner.name); }, [learner]);   // eslint-disable-line react-hooks/exhaustive-deps
 
-  useEffect(() => { window.scrollTo(0, 0); }, [step, view]);
+  /* A new lesson opens at the lesson itself, just under the menu bar, not at the top of the page. */
+  const contentRef = useRef<HTMLDivElement>(null);
+  const toContent = () => requestAnimationFrame(() => {
+    const el = contentRef.current; if (!el) return;
+    const bar = (document.querySelector('nav') as HTMLElement | null)?.offsetHeight || 0;
+    window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - bar - 12) });
+  });
+  useEffect(() => { if (view === 'intro') window.scrollTo(0, 0); else toContent(); }, [step, view]);   // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (course) document.title = `${course.title} | XionERP Academy`; }, [course]);
   const lessons = course?.lessons || [];
   const quizIndex = lessons.length;
@@ -113,7 +120,7 @@ export default function AcademyCourse() {
     setErr('');
     if (course.quiz.some((q) => answers[q.id] === undefined)) { setErr('Answer every question before you submit.'); return; }
     setBusy(true);
-    try { setResult(await post('grade', { courseId: course.id, answers })); window.scrollTo(0, 0); } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
+    try { setResult(await post('grade', { courseId: course.id, answers })); toContent(); } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
   };
   const getCertificate = async (e: React.FormEvent) => {
     e.preventDefault(); setErr('');
@@ -127,7 +134,7 @@ export default function AcademyCourse() {
       nav(`/academy/verify/${c.code}`, { state: { fresh: true } });
     } catch (e2: any) { setErr(e2.message); } finally { setBusy(false); }
   };
-  const retake = () => { setAnswers({}); setResult(null); setErr(''); window.scrollTo(0, 0); };
+  const retake = () => { setAnswers({}); setResult(null); setErr(''); toContent(); };
 
   const nameOf = (i: number) => (i === quizIndex ? 'Quiz and certificate' : lessons[i].title);
   const signOut = () => { try { localStorage.removeItem(LEARNER_KEY); } catch { /* none */ } setLearner(null); };
@@ -144,10 +151,10 @@ export default function AcademyCourse() {
 
   return (
     <>
-      <section className="page-hero"><div className="wrap">
+      <section className="page-hero academy-hero"><div className="wrap">
         <span className="eb-pill eyebrow"><span className="dot" />XionERP Academy</span>
         <h1 className="page-h">{course.title}</h1>
-        <p className="page-sub">{course.outcome} About {courseMinutes(course)} minutes.</p>
+        <p className="page-sub">{lessons.length} lessons and a quiz · about {courseMinutes(course)} minutes</p>
         <p style={{ margin: '10px 0 0', fontSize: 14 }}>
           <button type="button" onClick={() => setView('intro')} style={{ background: 'none', border: 0, padding: 0, font: 'inherit', color: 'inherit', textDecoration: 'underline', cursor: 'pointer' }}>Course introduction</button>
           {learner && <span style={{ opacity: 0.85 }}> · Signed in as {learner.name || learner.email}</span>}
@@ -167,7 +174,7 @@ export default function AcademyCourse() {
           {!allRead && <p style={{ fontSize: 13, color: 'var(--muted)', margin: '6px 2px' }}>The quiz opens once you have read every lesson.</p>}
         </nav>
 
-        <div style={{ gridColumn: 'span 2', minWidth: 0 }}>
+        <div ref={contentRef} style={{ gridColumn: 'span 2', minWidth: 0 }}>
           {step < quizIndex ? (
             <article>
               <div className="sec-eyebrow">Lesson {step + 1} of {quizIndex} · {lessons[step].minutes} min</div>
@@ -264,11 +271,11 @@ function CourseIntro({ course, saved, learner, signinErr, tab, setTab, copied, o
   const startLabel = !begun ? 'Start the course' : doneCount >= course.lessons.length ? 'Go to the quiz' : `Continue at lesson ${Math.min(saved.at, course.lessons.length - 1) + 1}`;
   return (
     <>
-      <section className="page-hero"><div className="wrap">
+      <section className="page-hero academy-hero"><div className="wrap">
         <span className="eb-pill eyebrow"><span className="dot" />XionERP Academy · {track} · Stage {course.stage}</span>
         <h1 className="page-h">{course.title}</h1>
         <p className="page-sub">{course.blurb}</p>
-        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', marginTop: 22 }}>
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', marginTop: 16 }}>
           {learner ? (
             <>
               <button type="button" className="btn btn-primary" onClick={onStart}>{startLabel}</button>
