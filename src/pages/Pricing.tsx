@@ -19,7 +19,7 @@ const COMPARE_ROWS = [
 ];
 
 const FAQS = [
-  { q: 'How does the 50% off first year offer work?', a: 'Choose any annual plan at checkout and your first 12 months are billed at half the standard annual rate. From year two onward, billing continues at the regular annual rate. The offer applies to new subscriptions only and can\u2019t be combined with other discounts.' },
+  ...(PROMO.active ? [  { q: 'How does the 50% off first year offer work?', a: 'Choose any annual plan at checkout and your first 12 months are billed at half the standard annual rate. From year two onward, billing continues at the regular annual rate. The offer applies to new subscriptions only and can\u2019t be combined with other discounts.' }] : []),
   { q: 'Do all plans include every module?', a: 'Yes. Every Xion ERP plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, manufacturing, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
   { q: 'Is Xion ERP really Fawtara-ready?', a: 'Xion ERP generates e-invoices in UBL 2.1 / Peppol BIS 3.0 format, aligned with Oman\u2019s Fawtara e-invoicing requirements ahead of the OTA phased rollout. See our Compliance page for the full timeline.' },
   { q: 'Can I switch between monthly and annual billing?', a: 'Yes, you can switch billing frequency at any time from your account settings. Moving to annual billing at any point qualifies you for the then-current seasonal offer, if one is active.' },
@@ -60,7 +60,7 @@ export default function Pricing() {
             <span className={'bill-opt' + (!annual ? ' on' : '')}>Monthly</span>
             <button className={'toggle' + (annual ? ' annual' : '')} onClick={() => setAnnual(!annual)} aria-label="Toggle billing period"><span className="knob" /></button>
             <span className={'bill-opt' + (annual ? ' on' : '')}>Annual</span>
-            <span className="save-pill">{annual ? '50% off your first year' : '14 months for 12 on annual'}</span>
+            <span className="save-pill">{annual && PROMO.active ? '50% off your first year' : '14 months for 12 on annual'}</span>
           </div>
           <div className="cur-toggle">
             <button className={'cur-btn' + (cur === 'usd' ? ' on' : '')} onClick={() => setCur('usd')}>USD $</button>
@@ -150,8 +150,8 @@ export default function Pricing() {
       <section className="final">
         <div className="wrap">
           <div className="final-card">
-            <h2>Lock in 50% off before it ends</h2>
-            <p>Start your 14-day free trial today, then choose any annual plan to secure half price for your first year.</p>
+            <h2>{PROMO.active ? 'Lock in 50% off before it ends' : 'Start your free trial'}</h2>
+            <p>{PROMO.active ? 'Start your 14-day free trial today, then choose any annual plan to secure half price for your first year.' : 'Start your 14-day free trial today, then choose the plan that fits your team.'}</p>
             <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('pricing_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>

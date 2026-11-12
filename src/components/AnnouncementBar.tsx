@@ -5,7 +5,7 @@ export default function AnnouncementBar() {
     <div className="annbar">
       <span className="ann-dot">
         <span className="ann-pulse" />
-        <strong>Seasonal offer:</strong>&nbsp;50% off your first year on any annual plan.
+        <strong>New lower prices</strong>&nbsp;on every plan.
       </span>
       <Link to="/pricing">See pricing &rarr;</Link>
       <a href="https://automatexion.com/xionconnect.html" className="ann-connect" aria-label="XionConnect" title="Also from Xion: XionConnect">

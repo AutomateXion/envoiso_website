@@ -15,19 +15,26 @@ interface CurrencyBlock {
   annual: number[];
 }
 
+/* Prices from 12 Nov 2026: the earlier list prices less 20%, rounded to the way each
+   currency is quoted (whole units, one decimal for OMR).
+   Earlier list, for the record:
+     USD monthly 15 / 29 / 49 / 99 / 129      annual 12 / 24 / 39 / 79 / 109
+     OMR monthly 7.9 / 14.9 / 22.9 / 41.9 / 55.9   annual 5.9 / 11.9 / 18.9 / 34.9 / 45.9
+     LKR monthly 4,999 / 9,999 / 15,999 / 28,999 / 38,999   annual users x Rs 3,999
+     QAR monthly 55 / 106 / 178 / 360 / 470   annual 44 / 87 / 142 / 288 / 397 */
 export const PRICES: Record<Currency, CurrencyBlock> = {
-  usd: { symbol: '$',      decimals: 0, monthly: [15, 29, 49, 99, 129],          annual: [12, 24, 39, 79, 109] },
-  omr: { symbol: '\uFDFC ', decimals: 3, monthly: [7.9, 14.9, 22.9, 41.9, 55.9],    annual: [5.9, 11.9, 18.9, 34.9, 45.9] },
-  // LKR annual list = users x Rs 3,999 (Solo rate), so the strike-through shows the real per-user discount.
-  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [4999, 9999, 15999, 28999, 38999], annual: [3999, 11997, 19995, 39990, 59985] },
-  // Proposed from the USD peg (~3.64 QAR/USD), rounded to whole riyals.
-  // TODO: confirm/adjust these against your intended Qatar go-to-market pricing.
-  qar: { symbol: 'QR ',    decimals: 2, monthly: [55, 106, 178, 360, 470],         annual: [44, 87, 142, 288, 397] },
+  usd: { symbol: '$',      decimals: 0, monthly: [12, 23, 39, 79, 103],           annual: [10, 19, 31, 63, 87] },
+  omr: { symbol: '\uFDFC ', decimals: 3, monthly: [6.3, 11.9, 18.3, 33.5, 44.7],    annual: [4.7, 9.5, 15.1, 27.9, 36.7] },
+  // LKR annual list = users x Rs 3,199 (Solo rate), as before with the old Solo rate.
+  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [3999, 7999, 12799, 23199, 31199], annual: [3199, 9597, 15995, 31990, 47985] },
+  qar: { symbol: 'QR ',    decimals: 2, monthly: [44, 85, 142, 288, 376],          annual: [35, 70, 114, 230, 318] },
 };
 
-// Seasonal offer: 50% off the first year on any annual plan.
+// Seasonal offer: 50% off the first year on any annual plan. Ended 12 Nov 2026.
+// Before switching it on again, re-set PROMO_FIRST_YEAR below: those first-year
+// prices were worked out from the earlier list prices and no longer match.
 export const PROMO = {
-  active: true,
+  active: false,
   label: '50% off your first year',
   detail: 'Sign up for an annual plan and pay half price for your first 12 months — then the standard annual rate applies from year two.',
   discount: 0.5,

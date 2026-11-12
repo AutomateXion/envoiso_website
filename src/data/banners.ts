@@ -39,9 +39,9 @@ export const BANNERS: Banner[] = [
     theme: 'navy',
   },
   {
-    eyebrow: 'Limited offer',
-    title: 'Half price, first year.',
-    text: 'Choose any annual plan and pay half for twelve months. Every module included — you only pick your team size.',
+    eyebrow: 'New prices',
+    title: 'Lower prices on every plan.',
+    text: 'Every module included — you only pick your team size. Start with a 14-day free trial.',
     cta: { label: 'See pricing', to: '/pricing' },
     icon: MODULE_ICONS['Invoicing'],
     image: '/banner-2.jpg',
