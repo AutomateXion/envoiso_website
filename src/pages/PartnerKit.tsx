@@ -3,6 +3,25 @@ import { Link } from 'react-router-dom';
 import { renderStamp, loadImage, type KitDisplay, type KitMeta } from '../lib/partnerStamp';
 
 const API = 'https://cloud.xionerp.com/api/v1/public/partner-kit';
+const SESSION_KEY = 'xion_partner_session';
+const readSession = () => { try { return sessionStorage.getItem(SESSION_KEY) || ''; } catch { return ''; } };
+const writeSession = (v: string) => { try { v ? sessionStorage.setItem(SESSION_KEY, v) : sessionStorage.removeItem(SESSION_KEY); } catch { /* the page still works until it is closed */ } };
+type Screen = 'loading' | 'create' | 'signin' | 'forgot' | 'forgot-sent' | 'reset' | 'kit' | 'bad' | 'error';
+
+/** One call to the portal. A plain error message comes back for the person to read. */
+async function call(path: string, opts: { method?: string; body?: unknown; session?: string } = {}) {
+  const r = await fetch(`${API}/${path}`, {
+    method: opts.method || 'GET',
+    headers: { Accept: 'application/json', ...(opts.body !== undefined ? { 'Content-Type': 'application/json' } : {}), ...(opts.session ? { Authorization: `Bearer ${opts.session}` } : {}) },
+    body: opts.body !== undefined ? JSON.stringify(opts.body) : undefined,
+  });
+  if (!r.ok) {
+    let m = 'Something went wrong. Please try again.';
+    try { const b = await r.json(); if (r.status === 429) m = 'Too many attempts. Please wait a few minutes.'; else if (b?.message) m = Array.isArray(b.message) ? b.message.join(' · ') : String(b.message); } catch { /* keep default */ }
+    const e: any = new Error(m); e.status = r.status; throw e;
+  }
+  return r;
+}
 type Stamp = { page?: number; x: number; y: number; w: number; h: number; layout: string };
 type KitFile = { id: string; group: string; title: string; desc: string; file: string; kind: 'pdf' | 'png'; stamps?: (Stamp & { page: number })[]; stamp?: Stamp };
 type View = { partnerCode: string; partnerType: 'RESELLER' | 'DISTRIBUTOR'; country: string; distributorName: string | null; hasLogo: boolean; display: KitDisplay };
@@ -42,15 +61,19 @@ async function prepareLogo(file: File): Promise<string> {
 }
 
 export default function PartnerKit() {
-  const token = useMemo(() => (/[#&]t=([0-9a-f]{48})/.exec(window.location.hash) || [])[1] || '', []);
+  const invite = useMemo(() => (/[#&]t=([0-9a-f]{48})/.exec(window.location.hash) || [])[1] || '', []);
+  const resetSecret = useMemo(() => (/[#&]r=([0-9a-f]{64})/.exec(window.location.hash) || [])[1] || '', []);
+  const [session, setSession] = useState<string>(() => readSession());
   const [view, setView] = useState<View | null>(null);
-  const [state, setState] = useState<'loading' | 'ok' | 'bad' | 'error'>('loading');
+  const [screen, setScreen] = useState<Screen>('loading');
+  const [invitee, setInvitee] = useState<{ companyName: string; email: string } | null>(null);
   const [form, setForm] = useState<KitDisplay | null>(null);
   const [files, setFiles] = useState<KitFile[]>([]);
   const [logoImg, setLogoImg] = useState<HTMLImageElement | null>(null);
   const [msg, setMsg] = useState<{ ok: boolean; t: string } | null>(null);
   const [busy, setBusy] = useState<string>('');
   const prev = useRef<HTMLCanvasElement>(null);
+  const state = screen; // the kit below was written for 'ok'; it is shown on 'kit'
 
   useEffect(() => {
     document.title = 'Your XionERP partner kit';
@@ -58,22 +81,51 @@ export default function PartnerKit() {
     return () => { m.remove(); };
   }, []);
 
-  const loadLogo = async () => {
+  const loadLogo = async (sess = session) => {
     try {
-      const r = await fetch(`${API}/${token}/logo?ts=${Date.now()}`);
+      const r = await fetch(`${API}/me/logo?ts=${Date.now()}`, { headers: { Authorization: `Bearer ${sess}` } });
       if (!r.ok) { setLogoImg(null); return; }
       const url = URL.createObjectURL(await r.blob());
       setLogoImg(await loadImage(url));
     } catch { setLogoImg(null); }
   };
 
+  /* Open the kit for a session. The address is cleaned so no secret stays in it or in the history. */
+  const enter = async (sess: string) => {
+    writeSession(sess); setSession(sess);
+    try { window.history.replaceState(null, '', window.location.pathname); } catch { /* ignore */ }
+    const v: View = await (await call('me', { session: sess })).json();
+    setView(v); setForm(v.display); setScreen('kit'); setMsg(null); if (v.hasLogo) loadLogo(sess); else setLogoImg(null);
+  };
+
+  const signOut = async () => {
+    try { await call('logout', { method: 'POST', body: {}, session }); } catch { /* the session expires anyway */ }
+    writeSession(''); setSession(''); setView(null); setForm(null); setLogoImg(null); setMsg(null); setScreen('signin');
+  };
+
+  /* An invitation or reset link opened in a tab that is already on this page only changes the hash: start over. */
   useEffect(() => {
-    if (!token) { setState('bad'); return; }
-    fetch(`${API}/${token}`, { headers: { Accept: 'application/json' } })
-      .then(async (r) => { if (r.status === 404) { setState('bad'); return; } if (!r.ok) throw new Error(); const v: View = await r.json(); setView(v); setForm(v.display); setState('ok'); if (v.hasLogo) loadLogo(); })
-      .catch(() => setState('error'));
+    const h = () => { if (/[#&][tr]=/.test(window.location.hash)) window.location.reload(); };
+    window.addEventListener('hashchange', h); return () => window.removeEventListener('hashchange', h);
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        if (resetSecret) { setScreen('reset'); return; }
+        if (invite) {
+          try { const i = await (await call(`invite/${invite}`)).json(); setInvitee(i); setScreen(i.state === 'create' ? 'create' : 'signin'); }
+          catch (e: any) { setScreen(e.status === 404 ? 'bad' : 'error'); }
+          return;
+        }
+        if (session) {
+          try { await enter(session); return; } catch (e: any) { if (e.status !== 401) throw e; writeSession(''); setSession(''); }
+        }
+        setScreen('signin');
+      } catch { setScreen('error'); }
+    })();
     fetch('/media-kit/manifest.json').then((r) => r.json()).then((m) => setFiles(m.files || [])).catch(() => setFiles([]));
-  }, [token]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const meta: KitMeta | null = view ? { partnerType: view.partnerType, country: view.country } : null;
 
@@ -86,13 +138,8 @@ export default function PartnerKit() {
   }, [form, logoImg, view]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const post = async (path: string, body: unknown) => {
-    const r = await fetch(`${API}/${token}/${path}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-    if (!r.ok) {
-      let m = 'Something went wrong. Please try again.';
-      try { const b = await r.json(); if (r.status === 429) m = 'Too many attempts. Please wait a few minutes.'; else if (b?.message) m = Array.isArray(b.message) ? b.message.join(' · ') : String(b.message); } catch { /* keep default */ }
-      throw new Error(m);
-    }
-    return r.json();
+    try { return await (await call(`me/${path}`, { method: 'POST', body, session })).json(); }
+    catch (e: any) { if (e.status === 401) { writeSession(''); setSession(''); setScreen('signin'); setMsg({ ok: false, t: 'Your session ended. Please sign in again.' }); } throw e; }
   };
 
   const save = async () => {
@@ -137,18 +184,21 @@ export default function PartnerKit() {
   const groups = useMemo(() => { const g = new Map<string, KitFile[]>(); files.forEach((f) => g.set(f.group, [...(g.get(f.group) || []), f])); return [...g.entries()]; }, [files]);
   const inp: React.CSSProperties = { width: '100%', padding: '11px 12px', border: '1px solid var(--line)', borderRadius: 8, font: 'inherit', background: '#fff', color: 'var(--ink)' };
 
-  if (state === 'loading') return <section className="sol-sec"><div className="wrap"><p>Opening your kit…</p></div></section>;
-  if (state === 'error') return <section className="sol-sec"><div className="wrap"><h1 className="page-h">We could not open your kit just now</h1><p>Please try again in a moment.</p></div></section>;
-  if (state === 'bad' || !view || !form) return (
+  if (screen === 'loading') return <section className="sol-sec"><div className="wrap"><p>Opening your partner kit…</p></div></section>;
+  if (screen === 'error') return <section className="sol-sec"><div className="wrap"><h1 className="page-h">We could not open your kit just now</h1><p>Please try again in a moment.</p></div></section>;
+  if (screen === 'bad') return (
     <section className="sol-sec"><div className="wrap" style={{ maxWidth: 680 }}>
       <h1 className="page-h">This link is not valid</h1>
-      <p>Your partner media kit opens from the private link in your welcome email. Please copy the whole link, or reply to that email and we will send you a new one.</p>
+      <p>Your partner kit opens from the invitation in your welcome email. Please copy the whole link, or <a href="/partners/kit">sign in</a> if you have already created your password. If you are stuck, reply to that email and we will help.</p>
       <p><Link to="/partners">Back to Partners</Link></p></div></section>);
+  if (screen !== 'kit' || !view || !form) return (
+    <PortalGate screen={screen} setScreen={setScreen} invite={invite} resetSecret={resetSecret} invitee={invitee} onSession={enter} inp={inp} />);
 
   return (
     <>
       <section className="page-hero"><div className="wrap">
         <span className="eb-pill eyebrow"><span className="dot" />Partner kit · {view.partnerCode}</span>
+        <button type="button" className="btn btn-ghost" style={{ float: 'right' }} onClick={signOut}>Sign out</button>
         <h1 className="page-h">Welcome, {form.companyName}</h1>
         <p className="page-sub">Everything you need to introduce XionERP in {view.country}, with your own logo and contact details on it. Add them once, then download each piece ready to share.</p>
       </div></section>
@@ -207,5 +257,71 @@ export default function PartnerKit() {
         <p style={{ marginTop: 24, fontSize: 14, color: 'var(--muted)' }}>Questions about any of this? Reply to your welcome email and it reaches our team directly.</p>
       </div></section>
     </>
+  );
+}
+
+
+/** Create a password, sign in, forgot and reset: the doors in front of the kit. */
+function PortalGate({ screen, setScreen, invite, resetSecret, invitee, onSession, inp }: {
+  screen: Screen; setScreen: (s: Screen) => void; invite: string; resetSecret: string; invitee: { companyName: string; email: string } | null;
+  onSession: (s: string) => Promise<void>; inp: React.CSSProperties;
+}) {
+  const [email, setEmail] = useState(invitee?.email || '');
+  const [pw, setPw] = useState(''); const [pw2, setPw2] = useState('');
+  const [err, setErr] = useState(''); const [busy, setBusy] = useState(false); const [show, setShow] = useState(false);
+  const creating = screen === 'create' || screen === 'reset';
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault(); setErr('');
+    if (creating) {
+      if (pw.length < 10) { setErr('Use at least 10 characters.'); return; }
+      if (pw !== pw2) { setErr('The two passwords are not the same.'); return; }
+    }
+    setBusy(true);
+    try {
+      if (screen === 'create') await onSession((await (await call(`invite/${invite}/password`, { method: 'POST', body: { password: pw } })).json()).session);
+      else if (screen === 'reset') await onSession((await (await call('reset', { method: 'POST', body: { token: resetSecret, password: pw } })).json()).session);
+      else if (screen === 'signin') await onSession((await (await call('login', { method: 'POST', body: { email, password: pw } })).json()).session);
+      else if (screen === 'forgot') { await call('forgot', { method: 'POST', body: { email } }); setScreen('forgot-sent'); }
+    } catch (e2: any) { setErr(e2.message); } finally { setBusy(false); }
+  };
+
+  const title = { create: 'Create your password', reset: 'Choose a new password', signin: 'Sign in to your partner kit', forgot: 'Reset your password', 'forgot-sent': 'Check your email' }[screen as string] || 'Partner kit';
+  const sub = {
+    create: `Welcome${invitee ? `, ${invitee.companyName}` : ''}. Choose a password for your partner kit. You will sign in with ${invitee?.email || 'your email'} and this password.`,
+    reset: 'Choose a new password for your partner kit. Anyone signed in with the old one is signed out.',
+    signin: 'Use the email address your welcome email was sent to, and the password you created.',
+    forgot: 'Enter your email address. If it belongs to a partner, we send a link to choose a new password.',
+    'forgot-sent': 'If that email address belongs to a partner, a link to choose a new password is on its way. It works for 60 minutes.',
+  }[screen as string] || '';
+
+  return (
+    <section className="sol-sec"><div className="wrap" style={{ maxWidth: 520 }}>
+      <span className="eb-pill eyebrow"><span className="dot" />XionERP partners</span>
+      <h1 className="page-h" style={{ fontSize: 'clamp(28px, 5vw, 40px)', margin: '16px 0 10px', maxWidth: 'none', textAlign: 'left' }}>{title}</h1>
+      <p style={{ color: 'var(--muted)', lineHeight: 1.6 }}>{sub}</p>
+      {screen === 'forgot-sent' ? (
+        <p><button type="button" className="btn btn-ghost" onClick={() => setScreen('signin')}>Back to sign in</button></p>
+      ) : (
+        <form onSubmit={submit} className="fw-card" style={{ display: 'grid', gap: 14, marginTop: 18 }} noValidate>
+          {(screen === 'signin' || screen === 'forgot') && (
+            <label style={{ display: 'grid', gap: 6, fontSize: 14, fontWeight: 600 }}>Email
+              <input style={inp} type="email" autoComplete="username" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@company.com" required /></label>)}
+          {screen === 'create' && invitee && <div style={{ fontSize: 14 }}>Sign-in email: <strong>{invitee.email}</strong></div>}
+          {screen !== 'forgot' && (
+            <label style={{ display: 'grid', gap: 6, fontSize: 14, fontWeight: 600 }}>{creating ? 'New password' : 'Password'}
+              <input style={inp} type={show ? 'text' : 'password'} autoComplete={creating ? 'new-password' : 'current-password'} value={pw} onChange={(e) => setPw(e.target.value)} required />
+              {creating && <span style={{ fontWeight: 400, fontSize: 13, color: 'var(--muted)' }}>At least 10 characters. A few random words is a good password.</span>}</label>)}
+          {creating && (
+            <label style={{ display: 'grid', gap: 6, fontSize: 14, fontWeight: 600 }}>Type it again
+              <input style={inp} type={show ? 'text' : 'password'} autoComplete="new-password" value={pw2} onChange={(e) => setPw2(e.target.value)} required /></label>)}
+          {screen !== 'forgot' && <label style={{ fontSize: 13, display: 'flex', gap: 8, alignItems: 'center' }}><input type="checkbox" checked={show} onChange={(e) => setShow(e.target.checked)} />Show password</label>}
+          {err && <div role="alert" style={{ fontSize: 14, color: '#b42318', fontWeight: 600 }}>{err}</div>}
+          <button className="btn btn-primary" type="submit" disabled={busy}>{busy ? 'One moment…' : { create: 'Create password and open my kit', reset: 'Save password and open my kit', signin: 'Sign in', forgot: 'Send reset link' }[screen as string]}</button>
+          {screen === 'signin' && <button type="button" className="btn btn-ghost" onClick={() => { setErr(''); setScreen('forgot'); }}>Forgot password</button>}
+          {screen === 'forgot' && <button type="button" className="btn btn-ghost" onClick={() => { setErr(''); setScreen('signin'); }}>Back to sign in</button>}
+        </form>)}
+      <p style={{ marginTop: 18, fontSize: 13, color: 'var(--muted)' }}>Not a partner yet? <Link to="/partners">Apply to become one</Link>.</p>
+    </div></section>
   );
 }
