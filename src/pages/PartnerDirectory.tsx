@@ -131,7 +131,7 @@ export default function PartnerDirectory() {
               </div>);
           })}
 
-          <p style={{ marginTop: 8 }}>Want to be on this list? <Link to="/partners#apply">Apply to become a partner</Link>.</p>
+          <p style={{ marginTop: 8 }}>Want to be on this list? <Link to="/partners#apply">Apply to become a partner</Link>. Already a partner? <Link to="/partners/kit">Sign in to your partner kit</Link>.</p>
         </div>
       </section>
     </>

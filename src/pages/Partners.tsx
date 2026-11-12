@@ -123,6 +123,7 @@ export default function Partners() {
             <a className="btn btn-primary btn-lg" href="#apply" onClick={() => trackClick('partner_apply_cta', 'hero')}>Apply to partner</a>
             <Link className="btn btn-ghost btn-lg" to="/contact">Talk to us first</Link>
             <Link className="btn btn-ghost btn-lg" to="/partners/directory">Find a partner</Link>
+            <Link className="btn btn-ghost btn-lg" to="/partners/kit">Partner sign in</Link>
           </div>
         </div>
       </section>
