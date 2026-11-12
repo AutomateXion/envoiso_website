@@ -51,14 +51,14 @@
     },
     "/academy": {
       "title": "XionERP Academy | Free Courses and Certificates",
-      "description": "Free courses on XionERP for customers and partners. Read the lessons, pass the quiz and download your certificate.",
+      "description": "Free XionERP courses in two tracks of four stages, for customers and partners. Pass the quiz and get a certificate with a job title for your CV and LinkedIn.",
       "h1": "XionERP Academy",
-      "summary": "Free short courses on XionERP: Fundamentals for customers and new team members, and Partner Essentials for resellers and distributors. Pass a ten-question quiz and download a certificate that anyone can verify."
+      "summary": "Free XionERP courses. Customers: Certified User, Operations Specialist, Finance & Accounting Professional, System Administrator. Partners: Partner Essentials, Sales Consultant, Implementation Consultant, Support Specialist. Each has a ten-question quiz and a certificate anyone can verify."
     },
     "/academy/fundamentals": {
-      "title": "XionERP Fundamentals | Free Course and Certificate",
+      "title": "XionERP Certified User | Free Course and Certificate",
       "description": "Learn how XionERP is organised, how to set a company up, and how sales, purchasing, stock and the books fit together. Free, with a certificate.",
-      "h1": "XionERP Fundamentals",
+      "h1": "XionERP Certified User",
       "summary": "Seven short lessons: how XionERP is organised, setting up your company, people and access, products and prices, selling, buying, and stock, bank and the books. A ten-question quiz and a free certificate."
     },
     "/academy/partner": {
@@ -66,6 +66,42 @@
       "description": "For resellers and distributors: how the partner programme works, your partner portal, and how to show, set up and support XionERP for a customer. Free, with a certificate.",
       "h1": "XionERP Partner Essentials",
       "summary": "Six short lessons for partners: reseller or distributor, your partner portal, finding the right customers, showing XionERP, setting a customer up and supporting your customers. A ten-question quiz and a free certificate."
+    },
+    "/academy/operations": {
+      "title": "XionERP Certified Operations Specialist | Free Course and Certificate",
+      "description": "Sales, purchasing and inventory in XionERP: sales orders, deliveries, returns, advances, cheques, landed cost, transfers and stock counts. Free, with a certificate.",
+      "h1": "XionERP Certified Operations Specialist",
+      "summary": "Six lessons on order-to-cash and procure-to-pay in XionERP, a ten-question quiz and a free certificate."
+    },
+    "/academy/finance": {
+      "title": "XionERP Certified Finance & Accounting Professional | Free Course and Certificate",
+      "description": "Accounting in XionERP: chart of accounts, journals, bank and card reconciliation, VAT, closing periods and reading the reports. Free, with a certificate.",
+      "h1": "XionERP Certified Finance & Accounting Professional",
+      "summary": "Six lessons on keeping the books in XionERP, a ten-question quiz and a free certificate."
+    },
+    "/academy/admin": {
+      "title": "XionERP Certified System Administrator | Free Course and Certificate",
+      "description": "Administering XionERP: users, roles and permissions, company settings, document layouts, numbering, master data, import and entities. Free, with a certificate.",
+      "h1": "XionERP Certified System Administrator",
+      "summary": "Six lessons on running XionERP for a company, a ten-question quiz and a free certificate."
+    },
+    "/academy/partner-sales": {
+      "title": "XionERP Certified Sales Consultant | Free Course and Certificate",
+      "description": "For partners: who XionERP fits, plans and the trial, discovery, demos by business type, objections and closing. Free, with a certificate.",
+      "h1": "XionERP Certified Sales Consultant",
+      "summary": "Six lessons on selling XionERP, a ten-question quiz and a free certificate."
+    },
+    "/academy/partner-implementation": {
+      "title": "XionERP Certified Implementation Consultant | Free Course and Certificate",
+      "description": "For partners: the onboarding plan, setup, roles, data import, opening balances at a cut-off date, training and go-live. Free, with a certificate.",
+      "h1": "XionERP Certified Implementation Consultant",
+      "summary": "Six lessons on implementing XionERP, a ten-question quiz and a free certificate."
+    },
+    "/academy/partner-support": {
+      "title": "XionERP Certified Support Specialist | Free Course and Certificate",
+      "description": "For partners: the Help Center, reporting a problem, common access and document questions, healthy books and growing the account. Free, with a certificate.",
+      "h1": "XionERP Certified Support Specialist",
+      "summary": "Six lessons on supporting XionERP customers, a ten-question quiz and a free certificate."
     },
     "/privacy": {
       "title": "Privacy Policy | XionERP",

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { COURSES, courseMinutes, PASS_MARK } from '../data/academy';
+import { COURSES, courseMinutes, PASS_MARK, TRACKS } from '../data/academy';
 
 export default function Academy() {
   const nav = useNavigate();
@@ -11,27 +11,31 @@ export default function Academy() {
       <section className="page-hero"><div className="wrap">
         <span className="eb-pill eyebrow"><span className="dot" />XionERP Academy</span>
         <h1 className="page-h">Learn XionERP. Get certified. Free.</h1>
-        <p className="page-sub">Short courses for customers and partners. Read the lessons in your own time, pass a ten-question quiz, and download your certificate.</p>
+        <p className="page-sub">Two tracks of four stages, for customers and for partners. Read the lessons in your own time, pass a ten-question quiz, and download a certificate with a job title you can put on your CV and LinkedIn.</p>
       </div></section>
 
-      <section className="sol-sec"><div className="wrap">
-        <div className="sec-eyebrow">Courses</div>
-        <div style={{ display: 'grid', gap: 18, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', marginTop: 14 }}>
-          {COURSES.map((c) => (
-            <div key={c.id} className="fw-card" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <div className="sec-eyebrow">{c.audience}</div>
-              <h2 style={{ margin: 0 }}>{c.title}</h2>
-              <p style={{ margin: 0, color: 'var(--muted)', lineHeight: 1.6 }}>{c.blurb}</p>
-              <p style={{ margin: 0, fontSize: 14, color: 'var(--muted)' }}>{c.lessons.length} lessons · about {courseMinutes(c)} minutes · quiz and certificate</p>
-              <div style={{ marginTop: 'auto', paddingTop: 8 }}><Link className="btn btn-primary" to={`/academy/${c.id}`}>Start the course</Link></div>
-            </div>
-          ))}
-        </div>
-      </div></section>
+      {TRACKS.map((t) => (
+        <section key={t.id} className="sol-sec"><div className="wrap">
+          <div className="sec-eyebrow">{t.title}</div>
+          <p style={{ margin: '6px 0 0', color: 'var(--muted)', maxWidth: 760, lineHeight: 1.6 }}>{t.sub}</p>
+          <div style={{ display: 'grid', gap: 18, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', marginTop: 14 }}>
+            {COURSES.filter((c) => c.track === t.id).map((c) => (
+              <div key={c.id} className="fw-card" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div className="sec-eyebrow">Stage {c.stage}</div>
+                <h2 style={{ margin: 0, fontSize: 21 }}>{c.title}</h2>
+                <p style={{ margin: 0, color: 'var(--muted)', lineHeight: 1.6 }}>{c.blurb}</p>
+                <p style={{ margin: 0, fontSize: 14, color: 'var(--muted)' }}>{c.lessons.length} lessons · about {courseMinutes(c)} minutes · quiz and certificate</p>
+                <div style={{ marginTop: 'auto', paddingTop: 8 }}><Link className="btn btn-primary" to={`/academy/${c.id}`}>Start stage {c.stage}</Link></div>
+              </div>
+            ))}
+          </div>
+        </div></section>
+      ))}
 
       <section className="sol-sec"><div className="wrap" style={{ maxWidth: 820 }}>
         <div className="sec-eyebrow">How it works</div>
         <ol style={{ lineHeight: 1.8, paddingLeft: 20 }}>
+          <li>Start at stage 1 of your track, or at the stage that fits what you already know. Nothing is locked.</li>
           <li>Read the lessons. Your place is kept in this browser, so you can stop and come back.</li>
           <li>Take the quiz at the end. Ten questions; you need {PASS_MARK}% to pass, and you can retake it as often as you like.</li>
           <li>Enter your name and email. We send your certificate and show it on screen to download as a PDF or an image.</li>
