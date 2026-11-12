@@ -26,6 +26,7 @@ export default function Footer() {
             <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/partners">Partners</Link>
+            <Link to="/academy">Academy</Link>
           </div>
           <div className="foot-col">
             <h4>Resources</h4>

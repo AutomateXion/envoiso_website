@@ -14,6 +14,9 @@ import Careers from './pages/Careers';
 import Partners from './pages/Partners';
 import PartnerDirectory from './pages/PartnerDirectory';
 import PartnerKit from './pages/PartnerKit';
+import Academy from './pages/Academy';
+import AcademyCourse from './pages/AcademyCourse';
+import AcademyVerify from './pages/AcademyVerify';
 import './styles/global.css';
 import { initGA, trackPageview } from './lib/analytics';
 
@@ -67,6 +70,10 @@ export default function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/partners/directory" element={<PartnerDirectory />} />
         <Route path="/partners/kit" element={<PartnerKit />} />
+        <Route path="/academy" element={<Academy />} />
+        <Route path="/academy/verify" element={<AcademyVerify />} />
+        <Route path="/academy/verify/:code" element={<AcademyVerify />} />
+        <Route path="/academy/:courseId" element={<AcademyCourse />} />
         <Route path="/solutions/:slug" element={<Solution />} />
       </Routes>
       <Footer />

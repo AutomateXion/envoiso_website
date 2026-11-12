@@ -48,6 +48,24 @@
       "description": "Search XionERP distributors and resellers by country. Find the local partner who sells, sets up and supports XionERP cloud ERP near you.",
       "h1": "Find a XionERP partner",
       "summary": "Search XionERP distributors and resellers by country, company or city. A distributor covers a country; resellers work with local businesses under the distributor of their country."
+    },
+    "/academy": {
+      "title": "XionERP Academy | Free Courses and Certificates",
+      "description": "Free courses on XionERP for customers and partners. Read the lessons, pass the quiz and download your certificate.",
+      "h1": "XionERP Academy",
+      "summary": "Free short courses on XionERP: Fundamentals for customers and new team members, and Partner Essentials for resellers and distributors. Pass a ten-question quiz and download a certificate that anyone can verify."
+    },
+    "/academy/fundamentals": {
+      "title": "XionERP Fundamentals | Free Course and Certificate",
+      "description": "Learn how XionERP is organised, how to set a company up, and how sales, purchasing, stock and the books fit together. Free, with a certificate.",
+      "h1": "XionERP Fundamentals",
+      "summary": "Seven short lessons: how XionERP is organised, setting up your company, people and access, products and prices, selling, buying, and stock, bank and the books. A ten-question quiz and a free certificate."
+    },
+    "/academy/partner": {
+      "title": "XionERP Partner Essentials | Free Course and Certificate",
+      "description": "For resellers and distributors: how the partner programme works, your partner portal, and how to show, set up and support XionERP for a customer. Free, with a certificate.",
+      "h1": "XionERP Partner Essentials",
+      "summary": "Six short lessons for partners: reseller or distributor, your partner portal, finding the right customers, showing XionERP, setting a customer up and supporting your customers. A ten-question quiz and a free certificate."
     }
   }
 }
