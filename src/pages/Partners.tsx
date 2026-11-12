@@ -120,6 +120,7 @@ export default function Partners() {
           <div className="hero-cta" style={{ marginTop: 24 }}>
             <a className="btn btn-primary btn-lg" href="#apply" onClick={() => trackClick('partner_apply_cta', 'hero')}>Apply to partner</a>
             <Link className="btn btn-ghost btn-lg" to="/contact">Talk to us first</Link>
+            <Link className="btn btn-ghost btn-lg" to="/partners/directory">Find a partner</Link>
           </div>
         </div>
       </section>

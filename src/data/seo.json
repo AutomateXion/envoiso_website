@@ -42,6 +42,12 @@
       "description": "Apply to become a XionERP reseller or distributor. Bring cloud ERP with e-invoicing for the GCC to businesses in your country.",
       "h1": "Partner with XionERP",
       "summary": "Apply to become a XionERP reseller or distributor. Resellers sell and support XionERP for their own customers; distributors cover a whole country and support resellers there. Applying is free, every application is reviewed by our team, and terms are agreed directly with each partner."
+    },
+    "/partners/directory": {
+      "title": "Find a XionERP Partner | Distributors and Resellers by Country",
+      "description": "Search XionERP distributors and resellers by country. Find the local partner who sells, sets up and supports XionERP cloud ERP near you.",
+      "h1": "Find a XionERP partner",
+      "summary": "Search XionERP distributors and resellers by country, company or city. A distributor covers a country; resellers work with local businesses under the distributor of their country."
     }
   }
 }
