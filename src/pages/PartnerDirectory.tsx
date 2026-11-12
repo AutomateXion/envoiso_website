@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import HeroVideo from '../components/HeroVideo';
 
 const API = 'https://cloud.xionerp.com/api/v1';
 
@@ -71,7 +72,8 @@ export default function PartnerDirectory() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbLd) }} />
 
-      <section className="page-hero">
+      <section className="page-hero page-hero--video">
+        <HeroVideo name="partners-hero" />
         <div className="wrap">
           <span className="eyebrow"><span className="dot" />Partners</span>
           <h1 className="page-h">Find a XionERP partner</h1>

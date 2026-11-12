@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, Plus } from '../components/Icons';
 import { trackClick } from '../lib/analytics';
+import HeroVideo from '../components/HeroVideo';
 import seo from '../data/seo.json';
 
 const API = 'https://cloud.xionerp.com/api/v1';
@@ -112,7 +113,8 @@ export default function Partners() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbLd) }} />
 
-      <section className="page-hero">
+      <section className="page-hero page-hero--video">
+        <HeroVideo name="partners-hero" />
         <div className="wrap">
           <span className="eyebrow"><span className="dot" />Partners</span>
           <h1 className="page-h">Partner with XionERP</h1>

@@ -432,3 +432,11 @@
   .evx .job-card .btn{justify-self:start}
   .evx .job-how{grid-template-columns:1fr}
 }
+
+/* Looping video behind a page hero. The wash keeps the heading and buttons readable. */
+.evx .page-hero--video{position:relative;overflow:hidden}
+.evx .page-hero--video>.wrap{position:relative;z-index:1}
+.evx .hero-video{position:absolute;inset:0;z-index:0;pointer-events:none}
+.evx .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
+.evx .hero-video::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(255,255,255,.72),rgba(255,255,255,.35) 60%,rgba(255,255,255,0) 100%)}
+@media (prefers-reduced-motion:reduce){.evx .hero-video video{display:none}.evx .hero-video{background:url(/partners-hero.jpg) center/cover no-repeat}}
