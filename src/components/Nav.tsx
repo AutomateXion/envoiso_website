@@ -9,7 +9,7 @@ export const APP_SIGNUP_URL = 'https://cloud.xionerp.com/signup';
 const LINKS = [
   { to: '/#features', label: 'Product', match: '/' },
   { to: '/pricing', label: 'Pricing', match: '/pricing' },
-  { to: '/compliance', label: 'Compliance', match: '/compliance' },
+  { to: '/partners', label: 'Partners', match: '/partners' },
   { to: '/#products', label: 'Products', match: '/' },
   { to: '/about', label: 'About', match: '/about' },
   { to: '/careers', label: 'Careers', match: '/careers' },
