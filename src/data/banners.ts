@@ -88,8 +88,8 @@ export const BANNERS: Banner[] = [
   },
   {
     eyebrow: 'Oman e-invoicing',
-    title: 'Fawtara-ready, ahead of the rollout.',
-    text: 'UBL 2.1 e-invoices generated and stored the way the Oman Tax Authority expects — built into every record.',
+    title: 'Fawtara e-invoice files, built in.',
+    text: 'XionERP creates the standard UBL 2.1 e-invoice file for every sales invoice, ready to pass to your Accredited Service Provider.',
     cta: { label: 'See compliance', to: '/compliance' },
     icon: MODULE_ICONS['Compliance'],
     image: '/banner-5.jpg',
