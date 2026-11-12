@@ -20,6 +20,25 @@ async function post(path: string, body: unknown) {
 function BlockView({ b }: { b: Block }) {
   if (b.t === 'p') return <p style={{ lineHeight: 1.75, margin: '0 0 14px' }}>{b.text}</p>;
   if (b.t === 'ul') return <ul style={{ lineHeight: 1.7, margin: '0 0 14px', paddingLeft: 20, display: 'grid', gap: 8 }}>{b.items.map((i) => <li key={i}>{i}</li>)}</ul>;
+  /* Pictures of the real screen (sample data). Clicking one opens it full size. */
+  if (b.t === 'img') return (
+    <figure style={{ margin: '4px 0 18px' }}>
+      <a href={b.src} target="_blank" rel="noreferrer" title="Open full size">
+        <img src={b.src} alt={b.alt} loading="lazy" decoding="async"
+          style={{ display: 'block', width: '100%', height: 'auto', border: '1px solid var(--line)', borderRadius: 10, boxShadow: '0 6px 20px rgba(16,48,128,.08)' }} />
+      </a>
+      {b.caption && <figcaption style={{ fontSize: 13, color: 'var(--muted, #5b6b82)', marginTop: 8 }}>{b.caption}</figcaption>}
+    </figure>
+  );
+  /* A short silent clip of the clicks: plays when pressed, loops, never starts with sound. */
+  if (b.t === 'video') return (
+    <figure style={{ margin: '4px 0 18px' }}>
+      <video src={b.src} poster={b.poster} controls muted playsInline loop preload="none"
+        aria-label={b.caption}
+        style={{ display: 'block', width: '100%', height: 'auto', border: '1px solid var(--line)', borderRadius: 10, background: '#0b1b3f', boxShadow: '0 6px 20px rgba(16,48,128,.08)' }} />
+      <figcaption style={{ fontSize: 13, color: 'var(--muted, #5b6b82)', marginTop: 8 }}><strong>Watch. </strong>{b.caption}</figcaption>
+    </figure>
+  );
   if (b.t === 'path') return <p style={{ margin: '0 0 14px', padding: '9px 12px', background: '#EEF3FB', borderRadius: 8, fontWeight: 600, color: 'var(--navy, #103080)', fontSize: 15 }}>{b.text}</p>;
   return <p style={{ margin: '0 0 14px', padding: '12px 14px', borderLeft: '4px solid #5090F1', background: '#F5F9FF', borderRadius: 6, lineHeight: 1.65 }}><strong>Tip. </strong>{b.text}</p>;
 }
