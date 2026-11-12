@@ -23,17 +23,25 @@ export type Block =
 export type Lesson = { id: string; title: string; minutes: number; blocks: Block[]; remember: string[] };
 export type Question = { id: string; q: string; options: string[] };
 export type Course = {
-  id: string; title: string; audience: string; blurb: string; outcome: string;
+  id: string;
+  /** Who the track is for, and the step on it (1 to 4). */
+  track: 'customer' | 'partner'; stage: number;
+  /** A job-style title, as it reads on a CV and on LinkedIn. */
+  title: string; audience: string; blurb: string; outcome: string;
   lessons: Lesson[]; quiz: Question[];
 };
 
+import { CUSTOMER_STAGES } from './academy-customer';
+import { PARTNER_STAGES } from './academy-partner';
+
 export const PASS_MARK = 80;
 
-export const COURSES: Course[] = [
+const FIRST_STAGES: Course[] = [
   {
     id: 'fundamentals',
-    title: 'XionERP Fundamentals',
-    audience: 'For customers and new team members',
+    track: 'customer', stage: 1,
+    title: 'XionERP Certified User',
+    audience: 'Customers · Stage 1 · Fundamentals',
     blurb: 'How XionERP is organised, how to set a company up, and how a sale, a purchase, stock and the books fit together.',
     outcome: 'You can find your way around XionERP and follow a sale and a purchase from the first document to the books.',
     lessons: [
@@ -184,8 +192,9 @@ export const COURSES: Course[] = [
   },
   {
     id: 'partner',
+    track: 'partner', stage: 1,
     title: 'XionERP Partner Essentials',
-    audience: 'For resellers and distributors',
+    audience: 'Partners · Stage 1',
     blurb: 'How the partner programme works, what your partner portal gives you, and how to show, set up and support XionERP for a customer.',
     outcome: 'You can explain the programme, use your partner portal, and take a customer from first demo to first week.',
     lessons: [
@@ -298,6 +307,13 @@ export const COURSES: Course[] = [
       { id: 'p10', q: 'A customer in Oman asks about e-invoicing (Fawtara). What is accurate to say today?', options: ['XionERP sends every invoice to the tax authority automatically', 'XionERP does not support e-invoicing', 'XionERP creates the standard e-invoice file (UBL 2.1) for each sales invoice; sending it to the provider automatically is not built yet', 'E-invoicing is only for retail shops'] },
     ],
   },
+];
+
+export const COURSES: Course[] = [...FIRST_STAGES, ...CUSTOMER_STAGES, ...PARTNER_STAGES]
+  .sort((a, b) => (a.track === b.track ? a.stage - b.stage : a.track === 'customer' ? -1 : 1));
+export const TRACKS: { id: Course['track']; title: string; sub: string }[] = [
+  { id: 'customer', title: 'For customers and their teams', sub: 'Four stages, from first steps to running the system. Each certificate carries a job title you can put on your CV and LinkedIn.' },
+  { id: 'partner', title: 'For resellers and distributors', sub: 'Four stages, from the programme to selling, implementing and supporting XionERP.' },
 ];
 
 export const courseById = (id: string) => COURSES.find((c) => c.id === id);
