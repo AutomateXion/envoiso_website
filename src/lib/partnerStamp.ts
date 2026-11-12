@@ -66,39 +66,49 @@ export function renderStamp(d: KitDisplay, logo: HTMLImageElement | null, meta: 
   ctx.strokeStyle = LINE; ctx.lineWidth = Math.max(0.6, h * 0.008);
   ctx.beginPath(); ctx.moveTo(x1, p); ctx.lineTo(x1, h - p); ctx.stroke();
 
-  /* Identity: who they are to XionERP, their company, and an address when there is room. */
+  /* Identity: who they are to XionERP, their company when a logo stands on the left, and an address. */
   const ix = x1 + p, iwid = iw - 2 * p;
-  const small = Math.min(h * 0.095, w * 0.016);
+  const identity = (dy: number): number => {
+  const small = Math.min(h * 0.085, w * 0.014);
   ctx.font = `700 ${small}px ${FONT}`; ctx.fillStyle = '#2F63C9';
   const labelSize = fit(ctx, label, iwid, small, small * 0.6, 700);
   ctx.font = `700 ${labelSize}px ${FONT}`;
-  let y = p + labelSize * 1.05;
-  ctx.fillText(label, ix, y);
+  let y = p + labelSize;
+  ctx.fillText(label, ix, y + dy);
+  y += labelSize * 0.9;                                   // clear space under the label
   if (logo) {
-    const cs = fit(ctx, d.companyName, iwid, h * 0.16, h * 0.085, 700);
+    const cs = fit(ctx, d.companyName, iwid, h * 0.14, h * 0.08, 700);
     ctx.font = `700 ${cs}px ${FONT}`; ctx.fillStyle = INK;
-    const lines = wrap(ctx, d.companyName, iwid, 2); y += cs * 1.4;
-    lines.forEach((t) => { ctx.fillText(t, ix, y); y += cs * 1.18; });
-    y -= cs * 0.18;
+    const lines = wrap(ctx, d.companyName, iwid, 2); y += cs;
+    lines.forEach((t) => { ctx.fillText(t, ix, y + dy); y += cs * 1.2; });
+    y -= cs * 0.2;
   }
-  if (d.address && h >= 100) {
-    const as = Math.min(h * 0.085, w * 0.016); ctx.font = `400 ${as}px ${FONT}`; ctx.fillStyle = MUTED;
-    y += as * 0.7;
-    wrap(ctx, d.address, iwid, Math.max(1, Math.floor((h - p - y) / (as * 1.3)))).forEach((t) => { ctx.fillText(t, ix, y); y += as * 1.3; });
+  if (d.address) {
+    const as = Math.min(h * 0.08, w * 0.0135); ctx.font = `400 ${as}px ${FONT}`; ctx.fillStyle = MUTED;
+    y += as * 0.5 + (logo ? as * 0.3 : as * 0.6);
+    const room = Math.floor((h - p - y) / (as * 1.3)) + 1;
+    if (room >= 1) wrap(ctx, d.address, iwid, Math.min(room, 3)).forEach((t) => { ctx.fillText(t, ix, y + dy); y += as * 1.3; });
   }
+  return y;
+  };
+  /* Measure the block first, then centre it between the top and bottom margins. */
+  const endY = (() => { ctx.save(); ctx.globalAlpha = 0; const e = identity(0); ctx.restore(); return e; })();
+  const lastBottom = endY - (d.address ? Math.min(h * 0.08, w * 0.0135) * 0.3 : 0);
+  identity(Math.max(0, (h - p - lastBottom - p) / 2));
 
-  /* Contacts: up to four lines, shrunk to fit the column. */
+  /* Contacts: up to four lines at one size, so the column reads as a block. */
   const cx = x2 + p / 2, cw = w - p - cx;
   const lines = [
     { t: d.contactName, bold: true }, { t: d.phone }, { t: d.email }, { t: d.website },
   ].filter((l) => l.t);
   if (lines.length) {
-    const fs0 = Math.min(h * 0.15, w * 0.026);
-    const lh = Math.min(fs0 * 1.3, (h - 2 * p) / lines.length);
-    let yy = (h - lines.length * lh) / 2 + lh * 0.78;
+    const fs0 = Math.min(h * 0.105, w * 0.019);
+    let fs = fs0;
+    lines.forEach((l) => { fs = Math.min(fs, fit(ctx, l.t!, cw, fs0, fs0 * 0.55, l.bold ? 700 : 500)); });
+    const lh = Math.min(fs * 1.55, (h - 2 * p) / lines.length);
+    let yy = (h - (lines.length - 1) * lh) / 2 + fs * 0.35;
     lines.forEach((l) => {
-      const s = fit(ctx, l.t!, cw, fs0, fs0 * 0.55, l.bold ? 700 : 500);
-      ctx.font = `${l.bold ? 700 : 500} ${s}px ${FONT}`; ctx.fillStyle = l.bold ? NAVY : INK;
+      ctx.font = `${l.bold ? 700 : 500} ${fs}px ${FONT}`; ctx.fillStyle = l.bold ? NAVY : INK;
       ctx.fillText(l.t!, cx, yy); yy += lh;
     });
   }
