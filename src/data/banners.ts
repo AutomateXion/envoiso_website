@@ -68,6 +68,16 @@ export const BANNERS: Banner[] = [
     theme: 'blue',
   },
   {
+    eyebrow: 'New · Free courses',
+    title: 'Learn XionERP. Get certified.',
+    text: 'Free Xion Academy courses for customers and partners. Pass the quiz, get a certificate and add it to LinkedIn.',
+    cta: { label: 'Open Xion Academy', to: '/academy' },
+    logo: { src: '/logo-academy-horizontal.png', alt: 'Xion Academy', href: '/academy' },
+    icon: MODULE_ICONS['Human Resources'],
+    image: '/banner-7.jpg',
+    theme: 'blue',
+  },
+  {
     eyebrow: 'Included, no extra cost',
     title: 'HRMS and field sales, built in.',
     text: 'Payroll, attendance and leave, plus a mobile app for reps on the road — modules most ERPs sell separately.',
