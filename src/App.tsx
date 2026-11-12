@@ -11,6 +11,7 @@ import Compliance from './pages/Compliance';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
+import Partners from './pages/Partners';
 import './styles/global.css';
 import { initGA, trackPageview } from './lib/analytics';
 
@@ -61,6 +62,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/partners" element={<Partners />} />
         <Route path="/solutions/:slug" element={<Solution />} />
       </Routes>
       <Footer />
