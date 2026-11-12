@@ -6,6 +6,85 @@ services:
     staticPublishPath: ./dist
     pullRequestPreviewsEnabled: false
     routes:
+      # Each page has its own prerendered file (title, description, heading). Render answers
+      # /pricing with the catch-all below unless the page has its own rule, so crawlers that do
+      # not run JavaScript would see the home page's title everywhere. scripts/prerender-meta.mjs
+      # fails the build if a page is missing here.
+      - type: rewrite
+        source: /pricing
+        destination: /pricing/index.html
+      - type: rewrite
+        source: /compliance
+        destination: /compliance/index.html
+      - type: rewrite
+        source: /about
+        destination: /about/index.html
+      - type: rewrite
+        source: /contact
+        destination: /contact/index.html
+      - type: rewrite
+        source: /careers
+        destination: /careers/index.html
+      - type: rewrite
+        source: /partners
+        destination: /partners/index.html
+      - type: rewrite
+        source: /partners/directory
+        destination: /partners/directory/index.html
+      - type: rewrite
+        source: /academy
+        destination: /academy/index.html
+      - type: rewrite
+        source: /academy/fundamentals
+        destination: /academy/fundamentals/index.html
+      - type: rewrite
+        source: /academy/partner
+        destination: /academy/partner/index.html
+      - type: rewrite
+        source: /academy/operations
+        destination: /academy/operations/index.html
+      - type: rewrite
+        source: /academy/finance
+        destination: /academy/finance/index.html
+      - type: rewrite
+        source: /academy/admin
+        destination: /academy/admin/index.html
+      - type: rewrite
+        source: /academy/partner-sales
+        destination: /academy/partner-sales/index.html
+      - type: rewrite
+        source: /academy/partner-implementation
+        destination: /academy/partner-implementation/index.html
+      - type: rewrite
+        source: /academy/partner-support
+        destination: /academy/partner-support/index.html
+      - type: rewrite
+        source: /privacy
+        destination: /privacy/index.html
+      - type: rewrite
+        source: /terms
+        destination: /terms/index.html
+      - type: rewrite
+        source: /solutions/accounting-and-e-invoicing
+        destination: /solutions/accounting-and-e-invoicing/index.html
+      - type: rewrite
+        source: /solutions/inventory-and-warehouse-management
+        destination: /solutions/inventory-and-warehouse-management/index.html
+      - type: rewrite
+        source: /solutions/field-sales-and-crm
+        destination: /solutions/field-sales-and-crm/index.html
+      - type: rewrite
+        source: /solutions/hr-payroll-and-recruitment
+        destination: /solutions/hr-payroll-and-recruitment/index.html
+      - type: rewrite
+        source: /solutions/manufacturing-erp
+        destination: /solutions/manufacturing-erp/index.html
+      - type: rewrite
+        source: /solutions/whatsapp-erp-integration
+        destination: /solutions/whatsapp-erp-integration/index.html
+      - type: rewrite
+        source: /solutions/online-store-for-erp
+        destination: /solutions/online-store-for-erp/index.html
       - type: rewrite
         source: /*
         destination: /index.html

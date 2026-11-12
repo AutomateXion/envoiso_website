@@ -37,6 +37,11 @@ function page(path, r) {
   return h;
 }
 
+// Every page needs its own rewrite in render.yaml, ahead of the catch-all (see the note there).
+const rules = readFileSync('render.yaml', 'utf8');
+const unruled = Object.keys(seo.routes).filter((p) => p !== '/' && !new RegExp('source: ' + p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*\\n\\s*destination: ' + p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/index.html').test(rules));
+if (unruled.length) throw new Error('render.yaml has no rewrite for: ' + unruled.join(', ') + '. Add one per page before the catch-all.');
+
 for (const [path, r] of Object.entries(seo.routes)) {
   const html = page(path, r);
   if (path === '/') writeFileSync(join(dist, 'index.html'), html);
