@@ -96,7 +96,7 @@ export default function Solution() {
         <div className="wrap">
           <div className="final-card">
             <h2>See it on your own numbers</h2>
-            <p>Start a 14-day free trial and run your own data through XionERP.</p>
+            <p>Start a 30-day free trial and run your own data through XionERP.</p>
             <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('solution_final_cta', s.slug)}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>

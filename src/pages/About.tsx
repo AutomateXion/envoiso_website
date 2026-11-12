@@ -93,7 +93,7 @@ export default function About() {
             <h2>Come see the platform for yourself</h2>
             <p>Start a free trial and run your own numbers through Xion ERP — no credit card, no sales call required to get started.</p>
             <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('about_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
-            <div className="hero-note"><Check />14-day free trial &middot; Cancel anytime</div>
+            <div className="hero-note"><Check />30-day free trial &middot; Cancel anytime</div>
           </div>
         </div>
       </section>

@@ -36,14 +36,14 @@ export const PARTNER_STAGES: Course[] = [
         blocks: [
           { t: 'p', text: 'Plans differ by the number of users, not by what the customer may use. There are five: Solo (1 user), Team (3), Business (5), Growth (10) and Enterprise (15). Each is billed monthly or annually; annual gives 14 months for the price of 12. Current prices, in US dollars, Omani rials, Sri Lankan rupees and Qatari riyals, are on xionerp.com/pricing.' },
           { t: 'path', text: 'xionerp.com/pricing' },
-          { t: 'p', text: 'Every company starts with a 14-day free trial, with no credit card. Reminders go out as the end comes near. When the trial ends without a plan, the workspace pauses and the data is kept until they subscribe.' },
+          { t: 'p', text: 'Every company starts with a 30-day free trial, with no credit card. Reminders go out as the end comes near. When the trial ends without a plan, the workspace pauses and the data is kept until they subscribe.' },
           { t: 'ul', items: [
             'A seat is a person who signs in. Salesmen who are only picked on documents can be added without sign-in, and take no seat.',
             'A person who has left is switched off, which frees their seat for someone else.',
           ] },
           { t: 'tip', text: 'Never quote a price from memory. Open the pricing page with the customer, in their currency, so the figure is today\'s.' },
         ],
-        remember: ['Five plans by number of users; annual is 14 months for 12.', '14-day trial, no card; the workspace pauses, data kept, if no plan follows.'],
+        remember: ['Five plans by number of users; annual is 14 months for 12.', '30-day trial, no card; the workspace pauses, data kept, if no plan follows.'],
       },
       {
         id: 'discovery', title: 'The discovery call', minutes: 5,

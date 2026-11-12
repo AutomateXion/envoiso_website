@@ -41,7 +41,7 @@ export const BANNERS: Banner[] = [
   {
     eyebrow: 'New prices',
     title: 'Lower prices on every plan.',
-    text: 'Every module included — you only pick your team size. Start with a 14-day free trial.',
+    text: 'Every module included — you only pick your team size. Start with a 30-day free trial.',
     cta: { label: 'See pricing', to: '/pricing' },
     icon: MODULE_ICONS['Invoicing'],
     image: '/banner-2.jpg',

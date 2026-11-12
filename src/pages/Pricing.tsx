@@ -23,7 +23,7 @@ const FAQS = [
   { q: 'Do all plans include every module?', a: 'Yes. Every Xion ERP plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, manufacturing, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
   { q: 'Is Xion ERP really Fawtara-ready?', a: 'Xion ERP generates e-invoices in UBL 2.1 / Peppol BIS 3.0 format, aligned with Oman\u2019s Fawtara e-invoicing requirements ahead of the OTA phased rollout. See our Compliance page for the full timeline.' },
   { q: 'Can I switch between monthly and annual billing?', a: 'Yes, you can switch billing frequency at any time from your account settings. Annual billing gives you 14 months for the price of 12.' },
-  { q: 'What happens after my 14-day trial?', a: 'You can pick any plan and continue seamlessly, or your workspace pauses (your data is kept safely) until you\u2019re ready to subscribe. No credit card is required to start the trial.' },
+  { q: 'What happens after my 30-day trial?', a: 'You can pick any plan and continue seamlessly, or your workspace pauses (your data is kept safely) until you\u2019re ready to subscribe. No credit card is required to start the trial.' },
   { q: 'Do you support multiple currencies?', a: 'Yes. Xion ERP supports OMR (to 3 decimal places), USD, LKR and other regional currencies, with real-time conversion for multi-entity and cross-border businesses.' },
 ];
 
@@ -41,7 +41,7 @@ export default function Pricing() {
         <div className="wrap">
           <span className="eyebrow"><span className="dot" />Pricing</span>
           <h1 className="page-h">Simple plans that grow with you</h1>
-          <p className="page-sub">Start free for 14 days. Every plan includes the full platform &mdash; you only choose your team size. No hidden fees, cancel anytime.</p>
+          <p className="page-sub">Start free for 30 days. Every plan includes the full platform &mdash; you only choose your team size. No hidden fees, cancel anytime.</p>
         </div>
       </section>
 
@@ -101,7 +101,7 @@ export default function Pricing() {
               <div className="seat-tier-for">For larger teams &amp; multi-entity groups needing custom onboarding.</div>
             </div>
           </div>
-          <p className="pricing-foot">All plans include <strong>every module</strong>, <strong>GCC e-invoicing compliance</strong>, IFRS-standard financials, and a <strong>14-day free trial</strong> &mdash; no credit card. {cur === 'lkr' && <strong>Sri Lanka pricing includes a regional rate.</strong>}</p>
+          <p className="pricing-foot">All plans include <strong>every module</strong>, <strong>GCC e-invoicing compliance</strong>, IFRS-standard financials, and a <strong>30-day free trial</strong> &mdash; no credit card. {cur === 'lkr' && <strong>Sri Lanka pricing includes a regional rate.</strong>}</p>
         </div>
       </section>
 
@@ -151,7 +151,7 @@ export default function Pricing() {
         <div className="wrap">
           <div className="final-card">
             <h2>{PROMO.active ? 'Lock in 50% off before it ends' : 'Start your free trial'}</h2>
-            <p>{PROMO.active ? 'Start your 14-day free trial today, then choose any annual plan to secure half price for your first year.' : 'Start your 14-day free trial today, then choose the plan that fits your team.'}</p>
+            <p>{PROMO.active ? 'Start your 30-day free trial today, then choose any annual plan to secure half price for your first year.' : 'Start your 30-day free trial today, then choose the plan that fits your team.'}</p>
             <a className="btn btn-white btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('pricing_final_cta', 'Start your free trial (final CTA)')}>Start your free trial</a>
             <div className="hero-note"><Check />No credit card &middot; Cancel anytime</div>
           </div>

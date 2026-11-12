@@ -116,7 +116,7 @@ export const INTROS: Record<string, Intro> = {
     audience: 'Partner sales consultants, account managers and pre-sales staff.',
     objectives: [
       'Qualify a prospect against what XionERP covers, and say plainly when it does not fit.',
-      'Explain the plans, seats, yearly billing and the 14-day free trial.',
+      'Explain the plans, seats, yearly billing and the 30-day free trial.',
       'Run a discovery call that finds the prospect\'s real pains.',
       'Give a demo for their kind of business and answer the usual objections.',
       'Move a prospect from demo to trial to a signed plan.',

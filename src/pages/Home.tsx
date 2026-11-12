@@ -35,7 +35,7 @@ export default function Home() {
             <a className="btn btn-primary btn-lg" href={APP_SIGNUP_URL} onClick={() => trackClick('hero_start_trial', 'Start free trial (hero)')}>Start free trial</a>
             <Link className="btn btn-ghost btn-lg" to="/pricing" onClick={() => trackClick('hero_see_pricing', 'See pricing')}>See pricing</Link>
           </div>
-          <div className="hero-note"><Check />14-day free trial &middot; No credit card required</div>
+          <div className="hero-note"><Check />30-day free trial &middot; No credit card required</div>
           <div className="hero-fawtara">
             <span className="ff-badge"><Check />Fawtara-ready</span>
             Built for Oman e-invoicing (UBL 2.1) ahead of the OTA rollout
@@ -137,7 +137,7 @@ export default function Home() {
             <div className="row"><span className="lbl">Decimal precision (OMR)</span><span className="big">3</span></div>
             <div className="row"><span className="lbl">Core business modules</span><span className="big">10+</span></div>
             <div className="row"><span className="lbl">Setup to first invoice</span><span className="big">1 day</span></div>
-            <div className="row"><span className="lbl">Free trial</span><span className="big">14 days</span></div>
+            <div className="row"><span className="lbl">Free trial</span><span className="big">30 days</span></div>
           </div>
         </div>
       </section>
