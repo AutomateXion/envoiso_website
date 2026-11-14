@@ -452,3 +452,7 @@
 .evx .academy-hero h1.page-h{font-size:clamp(26px,3.1vw,38px);line-height:1.12;max-width:32ch}
 .evx .academy-hero .page-sub{font-size:16px;margin-top:8px;max-width:78ch;line-height:1.5}
 .evx .academy-hero + .sol-sec{padding-top:28px}
+
+.evx .course-head{display:flex;align-items:center;gap:12px}
+.evx .course-icon{width:46px;height:46px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.evx .course-tag{font-size:13px;color:var(--muted);margin-top:2px}
