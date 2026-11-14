@@ -28,7 +28,7 @@ export default function Home() {
       <header className="hero">
         <div className="wrap">
           <HeroBanners />
-          <span className="eyebrow"><span className="dot" />Intelligence &middot; Flow &middot; Trust</span>
+          <span className="eyebrow"><span className="dot" />Cloud ERP software for Oman, Qatar, UAE and Sri Lanka</span>
           <h1 className="hero-h">Your whole business, in <em>one</em> flow.</h1>
           <p className="hero-sub">XionERP is a cloud ERP for growing GCC businesses. It brings accounting, sales, inventory, CRM, manufacturing, HR, projects and e-invoicing into a single platform &mdash; so your numbers, stock and customers finally speak to each other.</p>
           <div className="hero-cta">
@@ -152,7 +152,7 @@ export default function Home() {
             <p className="sec-sub">Pick the part of the business you want to fix first. Every area runs on the same data, so adding the next one does not mean another system.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
-            {solutions.solutions.map((s) => (
+            {solutions.solutions.filter((s) => !('country' in s)).map((s) => (
               <Link className="fw-card" key={s.slug} to={`/solutions/${s.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <h3>{s.eyebrow}</h3>
                 <p>{s.h1}</p>

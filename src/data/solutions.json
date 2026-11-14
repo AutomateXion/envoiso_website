@@ -2,7 +2,7 @@
   "solutions": [
     {
       "slug": "accounting-and-e-invoicing",
-      "title": "Accounting & E-Invoicing Software for the GCC | XionERP",
+      "title": "Accounting & VAT Software for Oman, UAE, Qatar | XionERP",
       "description": "Cloud accounting, invoicing and e-invoicing for GCC businesses: general ledger, VAT returns, multi-currency and OMR to three decimals, in one ERP.",
       "eyebrow": "Accounting & e-invoicing",
       "h1": "Accounting and e-invoicing software built for the GCC",
@@ -138,6 +138,94 @@
       ],
       "related": ["inventory-and-warehouse-management", "whatsapp-erp-integration", "accounting-and-e-invoicing"],
       "external": { "label": "See Xion Webstore", "href": "https://automatexion.com/xionwebstore.html" }
+    },
+    {
+      "slug": "erp-software-oman",
+      "country": true,
+      "title": "ERP Software in Oman | Cloud ERP with Fawtara E-Invoicing | XionERP",
+      "description": "Cloud ERP software for businesses in Oman: OMR to three decimals, 5% VAT returns, Fawtara e-invoicing, inventory, POS, HR and payroll. Head office in Muscat.",
+      "eyebrow": "ERP software in Oman",
+      "h1": "Cloud ERP software for businesses in Oman",
+      "intro": "XionERP is a cloud ERP from a Muscat-based company, made for Omani businesses. Accounting works in OMR to three decimals, VAT returns come straight from your invoices, and e-invoicing is built for the Oman Tax Authority's Fawtara programme. Sales, stock, purchasing, POS, HR and payroll run in the same system, with support from our team in Muscat.",
+      "groups": [
+        { "heading": "Tax and compliance in Oman", "blurb": "Built around how the Oman Tax Authority works.", "items": ["5% VAT on sales and purchases", "VAT return report", "Fawtara e-invoicing in UBL 2.1 and PINT-OM format", "VAT number on every tax invoice", "Arabic-ready invoice layouts"] },
+        { "heading": "Finance in OMR", "blurb": "Three-decimal Omani rial throughout.", "items": ["Chart of accounts and general ledger", "OMR to three decimals", "Multi-currency with exchange gain and loss", "Bank reconciliation", "Post-dated cheques (PDC)", "Profit and loss, balance sheet, cash flow"] },
+        { "heading": "Run the whole business", "blurb": "One system instead of separate tools.", "items": ["Quotations, invoices and receipts", "Inventory across branches and warehouses", "Point of sale for showrooms", "Purchasing and supplier bills", "HR, attendance and payroll", "WhatsApp invoices and reminders"] }
+      ],
+      "faqs": [
+        { "q": "Is XionERP ready for Oman's Fawtara e-invoicing?", "a": "Yes. XionERP produces structured e-invoices in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification. Our compliance guide explains the Fawtara phases and dates." },
+        { "q": "Does XionERP handle OMR to three decimals?", "a": "Yes. Amounts, the general ledger and the trial balance all work in Omani rial to three decimals, and you can also invoice in USD, AED, QAR or other currencies." },
+        { "q": "Can XionERP prepare my Oman VAT return?", "a": "Yes. VAT at 5% is applied on sales and purchases as you work, and the VAT return report totals output and input VAT for the period." },
+        { "q": "Where is XionERP support based?", "a": "Our head office is in Muscat, Oman, with an engineering team in Sri Lanka. You can reach us on +968 97696968 or by WhatsApp." },
+        { "q": "How much does XionERP cost in Oman?", "a": "Plans are priced per user in OMR and every plan includes every module. You can start with a 30-day free trial with no credit card." }
+      ],
+      "related": ["accounting-and-e-invoicing", "inventory-and-warehouse-management", "hr-payroll-and-recruitment"]
+    },
+    {
+      "slug": "erp-software-qatar",
+      "country": true,
+      "title": "ERP Software in Qatar | Cloud ERP for Qatari Businesses | XionERP",
+      "description": "Cloud ERP software for businesses in Qatar: accounting in QAR, inventory, showroom POS, field sales, service contracts, HR and payroll in one system.",
+      "eyebrow": "ERP software in Qatar",
+      "h1": "Cloud ERP software for businesses in Qatar",
+      "intro": "XionERP runs trading, retail and service companies in Qatar from one cloud system. Accounting works in Qatari riyal with multi-currency for imports, stock stays in step with every sale and delivery, and showrooms, field sales teams and service departments all work on the same data.",
+      "groups": [
+        { "heading": "Finance in QAR", "blurb": "Accounts that every other module posts to.", "items": ["Chart of accounts and general ledger", "Accounting in QAR with multi-currency", "Supplier payments in USD, AED and other currencies", "Post-dated cheques (PDC) and bounced cheques", "Customer statements and aging", "Profit and loss, balance sheet, cash flow"] },
+        { "heading": "Trading and retail", "blurb": "Built for importers, distributors and showrooms.", "items": ["Inventory across showrooms and warehouses", "Serial numbers and batches", "Point of sale with manager approvals", "Purchase orders, goods received and landed cost", "Price lists per customer group", "Online store connected to stock"] },
+        { "heading": "Service and people", "blurb": "After-sales and staff on the same system.", "items": ["Service calls and maintenance contracts (AMC)", "Rental contracts and meter billing", "Field sales app with live stock", "HR, attendance and payroll", "WhatsApp invoices and reminders"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP work in Qatari riyal?", "a": "Yes. Your books can be kept in QAR, and you can buy and sell in USD, AED, OMR or other currencies with exchange gains and losses posted automatically." },
+        { "q": "Is XionERP used by companies in Qatar?", "a": "Yes. Trading and retail companies in Qatar run their showrooms, stock, service departments and accounts on XionERP today." },
+        { "q": "Is XionERP ready for e-invoicing in Qatar?", "a": "XionERP already produces structured e-invoices in UBL 2.1 format for Oman's programme, so it is ready to adapt as Qatar's own e-invoicing requirements are published." },
+        { "q": "Can I run several companies or branches?", "a": "Yes. XionERP supports several branches, warehouses and legal entities, each with its own trial balance, profit and loss and balance sheet." },
+        { "q": "How do I try XionERP?", "a": "Start a 30-day free trial with no credit card, or contact our team for a demo on your own data. Plans are priced per user in QAR." }
+      ],
+      "related": ["inventory-and-warehouse-management", "field-sales-and-crm", "online-store-for-erp"]
+    },
+    {
+      "slug": "erp-software-uae",
+      "country": true,
+      "title": "ERP Software in the UAE | Cloud ERP with VAT | XionERP",
+      "description": "Cloud ERP software for UAE businesses: 5% VAT with TRN on tax invoices, accounting in AED, inventory, serial numbers, POS, CRM, HR and payroll in one system.",
+      "eyebrow": "ERP software in the UAE",
+      "h1": "Cloud ERP software for businesses in the UAE",
+      "intro": "XionERP gives trading and distribution companies in the UAE one cloud system for accounts, VAT, stock and sales. Tax invoices carry your TRN, 5% VAT is worked out on every line, and the books are kept in AED with multi-currency for imports and exports.",
+      "groups": [
+        { "heading": "VAT in the UAE", "blurb": "Tax invoices the way the FTA expects them.", "items": ["5% VAT, zero-rated and exempt lines", "TRN on tax invoices", "Tax and non-tax invoice types", "VAT return report", "Structured e-invoices in UBL 2.1 format"] },
+        { "heading": "Finance in AED", "blurb": "One ledger for every branch and currency.", "items": ["Chart of accounts and general ledger", "Accounting in AED with multi-currency", "Exchange gain and loss", "Bank reconciliation and cheques", "Proforma invoices and credit notes", "Profit and loss, balance sheet, cash flow"] },
+        { "heading": "Trading and operations", "blurb": "Stock, sales and staff on the same data.", "items": ["Inventory across warehouses", "Serial numbers on delivery notes", "Purchase orders and goods received", "Point of sale", "CRM and field sales", "HR, attendance and payroll"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP support UAE VAT?", "a": "Yes. XionERP applies 5% VAT, zero-rated and exempt rates per line, prints your TRN on tax invoices and produces a VAT return report for the period." },
+        { "q": "Can I keep my books in AED?", "a": "Yes. Your accounts can be kept in AED, and you can buy and sell in USD, OMR, QAR or other currencies with exchange differences posted automatically." },
+        { "q": "Is XionERP ready for UAE e-invoicing?", "a": "XionERP already generates structured e-invoices in UBL 2.1 format on the Peppol model used in the GCC, so it is ready to adapt to the UAE's e-invoicing requirements." },
+        { "q": "Can I track serial numbers?", "a": "Yes. Serial numbers are captured on goods received and delivery notes, so you can trace every unit from supplier to customer." },
+        { "q": "How do I try XionERP in the UAE?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo. Every plan includes every module." }
+      ],
+      "related": ["accounting-and-e-invoicing", "inventory-and-warehouse-management", "field-sales-and-crm"]
+    },
+    {
+      "slug": "erp-software-sri-lanka",
+      "country": true,
+      "title": "ERP Software in Sri Lanka | Cloud ERP System | XionERP",
+      "description": "Cloud ERP software for Sri Lankan businesses: accounting in LKR, VAT, inventory, manufacturing, van sales, POS, HR and payroll. Local team in Colombo.",
+      "eyebrow": "ERP software in Sri Lanka",
+      "h1": "Cloud ERP software for businesses in Sri Lanka",
+      "intro": "XionERP is built by an engineering team in Sri Lanka and runs manufacturers, distributors and retailers across the island. Accounting works in rupees with multi-currency for imports, and manufacturing, distribution, van sales, POS, HR and payroll all run in the same cloud system, with local support from Colombo.",
+      "groups": [
+        { "heading": "Finance in LKR", "blurb": "Accounts that every other module posts to.", "items": ["Chart of accounts and general ledger", "Accounting in LKR with multi-currency", "VAT on sales and purchases", "Cheques and post-dated cheques", "Bank reconciliation", "Profit and loss, balance sheet, cash flow"] },
+        { "heading": "Manufacturing and distribution", "blurb": "From raw material to the shop shelf.", "items": ["Recipes and multi-level bills of materials", "Production plans, work orders and costing", "Batch numbers end to end", "Van sales with load, unload and settlement", "Distributor network and price claims", "Field sales app with live stock"] },
+        { "heading": "Retail and people", "blurb": "Shops and staff on the same data.", "items": ["Point of sale", "Inventory across shops and warehouses", "Online store connected to stock", "HR, attendance and payroll", "WhatsApp invoices and reminders"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP work in Sri Lankan rupees?", "a": "Yes. Your books can be kept in LKR, and you can buy and sell in USD or other currencies with exchange differences posted automatically." },
+        { "q": "Does XionERP support manufacturing in Sri Lanka?", "a": "Yes. XionERP covers recipes and multi-level bills of materials, production plans, work orders, outside workers, batch numbers and production costing." },
+        { "q": "Can XionERP run van sales and distributors?", "a": "Yes. Vans are loaded, sell on the road and are settled at the end of the day, and distributor networks with price claims run in the same system." },
+        { "q": "Is there local support in Sri Lanka?", "a": "Yes. Our engineering and support team is in Colombo. Call +94 761 949294 or message us on WhatsApp." },
+        { "q": "How much does XionERP cost in Sri Lanka?", "a": "Plans are priced per user in LKR and every plan includes every module. Start a 30-day free trial with no credit card." }
+      ],
+      "related": ["manufacturing-erp", "field-sales-and-crm", "hr-payroll-and-recruitment"]
     }
   ]
 }

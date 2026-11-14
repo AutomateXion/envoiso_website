@@ -18,7 +18,11 @@ export default function Footer() {
           </div>
           <div className="foot-col">
             <h4>Solutions</h4>
-            {sol.solutions.map((s) => (<Link key={s.slug} to={`/solutions/${s.slug}`}>{s.eyebrow}</Link>))}
+            {sol.solutions.filter((s) => !('country' in s)).map((s) => (<Link key={s.slug} to={`/solutions/${s.slug}`}>{s.eyebrow}</Link>))}
+          </div>
+          <div className="foot-col">
+            <h4>Countries</h4>
+            {sol.solutions.filter((s) => 'country' in s).map((s) => (<Link key={s.slug} to={`/solutions/${s.slug}`}>{s.eyebrow}</Link>))}
           </div>
           <div className="foot-col">
             <h4>Company</h4>

@@ -86,6 +86,18 @@ services:
         source: /solutions/online-store-for-erp
         destination: /solutions/online-store-for-erp/index.html
       - type: rewrite
+        source: /solutions/erp-software-oman
+        destination: /solutions/erp-software-oman/index.html
+      - type: rewrite
+        source: /solutions/erp-software-qatar
+        destination: /solutions/erp-software-qatar/index.html
+      - type: rewrite
+        source: /solutions/erp-software-uae
+        destination: /solutions/erp-software-uae/index.html
+      - type: rewrite
+        source: /solutions/erp-software-sri-lanka
+        destination: /solutions/erp-software-sri-lanka/index.html
+      - type: rewrite
         source: /*
         destination: /index.html
     headers:
