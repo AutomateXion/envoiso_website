@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import sol from '../data/solutions.json';
 
+const byKind = (kind: string) => sol.solutions.filter((s) => s.kind === kind)
+  .map((s) => (<Link key={s.slug} to={`/solutions/${s.slug}/`}>{s.eyebrow}</Link>));
+
 export default function Footer() {
   return (
     <footer>
@@ -18,11 +21,17 @@ export default function Footer() {
           </div>
           <div className="foot-col">
             <h4>Solutions</h4>
-            {sol.solutions.filter((s) => !('country' in s)).map((s) => (<Link key={s.slug} to={`/solutions/${s.slug}/`}>{s.eyebrow}</Link>))}
+            {byKind('module')}
+          </div>
+          <div className="foot-col">
+            <h4>Industries</h4>
+            {byKind('industry')}
+            <h4 style={{ marginTop: 20 }}>Compare</h4>
+            {byKind('compare')}
           </div>
           <div className="foot-col">
             <h4>Countries</h4>
-            {sol.solutions.filter((s) => 'country' in s).map((s) => (<Link key={s.slug} to={`/solutions/${s.slug}/`}>{s.eyebrow}</Link>))}
+            {byKind('country')}
           </div>
           <div className="foot-col">
             <h4>Company</h4>
