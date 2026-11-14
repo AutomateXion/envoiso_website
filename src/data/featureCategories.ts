@@ -13,8 +13,8 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
   {
     title: 'Dashboard',
     icon: MODULE_ICONS['Dashboard'],
-    blurb: 'One command centre for the whole business, not eleven separate logins.',
-    features: ['Cross-module overview', 'Live KPIs at a glance', 'Role-based landing view'],
+    blurb: 'One command centre for the whole business, with the owner\u2019s view first.',
+    features: ['CEO Dashboard for each entity \u2014 cash, profit, receivables and aging', 'CEO Dashboard tabs for Field Sales, Manufacturing, Fashion and Maintenance', 'Command Deck home screen for each entity \u2014 Sales, Purchase, Finance, Profitability and Inventory tabs', 'Live KPIs at a glance', 'Role-based landing view'],
   },
   {
     title: 'Accounting & Finance',
@@ -91,8 +91,8 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
   {
     title: 'Manufacturing',
     icon: MODULE_ICONS['Manufacturing'],
-    blurb: 'From raw material to finished goods — BOMs, work orders and production costing on the same stock and ledger.',
-    features: ['Multi-level bill of materials (BOM)', 'Work / production orders', 'Production planning & scheduling', 'Work centres, routing & operations', 'WIP tracking', 'Production costing — material, labour & overhead', 'Quality control inspections', 'Shop-floor job tracking, scrap & rework'],
+    blurb: 'From fabric and raw material to finished goods \u2014 recipes, cutting, production and costing on the same stock and ledger.',
+    features: ['Multi-level bill of materials (BOM)', 'Work / production orders', 'Production planning & scheduling', 'Work centres, routing & operations', 'WIP tracking', 'Production costing — material, labour & overhead', 'Quality control inspections', 'Shop-floor job tracking, scrap & rework', 'Style recipes by size and colour, with a measurement chart', 'Operation bulletin \u2014 SMV, machine, piece rate and line planning', 'Fabric rolls with 4-point inspection and a Fabrics photo wall', 'Plan garments from a fabric', 'Cutting room on every cut order \u2014 lays, rolls per lay and re-cuts', 'Production orders made from a customer\u2019s sales order'],
     highlight: true,
     highlightNote: 'A real manufacturing module — BOM to finished goods with WIP costing — included in every plan, not sold as an add-on.',
   },
@@ -133,10 +133,10 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
     features: ['UBL 2.1 / PINT-OM structured invoices', 'Peppol-ready architecture', 'VAT reporting'],
   },
   {
-    title: 'WhatsApp Integration',
+    title: 'Social Media',
     icon: MODULE_ICONS['WhatsApp'],
-    blurb: 'Your documents and your customer chats on WhatsApp — sent from, and answered in, Xion ERP.',
-    features: ['Send invoices, quotations & statements on WhatsApp', 'Payment reminders & account statements', 'E-signature & approval links delivered on WhatsApp', 'WhatsApp inbox — every chat, answered from Xion ERP', 'Photos, voice notes & documents in chat', 'Meta-approved message templates', 'Keep your WhatsApp Business app working on the same number', 'A number per salesman, with a shared company number'],
+    blurb: 'WhatsApp, Facebook, Instagram and SEO in one module \u2014 your documents and customer chats sent from, and answered in, Xion ERP.',
+    features: ['Send invoices, quotations & statements on WhatsApp', 'Payment reminders & account statements', 'E-signature & approval links delivered on WhatsApp', 'WhatsApp inbox — every chat, answered from Xion ERP', 'Photos, voice notes & documents in chat', 'Meta-approved message templates', 'Keep your WhatsApp Business app working on the same number', 'A number per salesman, with a shared company number', 'Campaigns, flows and templates, with reports', 'Facebook and Instagram messages in the same inbox', 'SEO tools \u2014 website check, Google Search Console, keywords and a monthly report', 'Automatic WhatsApp messages carry the PDF'],
     highlight: true,
     highlightNote: 'Built on the official WhatsApp Business Platform (Meta Cloud API) — not a wa.me shortcut. Your number, your templates, your inbox.',
   },

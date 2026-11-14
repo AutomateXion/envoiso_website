@@ -3,7 +3,7 @@ import { MODULE_ICONS } from './moduleIcons';
 export interface EvxModule { n: string; d: string; svg: string; }
 
 export const EVX_MODULES: EvxModule[] = [
-  { n: 'Dashboard', d: 'One command centre for the whole business — live KPIs, role-based landing view.', svg: MODULE_ICONS['Dashboard'] },
+  { n: 'Dashboard', d: 'A CEO Dashboard and a Command Deck for every entity \u2014 sales, purchase, finance, profitability and stock on one screen, with the owner\u2019s view first.', svg: MODULE_ICONS['Dashboard'] },
   { n: 'Accounting', d: 'General ledger, journals, trial balance — to three decimals.', svg: MODULE_ICONS['Accounting'] },
   { n: 'Banking & Cash', d: 'Bank accounts, PDC cheques and reconciliation.', svg: MODULE_ICONS['Banking & Cash'] },
   { n: 'CRM', d: 'Leads, contacts and pipeline from first touch to close.', svg: MODULE_ICONS['CRM'] },
@@ -23,8 +23,8 @@ export const EVX_MODULES_OUTER: EvxModule[] = [
   { n: 'Maintenance', d: 'Service calls, AMC contracts, PM visits and technician productivity — run field service like a business, not a bolt-on to inventory.', svg: MODULE_ICONS['Maintenance'] },
   { n: 'Field Sales', d: 'A mobile-first rep app — quick orders, collections and live stock, built for reps working outside the office.', svg: MODULE_ICONS['Field Sales'] },
   { n: 'Point of Sale', d: 'A real point-of-sale, not a workaround — built for retail and counter sales, connected to the same stock and accounts.', svg: MODULE_ICONS['Point of Sale'] },
-  { n: 'Manufacturing', d: 'BOMs, work orders, routing and production costing — from raw material to finished goods, with WIP flowing straight into the same stock and ledger.', svg: MODULE_ICONS['Manufacturing'] },
-  { n: 'WhatsApp', d: 'Send invoices, quotations, statements and reminders on WhatsApp straight from the document — and answer every customer chat from an inbox inside Xion ERP, on your own WhatsApp Business number.', svg: MODULE_ICONS['WhatsApp'] },
-  { n: 'Claude AI', d: 'Connect your own Claude to Xion ERP and ask it anything about your business — overdue receivables, sales, stock, statements — and even draft quotations and invoices, with every write previewed and confirmed first.', svg: MODULE_ICONS['Claude'] },
-  { n: 'Xion Webstore', d: 'Your own online shop, run from the XionERP you already use. Prices and stock come straight from XionERP, and web orders land as sales documents.', svg: MODULE_ICONS['Xion Webstore'] },
+  { n: 'Manufacturing', d: 'Recipes by size and colour, operation bulletin with SMV and piece rates, fabric rolls with 4-point inspection, a cutting room, and production orders made straight from a sales order \u2014 all flowing into the same stock and ledger.', svg: MODULE_ICONS['Manufacturing'] },
+  { n: 'Social Media', d: 'WhatsApp inbox, campaigns, flows and templates, Facebook and Instagram messages, and SEO tools \u2014 every customer conversation and your search visibility, inside the ERP you already run.', svg: MODULE_ICONS['WhatsApp'] },
+  { n: 'Claude AI', d: 'Connect your own Claude to Xion ERP and ask the owner\u2019s questions \u2014 profit, cash, best sellers, low stock, overdue receivables \u2014 and send a document to the customer by WhatsApp or email, with every write previewed and confirmed first.', svg: MODULE_ICONS['Claude'] },
+  { n: 'Xion Webstore', d: 'Your own online shop, run from the XionERP you already use. Prices and stock come from XionERP; coupons, templates, Google Shopping, Facebook, Instagram and WhatsApp product feeds are built in, and web orders land as sales documents.', svg: MODULE_ICONS['Xion Webstore'] },
 ];

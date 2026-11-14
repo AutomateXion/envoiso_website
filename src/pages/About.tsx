@@ -15,7 +15,7 @@ export default function About() {
         <div className="wrap">
           <span className="eyebrow"><span className="dot" />About Xion ERP</span>
           <h1 className="page-h">Built by people who've run GCC operations, not just software</h1>
-          <p className="page-sub">Xion ERP exists because too many growing businesses in the region are still stitching together spreadsheets, WhatsApp and disconnected apps to run finance, sales and stock.</p>
+          <p className="page-sub">Xion ERP exists because too many growing businesses in the region are still stitching together spreadsheets and separate apps to run finance, sales, stock and customer chats.</p>
         </div>
       </section>
 

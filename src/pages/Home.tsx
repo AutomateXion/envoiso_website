@@ -69,16 +69,16 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sec-eyebrow">Why XionERP</div>
-            <h2 className="sec-h">Stop running your business across six disconnected tools</h2>
-            <p className="sec-sub">Spreadsheets for accounts, one app for invoices, another for stock, WhatsApp for the sales team. The data never lines up &mdash; and month-end becomes a guessing game.</p>
+            <h2 className="sec-h">One system for the whole business &mdash; 18 modules, one set of numbers</h2>
+            <p className="sec-sub">From accounts, sales and stock to manufacturing, HR, WhatsApp, Facebook and Instagram, the online store and the owner&rsquo;s dashboard &mdash; every module runs on the same data, so month-end stops being a guessing game.</p>
           </div>
           <div className="prob-grid">
             <div className="prob-before prob-col">
               <h3>Business as usual</h3>
               <ul className="prob-list">
-                <li><svg className="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4}><path d="M18 6L6 18M6 6l12 12" /></svg>Accounting in one system, sales in another</li>
+                <li><svg className="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4}><path d="M18 6L6 18M6 6l12 12" /></svg>Accounts in one place, sales and stock in another</li>
                 <li><svg className="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4}><path d="M18 6L6 18M6 6l12 12" /></svg>Stock counts that never match the books</li>
-                <li><svg className="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4}><path d="M18 6L6 18M6 6l12 12" /></svg>Manual e-invoicing, compliance anxiety</li>
+                <li><svg className="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4}><path d="M18 6L6 18M6 6l12 12" /></svg>Customer chats scattered across personal phones</li>
                 <li><svg className="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4}><path d="M18 6L6 18M6 6l12 12" /></svg>No single view of cash, receivables or profit</li>
               </ul>
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
                 <li><span className="c"><Check /></span>One platform from quote to cash to ledger</li>
                 <li><span className="c"><Check /></span>Sales reduce stock and post cost automatically</li>
                 <li><span className="c"><Check /></span>GCC e-invoicing built in, compliant by default</li>
-                <li><span className="c"><Check /></span>Live dashboards for cash, profit and aging</li>
+                <li><span className="c"><Check /></span>A CEO Dashboard for cash, profit and aging, live</li>
               </ul>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function Home() {
           <div className="sec-head">
             <div className="sec-eyebrow">One platform, every function</div>
             <h2 className="sec-h">Everything connected, by design</h2>
-            <p className="sec-sub">Not a pile of separate apps &mdash; one platform where every module shares the same data, so your numbers, stock and customers always agree.</p>
+            <p className="sec-sub">One platform where every module shares the same data &mdash; so your numbers, stock and customers always agree. Tap a module to see what it does.</p>
           </div>
           <ModuleConstellation />
         </div>
@@ -135,7 +135,7 @@ export default function Home() {
           </div>
           <div className="comp-stat">
             <div className="row"><span className="lbl">Decimal precision (OMR)</span><span className="big">3</span></div>
-            <div className="row"><span className="lbl">Core business modules</span><span className="big">10+</span></div>
+            <div className="row"><span className="lbl">Business modules</span><span className="big">18+</span></div>
             <div className="row"><span className="lbl">Setup to first invoice</span><span className="big">1 day</span></div>
             <div className="row"><span className="lbl">Free trial</span><span className="big">30 days</span></div>
           </div>

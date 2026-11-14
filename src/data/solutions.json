@@ -112,15 +112,17 @@
       "description": "Send invoices, quotations and reminders on WhatsApp straight from your ERP and answer customer chats from one inbox, on the official WhatsApp Business Platform.",
       "eyebrow": "WhatsApp integration",
       "h1": "WhatsApp built into your ERP",
-      "intro": "XionERP sends documents on WhatsApp straight from the invoice or quotation, and gives your team an inbox inside XionERP to answer every customer chat on your own WhatsApp Business number. It uses the official WhatsApp Business Platform, not a shortcut link.",
+      "intro": "WhatsApp is part of the Social Media module in XionERP. It sends documents on WhatsApp straight from the invoice or quotation, and gives your team an inbox inside XionERP to answer every customer chat on your own WhatsApp Business number. Facebook and Instagram messages and SEO tools sit in the same module. It uses the official WhatsApp Business Platform, not a shortcut link.",
       "groups": [
         { "heading": "Send from the document", "blurb": "Your documents on WhatsApp in one click.", "items": ["Invoices, quotations and statements on WhatsApp", "Payment reminders and account statements", "E-signature and approval links delivered on WhatsApp", "Meta-approved message templates"] },
-        { "heading": "Answer from one inbox", "blurb": "Every chat, answered from XionERP.", "items": ["WhatsApp inbox inside XionERP", "Photos, voice notes and documents in chat", "Keep your WhatsApp Business app working on the same number", "A number per salesman, with a shared company number"] }
+        { "heading": "Answer from one inbox", "blurb": "Every chat, answered from XionERP.", "items": ["WhatsApp inbox inside XionERP", "Photos, voice notes and documents in chat", "Keep your WhatsApp Business app working on the same number", "A number per salesman, with a shared company number"] },
+        { "heading": "Grow beyond WhatsApp", "blurb": "One Social Media module for every channel.", "items": ["Campaigns, flows and templates, with a report", "Facebook and Instagram messages in the same inbox", "SEO tools: website check, Google Search Console, keywords and a monthly report", "Automatic WhatsApp messages that carry the PDF"] }
       ],
       "faqs": [
         { "q": "Does XionERP use the official WhatsApp Business Platform?", "a": "Yes. It is built on the official WhatsApp Business Platform (Meta Cloud API), on your own number and templates, not a wa.me shortcut." },
         { "q": "Can I still use the WhatsApp Business app?", "a": "Yes. You can keep your WhatsApp Business app working on the same number." },
         { "q": "Can each salesperson have their own number?", "a": "Yes. XionERP supports a number per salesman, alongside a shared company number." },
+        { "q": "Does XionERP cover Facebook and Instagram too?", "a": "Yes. The Social Media module has WhatsApp, Facebook and Instagram messages, and SEO tools, all inside XionERP." },
         { "q": "Is there a standalone team inbox for more channels?", "a": "Yes. XionConnect brings WhatsApp, Instagram, Messenger, Telegram, email and SMS into one shared team inbox, and works with XionERP." }
       ],
       "related": ["field-sales-and-crm", "online-store-for-erp", "accounting-and-e-invoicing"]

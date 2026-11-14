@@ -48,9 +48,9 @@ export const BANNERS: Banner[] = [
     theme: 'orange',
   },
   {
-    eyebrow: 'New integration',
-    title: 'WhatsApp API is live.',
-    text: 'Invoices, payment reminders and order updates sent to customers on WhatsApp — straight from Xion ERP.',
+    eyebrow: 'New module',
+    title: 'Social Media, inside your ERP.',
+    text: 'WhatsApp, Facebook, Instagram and SEO in one place — answer every customer chat and send invoices and reminders straight from Xion ERP.',
     cta: { label: 'Chat with us', action: 'web-chat' },
     logo: { src: '/logo-connect-horizontal.png', alt: 'XionConnect', href: 'https://automatexion.com/xionconnect.html' },
     icon: MODULE_ICONS['CRM'],

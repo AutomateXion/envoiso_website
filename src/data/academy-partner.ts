@@ -18,11 +18,11 @@ export const PARTNER_STAGES: Course[] = [
       {
         id: 'fit', title: 'What XionERP covers and who it fits', minutes: 5,
         blocks: [
-          { t: 'p', text: 'XionERP runs a growing business in one system: sales, purchasing, inventory and warehouses, accounting and banking, CRM, HR and payroll, manufacturing, point of sale and field sales. Social media (WhatsApp, Facebook, Instagram) and an online store sit beside it, on the same customers, items and stock.' },
+          { t: 'p', text: 'XionERP runs a growing business in one system, with more than 18 modules on the same customers, items and stock: CRM, sales, purchase, inventory, warehouse and delivery, accounting, banking and cash, assets, HR and payroll, projects, maintenance, field sales, point of sale, manufacturing, documents, reports, the online store and Social Media. Social Media is one module: the WhatsApp inbox, campaigns and flows, Facebook and Instagram messages, and SEO tools. Owners get a CEO Dashboard and a Command Deck for each entity, so cash, profit and stock are in one place.' },
           { t: 'ul', items: [
             'Trading and distribution: quotations to invoices, stock in several warehouses, cheques, credit limits, landed cost on imports.',
             'Retail: the till, with offline selling, returns, loyalty and the day\'s count.',
-            'Manufacturing: bills of materials, production orders, work in progress at real cost, quality checks.',
+            'Manufacturing and fashion: recipes by size and colour, an operation bulletin with piece rates, fabric rolls with 4-point inspection, a cutting room, and production orders made from a customer\'s sales order.',
             'Field sales: salesmen taking orders on the phone, and vans that bill on the spot and settle at the end of the day.',
             'Services: projects, contracts, service calls and HR.',
           ] },
