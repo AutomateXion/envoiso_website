@@ -1,6 +1,9 @@
 // After `vite build`: write dist/<route>/index.html for every route with that route's own
 // title, description, canonical and social tags, plus a <noscript> summary, so crawlers and
 // link-preview bots that don't run JavaScript still get correct, unique metadata per page.
+// Canonical, sitemap and crawler links use the trailing-slash address (/pricing/): the live Render
+// site does not apply the rewrites in render.yaml, so /pricing gets the home page's HTML, while
+// /pricing/ is served dist/pricing/index.html directly with this page's own tags.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -16,13 +19,13 @@ for (const s of sol.solutions) {
 const dist = 'dist';
 const base = readFileSync(join(dist, 'index.html'), 'utf8');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
-const nav = Object.entries(seo.routes).map(([p, r]) => `<a href="${p}">${esc(r.h1)}</a>`).join(' ');
+const nav = Object.entries(seo.routes).map(([p, r]) => `<a href="${p === '/' ? '/' : p + '/'}">${esc(r.h1)}</a>`).join(' ');
 const today = new Date().toISOString().slice(0, 10);
 const prio = { '/': '1.0', '/pricing': '0.9', '/compliance': '0.9' };
-writeFileSync(join(dist, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + Object.entries(seo.routes).map(([p, r]) => `  <url><loc>${seo.origin}${p}</loc><lastmod>${today}</lastmod><priority>${prio[p] || (r.solution ? '0.8' : '0.6')}</priority></url>`).join('\n') + '\n</urlset>\n');
+writeFileSync(join(dist, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + Object.entries(seo.routes).map(([p, r]) => `  <url><loc>${seo.origin}${p === '/' ? '/' : p + '/'}</loc><lastmod>${today}</lastmod><priority>${prio[p] || (r.solution ? '0.8' : '0.6')}</priority></url>`).join('\n') + '\n</urlset>\n');
 
 function page(path, r) {
-  const url = seo.origin + (path === '/' ? '/' : path);
+  const url = seo.origin + (path === '/' ? '/' : path + '/');
   let h = base;
   const rep = (re, to) => { if (!re.test(h)) throw new Error('missing ' + re + ' for ' + path); h = h.replace(re, to); };
   rep(/<title>[^<]*<\/title>/, `<title>${esc(r.title)}</title>`);

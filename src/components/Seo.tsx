@@ -19,7 +19,7 @@ export default function Seo() {
   useEffect(() => {
     const path = pathname.length > 1 ? pathname.replace(/\/+$/, '') : '/';
     const e = routes[path] || routes['/'];
-    const url = seo.origin + (path === '/' ? '/' : path);
+    const url = seo.origin + (path === '/' ? '/' : path + '/');
     document.title = e.title;
     const mk = (tag: string, k: string, v: string) => () => { const n = document.createElement(tag); n.setAttribute(k, v); return n; };
     setMeta('meta[name="description"]', 'content', e.description, mk('meta', 'name', 'description'));

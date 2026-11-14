@@ -76,7 +76,7 @@ export default function Partners() {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'XionERP', item: seo.origin + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Partners', item: seo.origin + '/partners' },
+      { '@type': 'ListItem', position: 2, name: 'Partners', item: seo.origin + '/partners/' },
     ],
   };
 
