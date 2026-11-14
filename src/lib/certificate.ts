@@ -1,4 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
+import { badgeFor, drawBadge } from './badge';
 
 /* The certificate, drawn on a canvas at A4 landscape (150 dpi). It uses the real
    XionERP logo file, never a redrawn one. */
@@ -17,7 +18,8 @@ export async function drawCertificate(d: CertificateData): Promise<HTMLCanvasEle
   const x = c.getContext('2d')!;
   x.fillStyle = '#FFFFFF'; x.fillRect(0, 0, W, H);
   x.strokeStyle = NAVY; x.lineWidth = 6; x.strokeRect(46, 46, W - 92, H - 92);
-  x.strokeStyle = BLUE; x.lineWidth = 2; x.strokeRect(66, 66, W - 132, H - 132);
+  const badge = badgeFor(d.course); const accent = badge?.accent ?? BLUE;
+  x.strokeStyle = accent; x.lineWidth = 2; x.strokeRect(66, 66, W - 132, H - 132);
   x.textAlign = 'center'; x.textBaseline = 'alphabetic';
 
   try {
@@ -26,7 +28,7 @@ export async function drawCertificate(d: CertificateData): Promise<HTMLCanvasEle
     x.drawImage(logo, (W - w) / 2, 150, w, h);
   } catch { x.fillStyle = NAVY; x.font = '700 64px Inter, sans-serif'; x.fillText('XionERP', W / 2, 220); }
 
-  x.fillStyle = BLUE; x.font = '600 26px Inter, sans-serif';
+  x.fillStyle = accent; x.font = '600 26px Inter, sans-serif';
   (x as any).letterSpacing = '8px'; x.fillText('CERTIFICATE OF COMPLETION', W / 2, 360); (x as any).letterSpacing = '0px';
   x.fillStyle = MUTED; x.font = '500 30px Inter, sans-serif'; x.fillText('This certifies that', W / 2, 450);
 
@@ -47,6 +49,7 @@ export async function drawCertificate(d: CertificateData): Promise<HTMLCanvasEle
   x.fillStyle = MUTED; x.font = '500 22px Inter, sans-serif';
   x.fillText(`Certificate code ${d.code}  ·  Verify at xionerp.com/academy/verify/${d.code}`, W / 2, 1090);
   x.fillText('XionERP Academy  ·  xionerp.com/academy', W / 2, 1126);
+  if (badge) { try { const b = await drawBadge(badge); x.drawImage(b, W - 66 - 40 - 230, H - 66 - 36 - 230, 230, 230); } catch { /* the certificate stands without it */ } }
   return c;
 }
 

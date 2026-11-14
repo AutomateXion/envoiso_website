@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { certificatePdf, certificatePng, drawCertificate, saveBlob } from '../lib/certificate';
+import { badgeFor, drawBadge } from '../lib/badge';
 import { linkedInLinks } from '../lib/linkedin';
 import AcademyBadge from '../components/AcademyBadge';
 
@@ -43,6 +44,15 @@ export default function AcademyVerify() {
     return () => { off = true; };
   }, [v]);
 
+  const badgeHost = useRef<HTMLDivElement>(null);
+  const badgeCanvas = useRef<HTMLCanvasElement | null>(null);
+  useEffect(() => {
+    const b = v?.valid && v.course ? badgeFor(v.course) : undefined; if (!b) return; let off = false;
+    drawBadge(b).then((c) => { if (off || !badgeHost.current) return; badgeCanvas.current = c; c.style.cssText = 'width:100%;height:auto;display:block;border-radius:6px'; badgeHost.current.replaceChildren(c); });
+    return () => { off = true; };
+  }, [v]);
+  const dlBadge = async () => { if (badgeCanvas.current) saveBlob(await certificatePng(badgeCanvas.current), `XionERP-badge-${v?.code || code}.png`); };
+
   const file = `XionERP-certificate-${v?.code || code}`;
   const dl = async (kind: 'pdf' | 'png') => {
     if (!canvas.current) return; setBusy(kind);
@@ -66,6 +76,16 @@ export default function AcademyVerify() {
             <button type="button" className="btn btn-primary" onClick={() => dl('pdf')} disabled={!!busy}>{busy === 'pdf' ? 'Preparing…' : 'Download PDF'}</button>
             <button type="button" className="btn btn-ghost" onClick={() => dl('png')} disabled={!!busy}>{busy === 'png' ? 'Preparing…' : 'Download image'}</button>
           </div>
+          {v.course && badgeFor(v.course) && (
+            <div style={{ marginTop: 22, display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap', padding: '18px 20px', border: '1px solid var(--line)', borderRadius: 10 }}>
+              <div ref={badgeHost} style={{ width: 150, flex: 'none' }} aria-label="Badge" />
+              <div style={{ flex: '1 1 240px', minWidth: 0 }}>
+                <h2 style={{ fontSize: 18, margin: '0 0 6px' }}>Your badge</h2>
+                <p style={{ margin: '0 0 12px', lineHeight: 1.6, fontSize: 15 }}>A square image for your LinkedIn post, your profile or your email signature.</p>
+                <button type="button" className="btn btn-ghost" onClick={dlBadge}>Download badge</button>
+              </div>
+            </div>
+          )}
           {(() => {
             const li = linkedInLinks({ code: v.code, course: v.course!, issuedAt: v.issuedAt! });
             return (
