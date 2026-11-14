@@ -2,32 +2,32 @@
   "origin": "https://xionerp.com",
   "routes": {
     "/": {
-      "title": "XionERP | Cloud ERP with E-Invoicing for the GCC",
-      "description": "XionERP is the all-in-one cloud ERP for growing GCC businesses: accounting, sales, inventory, CRM, manufacturing, projects and e-invoicing for the GCC.",
+      "title": "XionERP | Cloud ERP Software for Oman, Qatar, UAE & Sri Lanka",
+      "description": "Cloud ERP software for growing businesses in Oman, Qatar, the UAE and Sri Lanka: accounting, VAT, e-invoicing, inventory, POS, CRM, HR and payroll in one system. Free trial.",
       "h1": "Your whole business, in one flow.",
       "summary": "XionERP is a multi-tenant cloud ERP for growing businesses across the GCC and South Asia, covering accounting, sales, inventory, purchase, CRM, manufacturing, projects, assets and HR on one platform."
     },
     "/pricing": {
-      "title": "XionERP Pricing | Simple ERP Plans That Grow With You",
-      "description": "Compare XionERP plans and pricing, start with a free trial, and choose the plan that fits your team and the modules you need.",
+      "title": "ERP Software Pricing | XionERP Plans in OMR, QAR, LKR and USD",
+      "description": "XionERP cloud ERP pricing per user, in OMR, QAR, LKR or USD. Every plan includes every module. Start a 30-day free trial, no credit card needed.",
       "h1": "Simple plans that grow with you",
       "summary": "Compare XionERP plans and start a free trial."
     },
     "/compliance": {
-      "title": "E-Invoicing Explained | XionERP Compliance Guide for the GCC",
-      "description": "A plain-English guide to Oman's e-invoicing mandate, its phases and dates and how XionERP gets your business ready.",
+      "title": "Oman E-Invoicing (Fawtara) Guide | XionERP",
+      "description": "Oman's Fawtara e-invoicing mandate explained: who must comply, the phases and dates, and how XionERP e-invoicing software gets your business ready.",
       "h1": "E-invoicing, explained and ready when you are",
       "summary": "What e-invoicing means for your business, the rollout phases, and how XionERP helps you comply."
     },
     "/about": {
-      "title": "About XionERP | ERP Built by People Who Ran GCC Operations",
+      "title": "About XionERP | Cloud ERP Company in Oman and Sri Lanka",
       "description": "XionERP is built by AutomateXion, a digital transformation consultancy in Muscat with an engineering team in Sri Lanka, serving Oman, Qatar, UAE and Sri Lanka.",
       "h1": "Built by people who've run GCC operations, not just software",
       "summary": "XionERP is built by AutomateXion, based in Muscat, Oman, with engineering in Sri Lanka."
     },
     "/contact": {
-      "title": "Contact XionERP | Talk to Our Team in Oman and Sri Lanka",
-      "description": "Talk to the XionERP team about a free trial, onboarding, data migration or e-invoicing readiness. Call Oman +968 97696968, Sri Lanka +94 761 949294, or email.",
+      "title": "Contact XionERP | ERP Software Demo in Oman and Sri Lanka",
+      "description": "Book an ERP software demo or free trial with XionERP. Talk to our team about onboarding, data migration or e-invoicing. Oman +968 97696968, Sri Lanka +94 761 949294.",
       "h1": "Let's talk about your business",
       "summary": "Contact the XionERP team: Oman +968 97696968, Sri Lanka +94 761 949294, info@automatexion.com."
     },
