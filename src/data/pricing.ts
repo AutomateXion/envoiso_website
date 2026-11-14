@@ -15,21 +15,20 @@ interface CurrencyBlock {
   annual: number[];
 }
 
-/* Prices from 14 Nov 2026, per plan, per month. One user costs USD 4.99 billed annually;
-   each plan is that price times its users, and plans of more than 3 users (Business,
-   Growth, Enterprise) get a further 20% off. All prices end in .99 (OMR .xx9, LKR ...9).
-   Month to month costs about 25% more than annual. OMR, QAR and LKR are the USD prices
-   converted at 0.3845, 3.64 and 332.6, then rounded to the same ending.
+/* Prices from 14 Nov 2026, per plan, per month, as set in the "XionERP plan prices" sheet.
+   The basis was USD 4.99 per user billed annually, with 20% off plans of more than 3 users;
+   the figures below are the sheet's, and some were then set by hand (round LKR monthly,
+   whole QAR annual, .99 OMR annual), so they no longer follow one formula.
    Earlier prices (12 Nov 2026, list less 20%), for the record:
      USD monthly 14.9 / 19 / 39 / 79 / 99      annual 9 / 19 / 29 / 59 / 89
      OMR monthly 6.299 / 11.899 / 18.299 / 33.499 / 44.699   annual 4.699 / 9.499 / 15.099 / 27.899 / 36.699
      LKR monthly 3,999 / 7,999 / 12,799 / 23,199 / 31,199    annual 3,199 / 9,599 / 15,999 / 31,989 / 47,989
      QAR monthly 49 / 89 / 139 / 289 / 379     annual 39 / 69 / 119 / 229 / 319 */
 export const PRICES: Record<Currency, CurrencyBlock> = {
-  usd: { symbol: '$',      decimals: 2, monthly: [5.99, 18.99, 24.99, 49.99, 74.99], annual: [4.99, 14.99, 19.99, 39.99, 59.99] },
-  omr: { symbol: '\uFDFC ', decimals: 3, monthly: [2.299, 7.299, 9.609, 19.219, 28.829], annual: [1.919, 5.759, 7.689, 15.379, 23.069] },
-  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [1989, 6319, 8309, 16629, 24939], annual: [1659, 4989, 6649, 13299, 19949] },
-  qar: { symbol: 'QR ',    decimals: 2, monthly: [21.99, 68.99, 90.99, 181.99, 272.99], annual: [17.99, 54.99, 72.99, 145.99, 217.99] },
+  usd: { symbol: '$',      decimals: 2, monthly: [5.99, 17.99, 24.99, 49.99, 74.99], annual: [4.99, 14.99, 21.99, 39.99, 59.99] },
+  omr: { symbol: '\uFDFC ', decimals: 3, monthly: [2.299, 7.299, 9.609, 19.219, 28.829], annual: [1.99, 4.99, 6.99, 14.99, 22.99] },
+  lkr: { symbol: 'Rs ',    decimals: 0, monthly: [3000, 9000, 15000, 30000, 45000], annual: [1999, 5999, 9999, 19990, 29999] },
+  qar: { symbol: 'QR ',    decimals: 2, monthly: [21.99, 68.99, 90.99, 181.99, 272.99], annual: [19, 49, 69, 139, 199] },
 };
 
 // Seasonal offer: 50% off the first year on any annual plan. Ended 12 Nov 2026.
