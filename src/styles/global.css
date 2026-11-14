@@ -456,3 +456,7 @@
 .evx .course-head{display:flex;align-items:center;gap:12px}
 .evx .course-icon{width:46px;height:46px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .evx .course-tag{font-size:13px;color:var(--muted);margin-top:2px}
+.evx .course-card{overflow:hidden;position:relative}
+.evx .mosaic-strip{display:grid;grid-template-columns:repeat(10,1fr);margin:-30px -30px 6px}
+.evx .mosaic-strip i{display:block;aspect-ratio:1/1}
+.evx .course-head{align-items:flex-start}

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { COURSES, courseMinutes, PASS_MARK, TRACKS } from '../data/academy';
-import CourseIcon, { courseAccent, courseTag } from '../components/CourseIcon';
+import CourseIcon, { MosaicStrip, courseAccent, courseTag } from '../components/CourseIcon';
 import AcademyBadge from '../components/AcademyBadge';
 
 export default function Academy() {
@@ -22,7 +22,8 @@ export default function Academy() {
           <p style={{ margin: '6px 0 0', color: 'var(--muted)', maxWidth: 760, lineHeight: 1.6 }}>{t.sub}</p>
           <div style={{ display: 'grid', gap: 18, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', marginTop: 14 }}>
             {COURSES.filter((c) => c.track === t.id).map((c) => (
-              <div key={c.id} className="fw-card course-card" style={{ display: 'flex', flexDirection: 'column', gap: 10, borderTop: `4px solid ${courseAccent(c.id)}` }}>
+              <div key={c.id} className="fw-card course-card" style={{ display: 'flex', flexDirection: 'column', gap: 10}}>
+                <MosaicStrip id={c.id} />
                 <div className="course-head"><CourseIcon id={c.id} /><div><div className="sec-eyebrow" style={{ color: courseAccent(c.id) }}>Stage {c.stage}</div><div className="course-tag">{courseTag(c.id)}</div></div></div>
                 <h2 style={{ margin: 0, fontSize: 21 }}>{c.title}</h2>
                 <p style={{ margin: 0, color: 'var(--muted)', lineHeight: 1.6 }}>{c.blurb}</p>

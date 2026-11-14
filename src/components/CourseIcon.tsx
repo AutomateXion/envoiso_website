@@ -1,7 +1,9 @@
+import { MOSAIC } from '../lib/badge-mosaic';
+
 // One accent colour and one icon per Academy course, so each card is recognisable at a glance.
 const P: Record<string, { c: string; d: string; tag: string }> = {
   fundamentals: { c: '#2563eb', tag: 'Everyone', d: 'M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z' },
-  operations: { c: '#d97706', tag: 'Sales, purchasing, stock', d: 'M3 8l9-5 9 5v8l-9 5-9-5zM3 8l9 5 9-5M12 13v8' },
+  operations: { c: '#d97706', tag: 'Sales and stock', d: 'M3 8l9-5 9 5v8l-9 5-9-5zM3 8l9 5 9-5M12 13v8' },
   finance: { c: '#059669', tag: 'Accounts and finance', d: 'M5 3h14v18H5zM8 7h8M8 12h2M12 12h2M16 12h0M8 16h2M12 16h2M16 16h0' },
   admin: { c: '#7c3aed', tag: 'Administrators', d: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM9 12l2 2 4-4' },
   partner: { c: '#0d9488', tag: 'New partners', d: 'M16 11a4 4 0 1 0-8 0M4 21a8 8 0 0 1 16 0M12 3v0' },
@@ -17,5 +19,15 @@ export default function CourseIcon({ id }: { id: string }) {
     <span className="course-icon" style={{ background: p.c + '1a', color: p.c }}>
       <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={p.d} /></svg>
     </span>
+  );
+}
+
+/* The badge's mosaic as a band along the top of a course card (top two rows of the badge). */
+export function MosaicStrip({ id }: { id: string }) {
+  const cells = (MOSAIC[id] || []).slice(0, 20);
+  return (
+    <div className="mosaic-strip" aria-hidden="true">
+      {cells.map((c, i) => <i key={i} style={{ background: c || 'transparent' }} />)}
+    </div>
   );
 }
