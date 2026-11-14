@@ -153,7 +153,7 @@ export default function Home() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
             {solutions.solutions.filter((s) => !('country' in s)).map((s) => (
-              <Link className="fw-card" key={s.slug} to={`/solutions/${s.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link className="fw-card" key={s.slug} to={`/solutions/${s.slug}/`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <h3>{s.eyebrow}</h3>
                 <p>{s.h1}</p>
               </Link>

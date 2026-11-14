@@ -14,7 +14,7 @@ export default function Solution() {
   const s = sols.find((x) => x.slug === slug);
   const [open, setOpen] = useState<number | null>(0);
   if (!s) return (<section className="page-hero"><div className="wrap"><h1 className="page-h">Page not found</h1><p className="page-sub"><Link to="/">Back to the XionERP home page</Link></p></div></section>);
-  const url = `${seo.origin}/solutions/${s.slug}`;
+  const url = `${seo.origin}/solutions/${s.slug}/`;
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: s.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
@@ -85,7 +85,7 @@ export default function Solution() {
           <div className="sec-head"><h2 className="sec-h">Related on XionERP</h2></div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
             {s.related.map((r) => { const o = sols.find((x) => x.slug === r)!; return (
-              <Link className="fw-card" key={r} to={`/solutions/${r}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link className="fw-card" key={r} to={`/solutions/${r}/`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <h3>{o.eyebrow}</h3><p>{o.h1}</p>
               </Link>); })}
           </div>
