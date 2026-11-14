@@ -34,7 +34,7 @@ export const PARTNER_STAGES: Course[] = [
       {
         id: 'plans', title: 'Plans, seats and the free trial', minutes: 5,
         blocks: [
-          { t: 'p', text: 'Plans differ by the number of users, not by what the customer may use. There are five: Solo (1 user), Team (3), Business (5), Growth (10) and Enterprise (15). Each is billed monthly or annually; annual gives 14 months for the price of 12. Current prices, in US dollars, Omani rials, Sri Lankan rupees and Qatari riyals, are on xionerp.com/pricing.' },
+          { t: 'p', text: 'Plans differ by the number of users, not by what the customer may use. There are five: Solo (1 user), Team (3), Business (5), Growth (10) and Enterprise (15). Each is billed monthly or annually; annual saves about 20% compared with paying monthly. Current prices, in US dollars, Omani rials, Sri Lankan rupees and Qatari riyals, are on xionerp.com/pricing.' },
           { t: 'path', text: 'xionerp.com/pricing' },
           { t: 'p', text: 'Every company starts with a 30-day free trial, with no credit card. Reminders go out as the end comes near. When the trial ends without a plan, the workspace pauses and the data is kept until they subscribe.' },
           { t: 'ul', items: [
@@ -43,7 +43,7 @@ export const PARTNER_STAGES: Course[] = [
           ] },
           { t: 'tip', text: 'Never quote a price from memory. Open the pricing page with the customer, in their currency, so the figure is today\'s.' },
         ],
-        remember: ['Five plans by number of users; annual is 14 months for 12.', '30-day trial, no card; the workspace pauses, data kept, if no plan follows.'],
+        remember: ['Five plans by number of users; annual saves about 20%.', '30-day trial, no card; the workspace pauses, data kept, if no plan follows.'],
       },
       {
         id: 'discovery', title: 'The discovery call', minutes: 5,
@@ -112,7 +112,7 @@ export const PARTNER_STAGES: Course[] = [
     quiz: [
       { id: 's1', q: 'What is the strongest sign that a business fits XionERP?', options: ['It has a website', 'The same figures are typed in several separate tools', 'It has more than 100 staff', 'It uses only cash'] },
       { id: 's2', q: 'How do XionERP plans differ from each other?', options: ['By the modules included', 'By the country', 'By the number of users', 'By the number of invoices'] },
-      { id: 's3', q: 'What does annual billing give?', options: ['Two free users', 'A free online store', 'Nothing extra', '14 months for the price of 12'] },
+      { id: 's3', q: 'What does annual billing give?', options: ['Two free users', 'A free online store', 'Nothing extra', 'About 20% off the monthly price'] },
       { id: 's4', q: 'What happens when a trial ends with no plan chosen?', options: ['The workspace pauses and the data is kept', 'All data is deleted at once', 'The card on file is charged', 'It becomes a free plan forever'] },
       { id: 's5', q: 'A salesman only needs to be named on invoices and never signs in. Does he take a seat?', options: ['Yes, always', 'No: he can be added without sign-in and takes no seat', 'Only on annual plans', 'He cannot be added at all'] },
       { id: 's6', q: 'What should come before any demo?', options: ['A price list', 'A contract', 'A discovery call about how the business works today', 'Installing software on their computers'] },

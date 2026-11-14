@@ -22,7 +22,7 @@ const FAQS = [
   ...(PROMO.active ? [  { q: 'How does the 50% off first year offer work?', a: 'Choose any annual plan at checkout and your first 12 months are billed at half the standard annual rate. From year two onward, billing continues at the regular annual rate. The offer applies to new subscriptions only and can\u2019t be combined with other discounts.' }] : []),
   { q: 'Do all plans include every module?', a: 'Yes. Every Xion ERP plan — Solo through Enterprise — includes the full platform: accounting, sales, CRM, inventory, purchase, manufacturing, projects, assets, reporting and GCC e-invoicing. Plans differ only by the number of user seats.' },
   { q: 'Does Xion ERP support Fawtara e-invoicing?', a: 'Xion ERP creates the standard e-invoice file (UBL 2.1 / Peppol BIS 3.0) for each sales invoice, for you to download and pass to your Accredited Service Provider. Sending the file to the provider automatically is not built yet. See our Compliance page for the timeline.' },
-  { q: 'Can I switch between monthly and annual billing?', a: 'Yes, you can switch billing frequency at any time from your account settings. Annual billing gives you 14 months for the price of 12.' },
+  { q: 'Can I switch between monthly and annual billing?', a: 'Yes, you can switch billing frequency at any time from your account settings. Annual billing saves you about 20% compared with paying monthly.' },
   { q: 'What happens after my 30-day trial?', a: 'You can pick any plan and continue seamlessly, or your workspace pauses (your data is kept safely) until you\u2019re ready to subscribe. No credit card is required to start the trial.' },
   { q: 'Do you support multiple currencies?', a: 'Yes. Xion ERP supports OMR (to 3 decimal places), USD, LKR and other regional currencies, with real-time conversion for multi-entity and cross-border businesses.' },
 ];
@@ -60,7 +60,7 @@ export default function Pricing() {
             <span className={'bill-opt' + (!annual ? ' on' : '')}>Monthly</span>
             <button className={'toggle' + (annual ? ' annual' : '')} onClick={() => setAnnual(!annual)} aria-label="Toggle billing period"><span className="knob" /></button>
             <span className={'bill-opt' + (annual ? ' on' : '')}>Annual</span>
-            <span className="save-pill">{annual && PROMO.active ? '50% off your first year' : '14 months for 12 on annual'}</span>
+            <span className="save-pill">{annual && PROMO.active ? '50% off your first year' : 'Save about 20% on annual'}</span>
           </div>
           <div className="cur-toggle">
             <button className={'cur-btn' + (cur === 'usd' ? ' on' : '')} onClick={() => setCur('usd')}>USD $</button>
