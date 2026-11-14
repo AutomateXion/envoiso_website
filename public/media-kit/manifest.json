@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12",
+ "generated": "2026-11-14",
  "files": [
   {
    "id": "brochure",
@@ -148,7 +148,7 @@
   {
    "id": "poster-3",
    "group": "Posters",
-   "title": "WhatsApp and AI",
+   "title": "Social media and AI",
    "desc": "1080 × 1350 px, for social media",
    "file": "poster-3.png",
    "kind": "png",
