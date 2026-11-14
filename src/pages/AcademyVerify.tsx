@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { certificatePdf, certificatePng, drawCertificate, saveBlob } from '../lib/certificate';
 import { linkedInLinks } from '../lib/linkedin';
+import AcademyBadge from '../components/AcademyBadge';
 
 const API = 'https://cloud.xionerp.com/api/v1/public/academy';
 type V = { valid: boolean; code: string; name?: string; course?: string; issuedAt?: string };
@@ -51,7 +52,7 @@ export default function AcademyVerify() {
 
   return (
     <section className="sol-sec"><div className="wrap" style={{ maxWidth: 980 }}>
-      <span className="eb-pill eyebrow"><span className="dot" />XionERP Academy</span>
+      <AcademyBadge />
       {state === 'loading' && <p>Checking the certificate…</p>}
       {state === 'error' && <><h1 className="page-h">We could not check that just now</h1><p>Please try again in a moment.</p></>}
       {state === 'missing' && <><h1 className="page-h">We could not find that certificate</h1><p>Check the code and try again. A code looks like XC-ABCDE12345.</p></>}

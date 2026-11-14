@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { COURSES, courseMinutes, PASS_MARK, TRACKS } from '../data/academy';
+import AcademyBadge from '../components/AcademyBadge';
 
 export default function Academy() {
   const nav = useNavigate();
@@ -9,7 +10,7 @@ export default function Academy() {
   return (
     <>
       <section className="page-hero"><div className="wrap">
-        <span className="eb-pill eyebrow"><span className="dot" />XionERP Academy</span>
+        <AcademyBadge />
         <h1 className="page-h">Learn XionERP. Get certified. Free.</h1>
         <p className="page-sub">Two tracks of four stages, for customers and for partners. Read the lessons in your own time, pass a ten-question quiz, and download a certificate with a job title you can put on your CV and LinkedIn.</p>
       </div></section>

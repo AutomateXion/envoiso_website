@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { COURSES, courseById, courseMinutes, PASS_MARK, type Block, type Course } from '../data/academy';
 import { INTROS, UPDATED } from '../data/academy-intros';
+import AcademyBadge from '../components/AcademyBadge';
 
 const API = 'https://cloud.xionerp.com/api/v1/public/academy';
 const inp: React.CSSProperties = { width: '100%', padding: '11px 12px', border: '1px solid var(--line)', borderRadius: 8, font: 'inherit', background: '#fff', color: 'var(--ink)' };
@@ -152,7 +153,7 @@ export default function AcademyCourse() {
   return (
     <>
       <section className="page-hero academy-hero"><div className="wrap">
-        <span className="eb-pill eyebrow"><span className="dot" />XionERP Academy</span>
+        <AcademyBadge />
         <h1 className="page-h">{course.title}</h1>
         <p className="page-sub">{lessons.length} lessons and a quiz · about {courseMinutes(course)} minutes</p>
         <p style={{ margin: '10px 0 0', fontSize: 14 }}>
@@ -272,7 +273,7 @@ function CourseIntro({ course, saved, learner, signinErr, tab, setTab, copied, o
   return (
     <>
       <section className="page-hero academy-hero"><div className="wrap">
-        <span className="eb-pill eyebrow"><span className="dot" />XionERP Academy · {track} · Stage {course.stage}</span>
+        <AcademyBadge suffix={`· ${track} · Stage ${course.stage}`} />
         <h1 className="page-h">{course.title}</h1>
         <p className="page-sub">{course.blurb}</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', marginTop: 16 }}>
