@@ -21,7 +21,7 @@ export const EVX_MODULES: EvxModule[] = [
 export const EVX_MODULES_OUTER: EvxModule[] = [
   { n: 'Human Resources', d: 'A full HRMS — employees, attendance, leave, payroll and performance. Most competitors sell this as a separate product.', svg: MODULE_ICONS['Human Resources'] },
   { n: 'Maintenance', d: 'Service calls, AMC contracts, PM visits and technician productivity — run field service like a business, not a bolt-on to inventory.', svg: MODULE_ICONS['Maintenance'] },
-  { n: 'Field Sales', d: 'A mobile-first rep app — quick orders, collections and live stock, built for reps working outside the office.', svg: MODULE_ICONS['Field Sales'] },
+  { n: 'Field Sales', d: 'A mobile-first rep app — quick orders, collections and live stock, with van sales and a Distributor Network that shows your stock and sales at each distributor.', svg: MODULE_ICONS['Field Sales'] },
   { n: 'Point of Sale', d: 'A real point-of-sale, not a workaround — built for retail and counter sales, connected to the same stock and accounts.', svg: MODULE_ICONS['Point of Sale'] },
   { n: 'Manufacturing', d: 'Recipes by size and colour, operation bulletin with SMV and piece rates, fabric rolls with 4-point inspection, a cutting room, and production orders made straight from a sales order \u2014 all flowing into the same stock and ledger.', svg: MODULE_ICONS['Manufacturing'] },
   { n: 'Social Media', d: 'WhatsApp inbox, campaigns, flows and templates, Facebook and Instagram messages, and SEO tools \u2014 every customer conversation and your search visibility, inside the ERP you already run.', svg: MODULE_ICONS['WhatsApp'] },

@@ -44,7 +44,7 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
     title: 'Field Sales',
     icon: MODULE_ICONS['Field Sales'],
     blurb: 'A mobile-first toolkit for reps working outside the office.',
-    features: ['Rep dashboard', 'Quick order entry', 'My orders', 'Collections & collection vouchers', 'Customer snapshot', 'Live product availability'],
+    features: ['Rep dashboard', 'Quick order entry', 'My orders', 'Collections & collection vouchers', 'Customer snapshot', 'Live product availability', 'Van sales \u2014 load the van, bill the shop on the spot, settle at day end', 'Distributor Network \u2014 each distributor\u2019s stock and sales of your items', 'Distributor price claims worked out and paid'],
     highlight: true,
     highlightNote: 'A dedicated rep-in-the-field app — usually a separate mobile SKU elsewhere.',
   },

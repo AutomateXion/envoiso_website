@@ -23,7 +23,7 @@ export const PARTNER_STAGES: Course[] = [
             'Trading and distribution: quotations to invoices, stock in several warehouses, cheques, credit limits, landed cost on imports.',
             'Retail: the till, with offline selling, returns, loyalty and the day\'s count.',
             'Manufacturing and fashion: recipes by size and colour, an operation bulletin with piece rates, fabric rolls with 4-point inspection, a cutting room, and production orders made from a customer\'s sales order.',
-            'Field sales: salesmen taking orders on the phone, and vans that bill on the spot and settle at the end of the day.',
+            'Field sales and distribution: salesmen taking orders on the phone, vans that bill on the spot and settle at the end of the day, and a Distributor Network showing your stock and sales at each distributor.',
             'Services: projects, contracts, service calls and HR.',
           ] },
           { t: 'p', text: 'The strongest sign of fit is work done twice: invoices in one tool, stock in a spreadsheet, the accounts in a third. Every figure typed twice is one XionERP types once.' },
