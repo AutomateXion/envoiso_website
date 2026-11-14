@@ -98,6 +98,57 @@ services:
         source: /solutions/erp-software-sri-lanka
         destination: /solutions/erp-software-sri-lanka/index.html
       - type: rewrite
+        source: /solutions/pos-system
+        destination: /solutions/pos-system/index.html
+      - type: rewrite
+        source: /solutions/billing-and-invoicing-software
+        destination: /solutions/billing-and-invoicing-software/index.html
+      - type: rewrite
+        source: /solutions/e-invoicing-software
+        destination: /solutions/e-invoicing-software/index.html
+      - type: rewrite
+        source: /solutions/payroll-software
+        destination: /solutions/payroll-software/index.html
+      - type: rewrite
+        source: /solutions/crm-software
+        destination: /solutions/crm-software/index.html
+      - type: rewrite
+        source: /solutions/van-sales-software
+        destination: /solutions/van-sales-software/index.html
+      - type: rewrite
+        source: /solutions/service-and-rental-management
+        destination: /solutions/service-and-rental-management/index.html
+      - type: rewrite
+        source: /solutions/erp-for-trading-and-distribution
+        destination: /solutions/erp-for-trading-and-distribution/index.html
+      - type: rewrite
+        source: /solutions/erp-for-retail-and-fashion
+        destination: /solutions/erp-for-retail-and-fashion/index.html
+      - type: rewrite
+        source: /solutions/erp-for-electronics-and-it-trading
+        destination: /solutions/erp-for-electronics-and-it-trading/index.html
+      - type: rewrite
+        source: /solutions/erp-for-fmcg-manufacturing
+        destination: /solutions/erp-for-fmcg-manufacturing/index.html
+      - type: rewrite
+        source: /solutions/erp-software-kuwait
+        destination: /solutions/erp-software-kuwait/index.html
+      - type: rewrite
+        source: /solutions/erp-software-bahrain
+        destination: /solutions/erp-software-bahrain/index.html
+      - type: rewrite
+        source: /solutions/odoo-alternative
+        destination: /solutions/odoo-alternative/index.html
+      - type: rewrite
+        source: /solutions/tally-alternative
+        destination: /solutions/tally-alternative/index.html
+      - type: rewrite
+        source: /solutions/zoho-books-alternative
+        destination: /solutions/zoho-books-alternative/index.html
+      - type: rewrite
+        source: /solutions/quickbooks-alternative
+        destination: /solutions/quickbooks-alternative/index.html
+      - type: rewrite
         source: /*
         destination: /index.html
     headers:

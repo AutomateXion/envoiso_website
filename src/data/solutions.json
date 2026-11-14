@@ -2,6 +2,7 @@
   "solutions": [
     {
       "slug": "accounting-and-e-invoicing",
+      "kind": "module",
       "title": "Accounting & VAT Software for Oman, UAE, Qatar | XionERP",
       "description": "Cloud accounting, invoicing and e-invoicing for GCC businesses: general ledger, VAT returns, multi-currency and OMR to three decimals, in one ERP.",
       "eyebrow": "Accounting & e-invoicing",
@@ -22,6 +23,7 @@
     },
     {
       "slug": "inventory-and-warehouse-management",
+      "kind": "module",
       "title": "Inventory & Warehouse Management Software | XionERP",
       "description": "Multi-warehouse inventory, purchasing and stock analytics in one cloud ERP, with FIFO or average costing and stock that stays in step with sales and accounts.",
       "eyebrow": "Inventory & warehouse",
@@ -42,6 +44,7 @@
     },
     {
       "slug": "field-sales-and-crm",
+      "kind": "module",
       "title": "Field Sales App & CRM for Sales Teams | XionERP",
       "description": "A mobile-first field sales app with quick orders, collections and live stock, plus CRM for leads, contacts and pipeline, all connected to your ERP.",
       "eyebrow": "Field sales & CRM",
@@ -62,6 +65,7 @@
     },
     {
       "slug": "hr-payroll-and-recruitment",
+      "kind": "module",
       "title": "HR, Payroll & Recruitment Software | XionERP",
       "description": "A full HRMS with attendance, leave, payroll and performance, plus recruitment and approval workflows, included in your ERP rather than sold separately.",
       "eyebrow": "HR, payroll & recruitment",
@@ -82,6 +86,7 @@
     },
     {
       "slug": "manufacturing-erp",
+      "kind": "module",
       "title": "Manufacturing ERP with BOM & Costing | XionERP",
       "description": "Cloud manufacturing ERP with multi-level BOMs, work orders, routing and production costing, on the same stock and ledger as the rest of your business.",
       "eyebrow": "Manufacturing & maintenance",
@@ -102,6 +107,7 @@
     },
     {
       "slug": "whatsapp-erp-integration",
+      "kind": "module",
       "title": "WhatsApp ERP Integration | Send Invoices from XionERP",
       "description": "Send invoices, quotations and reminders on WhatsApp straight from your ERP and answer customer chats from one inbox, on the official WhatsApp Business Platform.",
       "eyebrow": "WhatsApp integration",
@@ -121,6 +127,7 @@
     },
     {
       "slug": "online-store-for-erp",
+      "kind": "module",
       "title": "Online Store Connected to Your ERP | Xion Webstore",
       "description": "Xion Webstore gives your company its own online shop, run from XionERP: prices and stock come from your ERP and web orders land as sales documents.",
       "eyebrow": "Online store",
@@ -137,11 +144,244 @@
         { "q": "Is Xion Webstore included in the plan?", "a": "Xion Webstore is a paid add-on for companies on XionERP." }
       ],
       "related": ["inventory-and-warehouse-management", "whatsapp-erp-integration", "accounting-and-e-invoicing"],
-      "external": { "label": "See Xion Webstore", "href": "https://automatexion.com/xionwebstore.html" }
+      "external": {"label": "See Xion Webstore", "href": "https://automatexion.com/xionwebstore.html"}
+    },
+    {
+      "slug": "pos-system",
+      "kind": "module",
+      "title": "POS System for Retail & Supermarkets | Cloud POS Software | XionERP",
+      "description": "Cloud POS software for shops, showrooms and supermarkets in Oman, Qatar, UAE and Sri Lanka: barcode and scale billing, loyalty points, offline selling and live stock.",
+      "eyebrow": "POS system",
+      "h1": "A POS system that keeps selling and keeps your stock right",
+      "intro": "XionERP POS is a cloud point of sale for shops, showrooms and supermarkets. Every sale comes off the same stock and lands in the same accounts as the rest of your business, the till keeps selling when the internet drops, and receipts can go to the customer on WhatsApp.",
+      "groups": [
+        { "heading": "At the till", "blurb": "Fast billing for busy counters.", "items": ["Barcode scanning and quick item search", "Weighing scale items and scale labels", "Multi-buy offers and bundle prices", "Cash, card and split payments", "Returns and exchanges", "Customer display"] },
+        { "heading": "Control", "blurb": "Know what every cashier did.", "items": ["Manager approval for discounts and voids", "Supervisor PIN rules per user group", "Day report per till and cashier", "Selling with no internet, sent once the line is back", "Receipts printed or sent on WhatsApp"] },
+        { "heading": "Connected to the business", "blurb": "No separate POS database.", "items": ["Live stock across shops and warehouses", "Loyalty points and a loyalty desk", "Sales post to the general ledger", "VAT on every receipt", "Online store on the same stock"] }
+      ],
+      "faqs": [
+        { "q": "Does the XionERP POS work without internet?", "a": "Yes. The till keeps a copy of items, barcodes and prices on the device. When the line drops it keeps selling for cash or card, and each bill is sent to the system once the internet is back." },
+        { "q": "Can I use a weighing scale?", "a": "Yes. XionERP supports weighed items, scale labels and barcodes printed by the scale, which suits supermarkets, butchers and vegetable counters." },
+        { "q": "How much does the POS system cost?", "a": "The POS is included in every XionERP plan, priced per user. There is no separate POS licence. See the pricing page for prices in OMR, QAR, LKR and USD." },
+        { "q": "Can cashiers give discounts?", "a": "Only within the rules you set. Discounts, voids and returns above a limit need a supervisor's approval or PIN, and the day report shows who approved what." },
+        { "q": "Does the POS share stock with my warehouse and online store?", "a": "Yes. The POS, warehouse, sales invoices and online store all use one stock figure, so an item sold at the till is no longer offered online." }
+      ],
+      "related": ["inventory-and-warehouse-management", "online-store-for-erp", "erp-for-retail-and-fashion"]
+    },
+    {
+      "slug": "billing-and-invoicing-software",
+      "kind": "module",
+      "title": "Billing & Invoicing Software with VAT | XionERP",
+      "description": "Billing and invoicing software for GCC and Sri Lankan businesses: quotations, proforma and tax invoices, VAT, multi-currency, receipts and invoices sent on WhatsApp.",
+      "eyebrow": "Billing & invoicing",
+      "h1": "Billing and invoicing software that posts straight to your accounts",
+      "intro": "Create quotations, proforma invoices and VAT tax invoices in seconds, send them on WhatsApp or email, and record the payment against the right bill. Every invoice posts to the ledger and updates stock, so billing, stock and accounts never disagree.",
+      "groups": [
+        { "heading": "Invoices", "blurb": "From quote to cash.", "items": ["Quotations and proforma invoices", "Tax and non-tax invoice types", "Invoices from sales orders and delivery notes", "Credit notes and sales returns", "QR code on the invoice PDF", "Multi-currency invoices"] },
+        { "heading": "Getting paid", "blurb": "Know who owes what.", "items": ["Receipts against chosen invoices", "Post-dated cheques", "Round off on receipts", "Customer statements", "Receivables aging", "Payment reminders on WhatsApp"] },
+        { "heading": "Tax", "blurb": "VAT handled on every line.", "items": ["Standard, zero-rated and exempt VAT", "VAT number and TRN on tax invoices", "VAT return report", "E-invoices in UBL 2.1 format"] }
+      ],
+      "faqs": [
+        { "q": "Can I send invoices on WhatsApp?", "a": "Yes. Invoices, quotations, statements and reminders can be sent from your company's WhatsApp number straight from XionERP." },
+        { "q": "Does XionERP handle VAT on invoices?", "a": "Yes. Each line carries its VAT rate, tax invoices show your VAT number or TRN, and the VAT return report totals the period." },
+        { "q": "Can I invoice in another currency?", "a": "Yes. Invoice in USD, AED, OMR, QAR, LKR or other currencies; exchange differences post automatically when the customer pays." },
+        { "q": "Is there free billing software?", "a": "XionERP has a 30-day free trial. After that, billing comes with every plan together with stock, accounts, HR and the rest of the system." }
+      ],
+      "related": ["accounting-and-e-invoicing", "e-invoicing-software", "pos-system"]
+    },
+    {
+      "slug": "e-invoicing-software",
+      "kind": "module",
+      "title": "E-Invoicing Software for Oman Fawtara & GCC | UBL 2.1, Peppol | XionERP",
+      "description": "E-invoicing software ready for Oman's Fawtara mandate: structured UBL 2.1 e-invoices on Peppol BIS 3.0 and PINT-OM, produced from the invoices you already raise in XionERP.",
+      "eyebrow": "E-invoicing software",
+      "h1": "E-invoicing software ready for Oman's Fawtara mandate",
+      "intro": "Oman's Fawtara programme requires VAT-registered businesses to issue structured e-invoices instead of paper or PDF. XionERP produces them from the invoices you already raise, in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification.",
+      "groups": [
+        { "heading": "Format", "blurb": "The data shape the tax authority expects.", "items": ["UBL 2.1 structured e-invoices", "Peppol BIS 3.0 alignment", "Omani PINT-OM specification", "Credit notes as e-invoices", "Buyer and seller VAT numbers checked"] },
+        { "heading": "Day to day", "blurb": "No second system to learn.", "items": ["E-invoice produced from the normal sales invoice", "Invoice QR code on the PDF", "Status of each e-invoice", "Multi-currency with OMR to three decimals"] },
+        { "heading": "Ready for the next phases", "blurb": "Built for the rollout.", "items": ["Phase dates explained in our Fawtara guide", "Ready to adapt as UAE and Qatar publish their rules", "Same ledger for sales, purchases and VAT return"] }
+      ],
+      "faqs": [
+        { "q": "What is Fawtara?", "a": "Fawtara is the Oman Tax Authority's e-invoicing programme. VAT-registered businesses issue structured, machine-readable e-invoices that are validated and reported through a Peppol-based network." },
+        { "q": "When does e-invoicing start in Oman?", "a": "The rollout is in phases, starting with the largest taxpayers. Our compliance guide keeps the phases and dates up to date." },
+        { "q": "Which format does XionERP use?", "a": "UBL 2.1, aligned with Peppol BIS 3.0 and the Omani PINT-OM specification." },
+        { "q": "Do I need a separate e-invoicing system?", "a": "No. The e-invoice comes from the same sales invoice you raise today, so there is nothing to re-key." },
+        { "q": "Does XionERP support Saudi ZATCA e-invoicing?", "a": "Not yet. XionERP is built for Oman's Fawtara first. Contact us if you need ZATCA so we can tell you the timeline." }
+      ],
+      "related": ["accounting-and-e-invoicing", "billing-and-invoicing-software", "erp-software-oman"]
+    },
+    {
+      "slug": "payroll-software",
+      "kind": "module",
+      "title": "Payroll Software with WPS | HR & Payroll System | XionERP",
+      "description": "Payroll software for GCC and Sri Lankan companies: attendance, leave, monthly payroll runs, salary payments to the ledger and the Qatar WPS salary file.",
+      "eyebrow": "Payroll software",
+      "h1": "Payroll software that pays people right and posts itself",
+      "intro": "Run monthly payroll from attendance and leave, approve it once, pay salaries and see every component posted to the right ledger account. Payroll lives in the same system as HR, so there is no export from one tool to another.",
+      "groups": [
+        { "heading": "Payroll runs", "blurb": "From attendance to payslip.", "items": ["Monthly payroll runs with approval", "Earnings and deduction components", "Overtime and allowances", "Payslips", "Reprocess a month after corrections"] },
+        { "heading": "Paying salaries", "blurb": "Money out, recorded once.", "items": ["Salary payment from bank or cash", "Qatar WPS salary information file (SIF)", "Ledger account per pay component", "Advances and loans"] },
+        { "heading": "People", "blurb": "HR in the same place.", "items": ["Employee records and documents", "Attendance and leave", "Recruitment and approvals", "Performance reviews"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP produce the WPS file?", "a": "Yes for Qatar: XionERP produces the Salary Information File (SIF) banks require, and checks it before you upload so a bank does not reject it." },
+        { "q": "Does payroll post to accounts automatically?", "a": "Yes. Each pay component has its own ledger account, so salaries, allowances and deductions land in the right place when the payroll is approved." },
+        { "q": "Is payroll an extra module?", "a": "No. HR and payroll are included in every plan." },
+        { "q": "Can I correct a payroll month?", "a": "Yes. Fix attendance or components and reprocess the month before paying." }
+      ],
+      "related": ["hr-payroll-and-recruitment", "accounting-and-e-invoicing", "erp-software-qatar"]
+    },
+    {
+      "slug": "crm-software",
+      "kind": "module",
+      "title": "CRM Software for Sales Teams | Leads, Pipeline & WhatsApp | XionERP",
+      "description": "CRM software for sales teams in Oman, Qatar, UAE and Sri Lanka: leads, pipeline, quotations, visits and WhatsApp chats, connected to stock and accounts.",
+      "eyebrow": "CRM software",
+      "h1": "CRM software that knows your stock, prices and invoices",
+      "intro": "Most CRMs stop at the quotation. XionERP's CRM runs from the first enquiry to the paid invoice: leads, pipeline, quotations, field visits and WhatsApp conversations sit next to live stock, customer prices and what each customer owes.",
+      "groups": [
+        { "heading": "Selling", "blurb": "Every opportunity in one place.", "items": ["Leads and lead capture", "Pipeline by stage", "Contacts and companies", "Quotations to sales orders", "Activities and follow-ups"] },
+        { "heading": "Conversations", "blurb": "Where customers already are.", "items": ["WhatsApp inbox for the team", "Facebook and Instagram messages", "Website chat", "Customer history in one view"] },
+        { "heading": "In the field", "blurb": "For people on the road.", "items": ["Field sales app with visits", "Collections against open bills", "Live stock and customer prices", "Visit summary for managers"] }
+      ],
+      "faqs": [
+        { "q": "Is CRM included with the ERP?", "a": "Yes. CRM is part of every XionERP plan, alongside accounts, stock and HR." },
+        { "q": "Can my team reply to WhatsApp from the CRM?", "a": "Yes. The team shares one WhatsApp inbox on your official WhatsApp Business number, with each chat linked to the customer record." },
+        { "q": "Can sales staff see stock and prices?", "a": "Yes. Quotations and orders use live stock and each customer's own price list." },
+        { "q": "Does it work on mobile?", "a": "Yes. The field sales app is made for phones, for visits, orders and collections." }
+      ],
+      "related": ["field-sales-and-crm", "whatsapp-erp-integration", "van-sales-software"]
+    },
+    {
+      "slug": "van-sales-software",
+      "kind": "module",
+      "title": "Van Sales Software | Route Sales & Distribution App | XionERP",
+      "description": "Van sales software for distributors in Sri Lanka and the GCC: load vans, sell and collect on the road with live stock, then unload and settle each van at day end.",
+      "eyebrow": "Van sales software",
+      "h1": "Van sales software from loading to end-of-day settlement",
+      "intro": "Load each van from the warehouse, let the salesman sell, invoice and collect on the road with a phone, and settle the van at the end of the day: cash against sales, stock against what came back. Everything posts to the same stock and accounts.",
+      "groups": [
+        { "heading": "Load and unload", "blurb": "Every unit accounted for.", "items": ["Load sheets from the warehouse", "Van as its own stock location", "Unload of unsold goods", "Damages and returns"] },
+        { "heading": "On the road", "blurb": "A phone is enough.", "items": ["Sell and invoice at the shop", "Collect cash and cheques against open bills", "Customer prices and credit visible", "Free issues and offers"] },
+        { "heading": "Settle", "blurb": "End the day with no gaps.", "items": ["Cash settlement per van", "Stock settlement per van", "Salesman performance", "Distributor and price claims"] }
+      ],
+      "faqs": [
+        { "q": "What is van sales software?", "a": "It runs sales from a vehicle: goods are loaded to a van, sold and invoiced at customers' shops, and the van is settled for cash and stock at day end." },
+        { "q": "Does the salesman need a laptop?", "a": "No. Selling, invoicing and collections work on a phone." },
+        { "q": "Is the van stock separate from the warehouse?", "a": "Yes. Each van is its own stock location, so you always know what is on which van." },
+        { "q": "Can it handle distributors?", "a": "Yes. XionERP also runs distributor networks with price claims in the same system." }
+      ],
+      "related": ["field-sales-and-crm", "erp-for-fmcg-manufacturing", "erp-for-trading-and-distribution"]
+    },
+    {
+      "slug": "service-and-rental-management",
+      "kind": "module",
+      "title": "AMC, Service & Rental Management Software | XionERP",
+      "description": "Service management software for AMC contracts, service calls, technician jobs, rental machines and meter-reading billing, connected to parts stock and invoicing.",
+      "eyebrow": "Service & rental",
+      "h1": "AMC, service calls and rentals in the same system as your stock",
+      "intro": "Run maintenance contracts, service calls and machine rentals without spreadsheets. Technicians see their jobs, parts come off real stock, meter readings turn into invoices, and every contract shows what it earns.",
+      "groups": [
+        { "heading": "Service", "blurb": "From call to closed job.", "items": ["Service calls and a service board", "Technician jobs on mobile", "Preventive maintenance visits", "Parts used from stock", "Return and repair (RMA)"] },
+        { "heading": "Contracts and rentals", "blurb": "Recurring income, tracked.", "items": ["AMC contracts", "Rental fleet by serial number", "Meter readings to invoices", "Money to collect", "Supplier warranty claims"] },
+        { "heading": "Performance", "blurb": "See what pays.", "items": ["Technician productivity", "Service performance", "Contract profitability", "Machines and their history"] }
+      ],
+      "faqs": [
+        { "q": "Can XionERP bill rentals by meter reading?", "a": "Yes. Readings are recorded per machine and turned into invoices, alongside fixed monthly rent." },
+        { "q": "Do technicians have an app?", "a": "Yes. Technicians see their jobs and record work and parts from a phone." },
+        { "q": "Are rented machines kept out of sale?", "a": "Yes. A serial number out on rent cannot be sold by mistake." },
+        { "q": "Can I import my existing contracts?", "a": "Yes. Contracts, machines and billed-up-to counters can be imported from Excel." }
+      ],
+      "related": ["inventory-and-warehouse-management", "erp-for-electronics-and-it-trading", "billing-and-invoicing-software"]
+    },
+    {
+      "slug": "erp-for-trading-and-distribution",
+      "kind": "industry",
+      "title": "ERP for Trading & Distribution Companies | XionERP",
+      "description": "ERP for traders, importers and distributors in the GCC and Sri Lanka: multi-warehouse stock, landed cost, customer price lists, PDC cheques, van and field sales.",
+      "eyebrow": "Trading & distribution",
+      "h1": "ERP for trading and distribution companies",
+      "intro": "Importers and distributors live on margins, credit and stock. XionERP brings purchasing with landed cost, multi-warehouse stock, customer price lists, credit, cheques, field and van sales into one cloud system, so you know your real margin on every invoice.",
+      "groups": [
+        { "heading": "Buying", "blurb": "True cost of every item.", "items": ["Purchase orders and goods received", "Landed cost: freight, duty, clearing", "Supplier payments in any currency", "Supplier statements"] },
+        { "heading": "Stock", "blurb": "Right item, right place.", "items": ["Multiple warehouses and branches", "Serial and batch numbers", "Back orders and partial deliveries", "Consignment stock with promoters"] },
+        { "heading": "Selling and collecting", "blurb": "Margin and credit under control.", "items": ["Price lists per customer group", "Margin analysis per invoice and item", "PDC cheques and bounced cheques", "Field sales and van sales"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP calculate landed cost?", "a": "Yes. Freight, duty and clearing bills are spread across the goods received, so item cost and margins are real." },
+        { "q": "Can I give different prices to different customers?", "a": "Yes. Price lists per customer group, plus customer-specific prices." },
+        { "q": "Can I see margin per invoice?", "a": "Yes. Margin analysis shows profit by invoice, item, customer and salesperson." },
+        { "q": "Does it handle post-dated cheques?", "a": "Yes, including cheques passed to suppliers and bounced cheques." }
+      ],
+      "related": ["inventory-and-warehouse-management", "van-sales-software", "erp-for-electronics-and-it-trading"]
+    },
+    {
+      "slug": "erp-for-retail-and-fashion",
+      "kind": "industry",
+      "title": "Retail & Fashion ERP | Garment Store Software with POS | XionERP",
+      "description": "Retail and fashion ERP for garment, clothing and lifestyle stores: sizes and colours, POS, sell-through, broken sizes, markdowns, open-to-buy and store stock in one system.",
+      "eyebrow": "Retail & fashion",
+      "h1": "Retail and fashion ERP, from the rack to the till",
+      "intro": "Fashion retail runs on sizes, seasons and sell-through. XionERP gives garment and clothing stores a POS, stock by size and colour, sell-through and broken-size reports, markdown planning and open-to-buy, all on the same stock and accounts.",
+      "groups": [
+        { "heading": "Store", "blurb": "Sell faster at the counter.", "items": ["POS with size picker", "Racks and floor map", "Sales staff commissions", "Footfall and conversion"] },
+        { "heading": "Merchandise", "blurb": "Buy and move the right stock.", "items": ["Stock by size and colour", "Sell-through by style", "Broken sizes", "What to send to each store"] },
+        { "heading": "Margin", "blurb": "Protect the season's profit.", "items": ["Markdown planning", "Open-to-buy budgets", "Margin by style and store", "Garment cut orders for own production"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP handle sizes and colours?", "a": "Yes. Styles carry sizes and colours, and stock, sales and sell-through are reported by each." },
+        { "q": "Can it tell me which sizes are missing in a store?", "a": "Yes. The broken sizes report shows styles where key sizes have run out, and What to send suggests transfers." },
+        { "q": "Is there a POS for fashion stores?", "a": "Yes. The POS has a size picker and works on the same stock as the warehouse." },
+        { "q": "Can it plan markdowns and buying?", "a": "Yes. Markdown planning and open-to-buy budgets are part of the fashion features." }
+      ],
+      "related": ["pos-system", "inventory-and-warehouse-management", "manufacturing-erp"]
+    },
+    {
+      "slug": "erp-for-electronics-and-it-trading",
+      "kind": "industry",
+      "title": "ERP for Computer, Electronics & IT Trading | Serial Numbers | XionERP",
+      "description": "ERP for computer, mobile and electronics traders: serial numbers from purchase to sale, warranty and RMA, landed cost, showroom POS, service and online store.",
+      "eyebrow": "Electronics & IT trading",
+      "h1": "ERP for computer, electronics and IT traders",
+      "intro": "Selling laptops, phones and electronics means tracking every serial number, handling warranty returns and keeping showroom, warehouse and online stock in step. XionERP does that in one cloud system, with landed cost so margins on imported goods are real.",
+      "groups": [
+        { "heading": "Serial numbers", "blurb": "Every unit traceable.", "items": ["Serials captured on goods received", "Serials on delivery notes", "Serial history from supplier to customer", "Bundles and kits"] },
+        { "heading": "After sales", "blurb": "Warranty without spreadsheets.", "items": ["Return and repair (RMA)", "Supplier warranty claims", "Service calls and technicians", "Rental and AMC for machines"] },
+        { "heading": "Selling", "blurb": "Showroom, B2B and online.", "items": ["Showroom POS", "Price lists for dealers and walk-ins", "Online store on the same stock", "Multi-currency purchasing with landed cost"] }
+      ],
+      "faqs": [
+        { "q": "Can XionERP track serial numbers?", "a": "Yes. Serials are captured when goods arrive and recorded on delivery notes, so every unit can be traced to its supplier and customer." },
+        { "q": "Does it handle warranty returns?", "a": "Yes. Return and repair (RMA) and supplier warranty claims are built in." },
+        { "q": "Can dealers and walk-in customers get different prices?", "a": "Yes. Use price lists per customer group." },
+        { "q": "Can I sell online from the same stock?", "a": "Yes. Xion Webstore runs from XionERP stock and prices." }
+      ],
+      "related": ["erp-for-trading-and-distribution", "service-and-rental-management", "online-store-for-erp"]
+    },
+    {
+      "slug": "erp-for-fmcg-manufacturing",
+      "kind": "industry",
+      "title": "FMCG Manufacturing & Distribution ERP | Batches, Recipes, Van Sales | XionERP",
+      "description": "ERP for FMCG makers in Sri Lanka and the GCC: recipes and multi-level BOMs, batch numbers, production plans, quality checks, van sales and distributor networks.",
+      "eyebrow": "FMCG manufacturing",
+      "h1": "ERP for FMCG manufacturers that sell through vans and distributors",
+      "intro": "FMCG makers produce in batches and sell through vans, shops and distributors. XionERP connects recipes, production, batch numbers and quality checks with van sales, distributors and price claims, so you see the cost and the profit of every batch.",
+      "groups": [
+        { "heading": "Production", "blurb": "Cost every batch.", "items": ["Recipes and multi-level BOMs", "Production plans and work orders", "Outside workers and job work", "Quality checks", "Production costing"] },
+        { "heading": "Traceability", "blurb": "Know where each batch went.", "items": ["Batch numbers end to end", "Expiry dates", "Stock by batch and location"] },
+        { "heading": "Route to market", "blurb": "Vans, shops and distributors.", "items": ["Van sales with settlement", "Distributor network", "Price claims and credits", "Field sales app"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP support batch numbers?", "a": "Yes. Batch numbers follow goods from production to the customer, with stock by batch and location." },
+        { "q": "Can I make semi-finished goods?", "a": "Yes. Multi-level recipes let you produce in-between products and use them in finished goods." },
+        { "q": "Can it run my distributors?", "a": "Yes. Distributor networks with price claims and credits run in the same system." },
+        { "q": "Is it suitable for small factories?", "a": "Yes. Start with production and stock, then add van sales and distributors as you grow." }
+      ],
+      "related": ["manufacturing-erp", "van-sales-software", "erp-software-sri-lanka"]
     },
     {
       "slug": "erp-software-oman",
-      "country": true,
+      "kind": "country",
       "title": "ERP Software in Oman | Cloud ERP with Fawtara E-Invoicing | XionERP",
       "description": "Cloud ERP software for businesses in Oman: OMR to three decimals, 5% VAT returns, Fawtara e-invoicing, inventory, POS, HR and payroll. Head office in Muscat.",
       "eyebrow": "ERP software in Oman",
@@ -157,13 +397,14 @@
         { "q": "Does XionERP handle OMR to three decimals?", "a": "Yes. Amounts, the general ledger and the trial balance all work in Omani rial to three decimals, and you can also invoice in USD, AED, QAR or other currencies." },
         { "q": "Can XionERP prepare my Oman VAT return?", "a": "Yes. VAT at 5% is applied on sales and purchases as you work, and the VAT return report totals output and input VAT for the period." },
         { "q": "Where is XionERP support based?", "a": "Our head office is in Muscat, Oman, with an engineering team in Sri Lanka. You can reach us on +968 97696968 or by WhatsApp." },
-        { "q": "How much does XionERP cost in Oman?", "a": "Plans are priced per user in OMR and every plan includes every module. You can start with a 30-day free trial with no credit card." }
+        { "q": "How much does XionERP cost in Oman?", "a": "Plans are priced per user in OMR and every plan includes every module. You can start with a 30-day free trial with no credit card." },
+        { "q": "Do you serve businesses outside Muscat?", "a": "Yes. XionERP is cloud software, so businesses in Muscat, Sohar, Salalah, Nizwa, Sur and across Oman use it from a browser or phone. Our team in Muscat does training and support online or on site." }
       ],
       "related": ["accounting-and-e-invoicing", "inventory-and-warehouse-management", "hr-payroll-and-recruitment"]
     },
     {
       "slug": "erp-software-qatar",
-      "country": true,
+      "kind": "country",
       "title": "ERP Software in Qatar | Cloud ERP for Qatari Businesses | XionERP",
       "description": "Cloud ERP software for businesses in Qatar: accounting in QAR, inventory, showroom POS, field sales, service contracts, HR and payroll in one system.",
       "eyebrow": "ERP software in Qatar",
@@ -179,13 +420,14 @@
         { "q": "Is XionERP used by companies in Qatar?", "a": "Yes. Trading and retail companies in Qatar run their showrooms, stock, service departments and accounts on XionERP today." },
         { "q": "Is XionERP ready for e-invoicing in Qatar?", "a": "XionERP already produces structured e-invoices in UBL 2.1 format for Oman's programme, so it is ready to adapt as Qatar's own e-invoicing requirements are published." },
         { "q": "Can I run several companies or branches?", "a": "Yes. XionERP supports several branches, warehouses and legal entities, each with its own trial balance, profit and loss and balance sheet." },
-        { "q": "How do I try XionERP?", "a": "Start a 30-day free trial with no credit card, or contact our team for a demo on your own data. Plans are priced per user in QAR." }
+        { "q": "How do I try XionERP?", "a": "Start a 30-day free trial with no credit card, or contact our team for a demo on your own data. Plans are priced per user in QAR." },
+        { "q": "Do you serve businesses outside Doha?", "a": "Yes. XionERP is cloud software, so businesses in Doha, Al Wakrah, Al Rayyan, Lusail and across Qatar use it from a browser or phone, with branches and warehouses in one system." }
       ],
       "related": ["inventory-and-warehouse-management", "field-sales-and-crm", "online-store-for-erp"]
     },
     {
       "slug": "erp-software-uae",
-      "country": true,
+      "kind": "country",
       "title": "ERP Software in the UAE | Cloud ERP with VAT | XionERP",
       "description": "Cloud ERP software for UAE businesses: 5% VAT with TRN on tax invoices, accounting in AED, inventory, serial numbers, POS, CRM, HR and payroll in one system.",
       "eyebrow": "ERP software in the UAE",
@@ -201,13 +443,14 @@
         { "q": "Can I keep my books in AED?", "a": "Yes. Your accounts can be kept in AED, and you can buy and sell in USD, OMR, QAR or other currencies with exchange differences posted automatically." },
         { "q": "Is XionERP ready for UAE e-invoicing?", "a": "XionERP already generates structured e-invoices in UBL 2.1 format on the Peppol model used in the GCC, so it is ready to adapt to the UAE's e-invoicing requirements." },
         { "q": "Can I track serial numbers?", "a": "Yes. Serial numbers are captured on goods received and delivery notes, so you can trace every unit from supplier to customer." },
-        { "q": "How do I try XionERP in the UAE?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo. Every plan includes every module." }
+        { "q": "How do I try XionERP in the UAE?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo. Every plan includes every module." },
+        { "q": "Which emirates do you serve?", "a": "All of them. XionERP is cloud software, so businesses in Dubai, Abu Dhabi, Sharjah, Ajman and the other emirates use it from a browser or phone, with each branch and warehouse in one system." }
       ],
       "related": ["accounting-and-e-invoicing", "inventory-and-warehouse-management", "field-sales-and-crm"]
     },
     {
       "slug": "erp-software-sri-lanka",
-      "country": true,
+      "kind": "country",
       "title": "ERP Software in Sri Lanka | Cloud ERP System | XionERP",
       "description": "Cloud ERP software for Sri Lankan businesses: accounting in LKR, VAT, inventory, manufacturing, van sales, POS, HR and payroll. Local team in Colombo.",
       "eyebrow": "ERP software in Sri Lanka",
@@ -223,9 +466,136 @@
         { "q": "Does XionERP support manufacturing in Sri Lanka?", "a": "Yes. XionERP covers recipes and multi-level bills of materials, production plans, work orders, outside workers, batch numbers and production costing." },
         { "q": "Can XionERP run van sales and distributors?", "a": "Yes. Vans are loaded, sell on the road and are settled at the end of the day, and distributor networks with price claims run in the same system." },
         { "q": "Is there local support in Sri Lanka?", "a": "Yes. Our engineering and support team is in Colombo. Call +94 761 949294 or message us on WhatsApp." },
-        { "q": "How much does XionERP cost in Sri Lanka?", "a": "Plans are priced per user in LKR and every plan includes every module. Start a 30-day free trial with no credit card." }
+        { "q": "How much does XionERP cost in Sri Lanka?", "a": "Plans are priced per user in LKR and every plan includes every module. Start a 30-day free trial with no credit card." },
+        { "q": "Do you serve businesses outside Colombo?", "a": "Yes. XionERP is cloud software, so businesses in Colombo, Kandy, Galle, Kurunegala, Negombo, Jaffna and across the island use it from a browser or phone, and van sales teams use it on the road." }
       ],
       "related": ["manufacturing-erp", "field-sales-and-crm", "hr-payroll-and-recruitment"]
+    },
+    {
+      "slug": "erp-software-kuwait",
+      "kind": "country",
+      "title": "ERP Software in Kuwait | Cloud ERP for Kuwaiti Businesses | XionERP",
+      "description": "Cloud ERP software for businesses in Kuwait: accounting in KWD to three decimals, inventory, POS, CRM, HR and payroll in one system.",
+      "eyebrow": "ERP software in Kuwait",
+      "h1": "Cloud ERP software for businesses in Kuwait",
+      "intro": "XionERP gives trading, retail and service companies in Kuwait one cloud system for accounts, stock, sales and staff. Amounts work to three decimals for the Kuwaiti dinar, with multi-currency for imports.",
+      "groups": [
+        { "heading": "Finance in KWD", "blurb": "Three decimals throughout.", "items": ["Chart of accounts and general ledger", "Three-decimal currencies", "Multi-currency with exchange gain and loss", "Post-dated cheques", "Profit and loss, balance sheet, cash flow"] },
+        { "heading": "Trading and retail", "blurb": "Stock that stays right.", "items": ["Inventory across warehouses", "Point of sale", "Purchase orders and landed cost", "Price lists per customer group"] },
+        { "heading": "Sales and people", "blurb": "One system for the team.", "items": ["CRM and field sales", "WhatsApp invoices and reminders", "HR, attendance and payroll"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP support three-decimal currencies like KWD?", "a": "Yes. XionERP already runs three-decimal Omani rial, and the same three-decimal handling applies to other currencies." },
+        { "q": "Is there VAT in Kuwait?", "a": "Kuwait has not introduced VAT. XionERP lets you keep invoices without VAT and switch tax on if that changes." },
+        { "q": "Can I run several branches?", "a": "Yes. Branches, warehouses and legal entities each get their own reports." },
+        { "q": "How do I try XionERP?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
+      ],
+      "related": ["erp-for-trading-and-distribution", "pos-system", "crm-software"]
+    },
+    {
+      "slug": "erp-software-bahrain",
+      "kind": "country",
+      "title": "ERP Software in Bahrain | Cloud ERP with VAT | XionERP",
+      "description": "Cloud ERP software for businesses in Bahrain: 10% VAT, accounting in BHD to three decimals, inventory, POS, CRM, HR and payroll in one system.",
+      "eyebrow": "ERP software in Bahrain",
+      "h1": "Cloud ERP software for businesses in Bahrain",
+      "intro": "XionERP runs accounts, VAT, stock, sales and staff for growing companies in Bahrain from one cloud system. VAT is worked out on every line and amounts work to three decimals for the Bahraini dinar.",
+      "groups": [
+        { "heading": "VAT in Bahrain", "blurb": "Tax handled as you work.", "items": ["10% VAT, zero-rated and exempt lines", "VAT number on tax invoices", "VAT return report", "Structured e-invoices in UBL 2.1 format"] },
+        { "heading": "Finance in BHD", "blurb": "Three decimals throughout.", "items": ["General ledger and trial balance", "Multi-currency", "Bank reconciliation and cheques", "Profit and loss, balance sheet, cash flow"] },
+        { "heading": "Operations", "blurb": "One system for the business.", "items": ["Inventory and warehouses", "Point of sale", "CRM and field sales", "HR, attendance and payroll"] }
+      ],
+      "faqs": [
+        { "q": "Does XionERP support Bahrain VAT?", "a": "Yes. Lines carry the 10% standard rate, zero-rated or exempt treatment, and the VAT return report totals the period." },
+        { "q": "Can I keep my books in BHD?", "a": "Yes, to three decimals, with other currencies for buying and selling." },
+        { "q": "Is XionERP cloud-based?", "a": "Yes. It runs in the browser and on phones, with nothing to install." },
+        { "q": "How do I try XionERP?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
+      ],
+      "related": ["accounting-and-e-invoicing", "pos-system", "inventory-and-warehouse-management"]
+    },
+    {
+      "slug": "odoo-alternative",
+      "kind": "compare",
+      "title": "Odoo Alternative for GCC & Sri Lanka | XionERP",
+      "description": "Looking for an Odoo alternative? XionERP is a cloud ERP with every module in every plan, built for GCC VAT, Fawtara e-invoicing and WhatsApp, with local support.",
+      "eyebrow": "Odoo alternative",
+      "h1": "A simpler Odoo alternative with every module included",
+      "intro": "Odoo is flexible, but many businesses end up paying partners to configure apps and localise them. XionERP comes ready for the GCC and Sri Lanka: every module is included, VAT and three-decimal currencies work out of the box, and our own team supports you.",
+      "groups": [
+        { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
+      ],
+      "faqs": [
+        { "q": "Why choose XionERP over Odoo?", "a": "Every XionERP plan includes every module, the regional setup (VAT, three-decimal currencies, Fawtara e-invoicing, WhatsApp) is built in, and support comes from the team that builds the product." },
+        { "q": "Can I move from Odoo to XionERP?", "a": "Yes. Export customers, suppliers, items and open balances to Excel and import them into XionERP. Our team helps with the move." },
+        { "q": "Is XionERP open source?", "a": "No. XionERP is a cloud service, so there is no server to host or upgrade." },
+        { "q": "How do I compare them on my own data?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
+      ],
+      "related": ["accounting-and-e-invoicing", "pos-system", "inventory-and-warehouse-management"]
+    },
+    {
+      "slug": "tally-alternative",
+      "kind": "compare",
+      "title": "Tally Alternative in the Cloud | Cloud ERP for GCC & Sri Lanka | XionERP",
+      "description": "Looking for a Tally alternative? XionERP is a cloud ERP that runs in the browser and on phones, with accounting, stock, POS, CRM and payroll in one system.",
+      "eyebrow": "Tally alternative",
+      "h1": "A cloud alternative to Tally, with the whole business in one place",
+      "intro": "Many businesses start on Tally for accounts, then add separate tools for POS, CRM, payroll and field sales. XionERP runs all of them in one cloud system you open from any browser or phone, with VAT and e-invoicing built in.",
+      "groups": [
+        { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
+      ],
+      "faqs": [
+        { "q": "Why move from Tally to XionERP?", "a": "XionERP is cloud-native, so the team works from anywhere, and it covers POS, CRM, field sales, HR and payroll as well as accounts and stock." },
+        { "q": "Can I bring my Tally data?", "a": "Yes. Export ledgers, parties, items and opening balances to Excel and import them into XionERP." },
+        { "q": "Does XionERP handle VAT like Tally?", "a": "Yes. VAT rates per line, VAT numbers on invoices and a VAT return report are built in." },
+        { "q": "How do I try it?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
+      ],
+      "related": ["accounting-and-e-invoicing", "pos-system", "inventory-and-warehouse-management"]
+    },
+    {
+      "slug": "zoho-books-alternative",
+      "kind": "compare",
+      "title": "Zoho Books Alternative with Inventory, POS & Payroll | XionERP",
+      "description": "Looking for a Zoho Books alternative? XionERP covers accounting plus inventory, POS, manufacturing, CRM, HR and payroll in one cloud ERP built for the GCC.",
+      "eyebrow": "Zoho Books alternative",
+      "h1": "A Zoho Books alternative when you need more than accounting",
+      "intro": "Zoho Books is good accounting software. When you also need warehouses, a POS, manufacturing, van sales, payroll and service in the same system, XionERP gives you all of them in one plan, with one ledger behind them.",
+      "groups": [
+        { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
+      ],
+      "faqs": [
+        { "q": "When should I choose XionERP over Zoho Books?", "a": "When the business needs more than invoices and books: multi-warehouse stock, POS, manufacturing, field and van sales, HR and payroll, all on one ledger." },
+        { "q": "Can I import from Zoho Books?", "a": "Yes. Export contacts, items and open invoices and import them into XionERP." },
+        { "q": "Does XionERP support e-invoicing?", "a": "Yes. XionERP produces UBL 2.1 e-invoices aligned with Peppol BIS 3.0 and Oman's PINT-OM." },
+        { "q": "How do I try it?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
+      ],
+      "related": ["accounting-and-e-invoicing", "pos-system", "inventory-and-warehouse-management"]
+    },
+    {
+      "slug": "quickbooks-alternative",
+      "kind": "compare",
+      "title": "QuickBooks Alternative for the GCC & Sri Lanka | XionERP",
+      "description": "Looking for a QuickBooks alternative in the Middle East or Sri Lanka? XionERP is a cloud ERP with VAT, three-decimal currencies, inventory, POS and payroll built in.",
+      "eyebrow": "QuickBooks alternative",
+      "h1": "A QuickBooks alternative made for the GCC and Sri Lanka",
+      "intro": "QuickBooks is built around other markets. XionERP is built for businesses in Oman, Qatar, the UAE and Sri Lanka, with three-decimal currencies, GCC VAT, Fawtara e-invoicing, WhatsApp and local support, plus stock, POS and payroll in the same system.",
+      "groups": [
+        { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
+      ],
+      "faqs": [
+        { "q": "Why choose XionERP over QuickBooks?", "a": "Regional needs are built in (three-decimal currencies, GCC VAT, Fawtara e-invoicing, WhatsApp) and the ERP covers stock, POS, CRM, HR and payroll as well as accounts." },
+        { "q": "Can I move my QuickBooks data?", "a": "Yes. Export customers, suppliers, items and balances and import them into XionERP." },
+        { "q": "Is XionERP more expensive?", "a": "Plans are priced per user and include every module. See the pricing page for OMR, QAR, LKR and USD prices." },
+        { "q": "How do I try it?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
+      ],
+      "related": ["accounting-and-e-invoicing", "pos-system", "inventory-and-warehouse-management"]
     }
   ]
 }

@@ -331,7 +331,7 @@
 
 /* ---------- Footer ---------- */
 .evx footer{background:var(--navy);color:#9fb3c8;padding:54px 0 30px;border-top:1px solid rgba(255,255,255,.08)}
-.evx .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr 1.2fr 1fr 1fr;gap:32px;margin-bottom:40px}
+.evx .foot-grid{display:grid;grid-template-columns:1.4fr .9fr 1.2fr 1.2fr 1.1fr .9fr .9fr;gap:32px;margin-bottom:40px}
 .evx .foot-brand{font-family:'Fraunces',serif;font-size:22px;color:#fff;font-weight:600;display:flex;align-items:center;gap:11px;margin-bottom:14px;text-decoration:none}
 .evx .foot-brand .mark{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--blue-lt);font-family:'Fraunces',serif;font-weight:700;font-size:18px;position:relative}
 .evx .foot-brand .mark::after{content:'';position:absolute;top:6px;right:6px;width:4px;height:4px;border-radius:50%;background:#fff}

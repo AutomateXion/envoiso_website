@@ -152,7 +152,7 @@ export default function Home() {
             <p className="sec-sub">Pick the part of the business you want to fix first. Every area runs on the same data, so adding the next one does not mean another system.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
-            {solutions.solutions.filter((s) => !('country' in s)).map((s) => (
+            {solutions.solutions.filter((s) => s.kind === 'module').map((s) => (
               <Link className="fw-card" key={s.slug} to={`/solutions/${s.slug}/`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <h3>{s.eyebrow}</h3>
                 <p>{s.h1}</p>

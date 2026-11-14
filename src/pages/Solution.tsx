@@ -9,6 +9,13 @@ import seo from '../data/seo.json';
 type Sol = (typeof data.solutions)[number] & { external?: { label: string; href: string } };
 const sols = data.solutions as Sol[];
 
+const INCLUDED_HEADING: Record<string, string> = {
+  module: 'Everything in this area, on one platform',
+  country: 'Everything in this area, on one platform',
+  industry: 'What your business gets, on one platform',
+  compare: 'What you get with XionERP',
+};
+
 export default function Solution() {
   const { slug } = useParams();
   const s = sols.find((x) => x.slug === slug);
@@ -46,7 +53,7 @@ export default function Solution() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sec-eyebrow">What is included</div>
-            <h2 className="sec-h">Everything in this area, on one platform</h2>
+            <h2 className="sec-h">{INCLUDED_HEADING[s.kind] ?? INCLUDED_HEADING.module}</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
             {s.groups.map((g) => (
