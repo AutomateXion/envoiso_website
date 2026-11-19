@@ -18,6 +18,7 @@ const Academy = lazy(() => import('./pages/Academy'));
 const Legal = lazy(() => import('./pages/Legal'));
 const AcademyCourse = lazy(() => import('./pages/AcademyCourse'));
 const AcademyVerify = lazy(() => import('./pages/AcademyVerify'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 import './styles/global.css';
 import { initGA, trackPageview } from './lib/analytics';
 
@@ -79,6 +80,7 @@ export default function App() {
         <Route path="/privacy" element={<Legal kind="privacy" />} />
         <Route path="/terms" element={<Legal kind="terms" />} />
         <Route path="/solutions/:slug" element={<Solution />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       </Suspense>
       <Footer />
