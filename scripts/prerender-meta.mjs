@@ -50,4 +50,15 @@ for (const [path, r] of Object.entries(seo.routes)) {
   if (path === '/') writeFileSync(join(dist, 'index.html'), html);
   else { mkdirSync(join(dist, path), { recursive: true }); writeFileSync(join(dist, path, 'index.html'), html); }
 }
+// 404.html: Render serves it with a real 404 status for any address that has no file (needs no
+// catch-all rewrite in Render; see /academy/verify/* there). noindex so it is never listed.
+{
+  let h = base;
+  const rep = (re, to) => { if (!re.test(h)) throw new Error('missing ' + re + ' for 404'); h = h.replace(re, to); };
+  rep(/<title>[^<]*<\/title>/, '<title>Page not found | XionERP</title>');
+  rep(/<link rel="canonical" href="[^"]*"\s*\/?>/, '');
+  rep(/<meta name="robots" content="[^"]*"\s*\/?>/, '<meta name="robots" content="noindex" />');
+  rep(/<div id="root"><\/div>/, `<div id="root"></div>\n    <noscript><h1>Page not found</h1><p>This address does not exist.</p><nav>${nav}</nav></noscript>`);
+  writeFileSync(join(dist, '404.html'), h);
+}
 console.log('prerendered meta for', Object.keys(seo.routes).length, 'routes');
