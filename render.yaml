@@ -89,6 +89,9 @@ services:
         source: /solutions/erp-software-oman
         destination: /solutions/erp-software-oman/index.html
       - type: rewrite
+        source: /solutions/vat-software-oman
+        destination: /solutions/vat-software-oman/index.html
+      - type: rewrite
         source: /solutions/erp-software-qatar
         destination: /solutions/erp-software-qatar/index.html
       - type: rewrite
