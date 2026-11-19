@@ -1,4 +1,3 @@
-import { PDFDocument } from 'pdf-lib';
 import { badgeFor, drawBadge } from './badge';
 
 /* The certificate, drawn on a canvas at A4 landscape (150 dpi). It uses the real
@@ -56,6 +55,7 @@ export async function drawCertificate(d: CertificateData): Promise<HTMLCanvasEle
 export const certificatePng = (c: HTMLCanvasElement) => new Promise<Blob>((res, rej) => c.toBlob((b) => (b ? res(b) : rej(new Error('png'))), 'image/png'));
 
 export async function certificatePdf(c: HTMLCanvasElement): Promise<Blob> {
+  const { PDFDocument } = await import('pdf-lib');
   const doc = await PDFDocument.create();
   const page = doc.addPage([841.89, 595.28]);
   const img = await doc.embedPng(await (await certificatePng(c)).arrayBuffer());
