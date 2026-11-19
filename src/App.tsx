@@ -1,23 +1,23 @@
-import { useEffect } from 'react';
-import Solution from './pages/Solution';
+import { lazy, Suspense, useEffect } from 'react';
+const Solution = lazy(() => import('./pages/Solution'));
 import Seo from './components/Seo';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import AnnouncementBar from './components/AnnouncementBar';
 import Home from './pages/Home';
-import Pricing from './pages/Pricing';
-import Compliance from './pages/Compliance';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Careers from './pages/Careers';
-import Partners from './pages/Partners';
-import PartnerDirectory from './pages/PartnerDirectory';
-import PartnerKit from './pages/PartnerKit';
-import Academy from './pages/Academy';
-import Legal from './pages/Legal';
-import AcademyCourse from './pages/AcademyCourse';
-import AcademyVerify from './pages/AcademyVerify';
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Compliance = lazy(() => import('./pages/Compliance'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Careers = lazy(() => import('./pages/Careers'));
+const Partners = lazy(() => import('./pages/Partners'));
+const PartnerDirectory = lazy(() => import('./pages/PartnerDirectory'));
+const PartnerKit = lazy(() => import('./pages/PartnerKit'));
+const Academy = lazy(() => import('./pages/Academy'));
+const Legal = lazy(() => import('./pages/Legal'));
+const AcademyCourse = lazy(() => import('./pages/AcademyCourse'));
+const AcademyVerify = lazy(() => import('./pages/AcademyVerify'));
 import './styles/global.css';
 import { initGA, trackPageview } from './lib/analytics';
 
@@ -61,6 +61,7 @@ export default function App() {
       <ScrollManager />
       <AnnouncementBar />
       <Nav />
+      <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pricing" element={<Pricing />} />
@@ -79,6 +80,7 @@ export default function App() {
         <Route path="/terms" element={<Legal kind="terms" />} />
         <Route path="/solutions/:slug" element={<Solution />} />
       </Routes>
+      </Suspense>
       <Footer />
     </div>
   );

@@ -2,14 +2,14 @@
   "origin": "https://xionerp.com",
   "routes": {
     "/": {
-      "title": "XionERP | Cloud ERP Software for Oman, Qatar, UAE & Sri Lanka",
-      "description": "Cloud ERP software for growing businesses in Oman, Qatar, the UAE and Sri Lanka: accounting, VAT, e-invoicing, inventory, POS, CRM, HR and payroll in one system. Free trial.",
+      "title": "XionERP | Cloud ERP for Oman, Qatar, UAE & Sri Lanka",
+      "description": "Cloud ERP for growing businesses in Oman, Qatar, UAE and Sri Lanka: accounting, VAT, e-invoicing, inventory, POS, CRM, HR and payroll. 30-day free trial.",
       "h1": "Your whole business, in one flow.",
       "summary": "XionERP is a multi-tenant cloud ERP for growing businesses across the GCC and South Asia, covering accounting, sales, inventory, purchase, CRM, manufacturing, projects, assets and HR on one platform."
     },
     "/pricing": {
-      "title": "ERP Software Price per User | XionERP Plans in OMR, QAR, LKR and USD",
-      "description": "XionERP cloud ERP price per user, in OMR, QAR, LKR or USD. Every plan includes every module, including POS, payroll and CRM. Start a 30-day free trial, no credit card needed.",
+      "title": "ERP Price per User | XionERP Plans in OMR, QAR, LKR, USD",
+      "description": "XionERP cloud ERP price per user in OMR, QAR, LKR or USD. Every plan includes every module. Start a 30-day free trial, no credit card needed.",
       "h1": "Simple plans that grow with you",
       "summary": "Compare XionERP plans and start a free trial."
     },
@@ -21,13 +21,13 @@
     },
     "/about": {
       "title": "About XionERP | Cloud ERP Company in Oman and Sri Lanka",
-      "description": "XionERP is built by AutomateXion, a digital transformation consultancy in Muscat with an engineering team in Sri Lanka, serving Oman, Qatar, UAE and Sri Lanka.",
+      "description": "XionERP is built by AutomateXion, a digital transformation firm in Muscat with an engineering team in Sri Lanka, serving Oman, Qatar, UAE and Sri Lanka.",
       "h1": "Built by people who've run GCC operations, not just software",
       "summary": "XionERP is built by AutomateXion, based in Muscat, Oman, with engineering in Sri Lanka."
     },
     "/contact": {
       "title": "Contact XionERP | ERP Software Demo in Oman and Sri Lanka",
-      "description": "Book an ERP software demo or free trial with XionERP. Talk to our team about onboarding, data migration or e-invoicing. Oman +968 97696968, Sri Lanka +94 761 949294.",
+      "description": "Book an ERP demo or free trial with XionERP. Talk to our team about onboarding, data migration or e-invoicing. Oman +968 97696968.",
       "h1": "Let's talk about your business",
       "summary": "Contact the XionERP team: Oman +968 97696968, Sri Lanka +94 761 949294, info@automatexion.com."
     },
@@ -44,7 +44,7 @@
       "summary": "Apply to become a XionERP reseller or distributor. Resellers sell and support XionERP for their own customers; distributors cover a whole country and support resellers there. Applying is free, every application is reviewed by our team, and terms are agreed directly with each partner."
     },
     "/partners/directory": {
-      "title": "Find a XionERP Partner | Distributors and Resellers by Country",
+      "title": "Find a XionERP Partner | Distributors & Resellers",
       "description": "Search XionERP distributors and resellers by country. Find the local partner who sells, sets up and supports XionERP cloud ERP near you.",
       "h1": "Find a XionERP partner",
       "summary": "Search XionERP distributors and resellers by country, company or city. A distributor covers a country; resellers work with local businesses under the distributor of their country."
@@ -63,42 +63,42 @@
     },
     "/academy/partner": {
       "title": "XionERP Partner Essentials | Free Course and Certificate",
-      "description": "For resellers and distributors: how the partner programme works, your partner portal, and how to show, set up and support XionERP for a customer. Free, with a certificate.",
+      "description": "For resellers and distributors: how the partner programme works, the partner portal, and how to show, set up and support XionERP. Free, with a certificate.",
       "h1": "XionERP Partner Essentials",
       "summary": "Six short lessons for partners: reseller or distributor, your partner portal, finding the right customers, showing XionERP, setting a customer up and supporting your customers. A ten-question quiz and a free certificate."
     },
     "/academy/operations": {
-      "title": "XionERP Certified Operations Specialist | Free Course and Certificate",
-      "description": "Sales, purchasing and inventory in XionERP: sales orders, deliveries, returns, advances, cheques, landed cost, transfers and stock counts. Free, with a certificate.",
+      "title": "XionERP Certified Operations Specialist | Free Course",
+      "description": "Sales, purchasing and inventory in XionERP: sales orders, deliveries, returns, advances, cheques, landed cost, transfers, stock counts. Free certificate.",
       "h1": "XionERP Certified Operations Specialist",
       "summary": "Six lessons on order-to-cash and procure-to-pay in XionERP, a ten-question quiz and a free certificate."
     },
     "/academy/finance": {
-      "title": "XionERP Certified Finance & Accounting Professional | Free Course and Certificate",
+      "title": "XionERP Certified Finance Professional | Free Course",
       "description": "Accounting in XionERP: chart of accounts, journals, bank and card reconciliation, VAT, closing periods and reading the reports. Free, with a certificate.",
       "h1": "XionERP Certified Finance & Accounting Professional",
       "summary": "Six lessons on keeping the books in XionERP, a ten-question quiz and a free certificate."
     },
     "/academy/admin": {
-      "title": "XionERP Certified System Administrator | Free Course and Certificate",
-      "description": "Administering XionERP: users, roles and permissions, company settings, document layouts, numbering, master data, import and entities. Free, with a certificate.",
+      "title": "XionERP Certified System Administrator | Free Course",
+      "description": "Administering XionERP: users, roles and permissions, company settings, document layouts, numbering, master data and import. Free, with a certificate.",
       "h1": "XionERP Certified System Administrator",
       "summary": "Six lessons on running XionERP for a company, a ten-question quiz and a free certificate."
     },
     "/academy/partner-sales": {
-      "title": "XionERP Certified Sales Consultant | Free Course and Certificate",
+      "title": "XionERP Certified Sales Consultant | Free Course",
       "description": "For partners: who XionERP fits, plans and the trial, discovery, demos by business type, objections and closing. Free, with a certificate.",
       "h1": "XionERP Certified Sales Consultant",
       "summary": "Six lessons on selling XionERP, a ten-question quiz and a free certificate."
     },
     "/academy/partner-implementation": {
-      "title": "XionERP Certified Implementation Consultant | Free Course and Certificate",
+      "title": "XionERP Certified Implementation Consultant | Free Course",
       "description": "For partners: the onboarding plan, setup, roles, data import, opening balances at a cut-off date, training and go-live. Free, with a certificate.",
       "h1": "XionERP Certified Implementation Consultant",
       "summary": "Six lessons on implementing XionERP, a ten-question quiz and a free certificate."
     },
     "/academy/partner-support": {
-      "title": "XionERP Certified Support Specialist | Free Course and Certificate",
+      "title": "XionERP Certified Support Specialist | Free Course",
       "description": "For partners: the Help Center, reporting a problem, common access and document questions, healthy books and growing the account. Free, with a certificate.",
       "h1": "XionERP Certified Support Specialist",
       "summary": "Six lessons on supporting XionERP customers, a ten-question quiz and a free certificate."
