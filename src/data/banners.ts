@@ -50,7 +50,7 @@ export const BANNERS: Banner[] = [
   {
     eyebrow: 'New module',
     title: 'Social Media, inside your ERP.',
-    text: 'WhatsApp, Facebook, Instagram and SEO in one place — answer every customer chat and send invoices and reminders straight from Xion ERP.',
+    text: 'WhatsApp, Facebook, Instagram, ads and SEO in one place — answer every customer chat, send invoices and reminders, and run your promotions straight from Xion ERP.',
     cta: { label: 'Chat with us', action: 'web-chat' },
     logo: { src: '/logo-connect-horizontal.png', alt: 'XionConnect', href: 'https://automatexion.com/xionconnect.html' },
     icon: MODULE_ICONS['CRM'],
