@@ -18,7 +18,6 @@ const TRUST_LOGOS = [
   { src: '/logo-notebooklk.png', alt: 'notebook.lk', cls: 'logo-img logo-img--badge' },
   { src: '/logo-gulfcoat.png', alt: 'Gulf Coat Paints' },
   { src: '/logo-noir.png', alt: 'NOIR' },
-  { src: '/logo-sabaragamuwa.png', alt: 'Sabaragamuwa Enterprises' },
   { src: '/logo-trichy.png', alt: 'Trichy Trading' },
   { src: '/logo-newcitypoint.png', alt: 'New City Point Private Limited', cls: 'logo-img logo-img--badge' },
   { src: '/logo-technocity.png', alt: 'Technocity Dubai', cls: 'logo-img logo-img--badge' },
