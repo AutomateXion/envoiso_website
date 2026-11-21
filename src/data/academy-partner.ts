@@ -85,7 +85,7 @@ export const PARTNER_STAGES: Course[] = [
           { t: 'ul', items: [
             '"We already use a spreadsheet or another package." Their customers, suppliers, products, opening stock and balances load from Excel, each file checked before anything is saved, as at one cut-off date they choose.',
             '"It will be too expensive." Plans are by users, with the modules included, and salesmen who only appear on documents take no seat. Show the plan for their real number of users.',
-            '"Is it compliant?" Show VAT on every document and the VAT return report. For Oman\'s Fawtara, the standard e-invoice file is made for each invoice; automatic sending to the provider is not built yet.',
+            '"Is it compliant?" Show VAT on every document and the VAT return report. For Oman\'s e-invoicing, the standard e-invoice file is made for each invoice; automatic sending to the provider is not built yet.',
             '"Our people will not use it." Every screen has a Help Center article, and permissions show each person only what they need.',
             '"What if we stop?" The trial needs no card, and their data can be exported to Excel from each list.',
           ] },

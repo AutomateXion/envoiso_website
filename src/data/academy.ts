@@ -288,7 +288,7 @@ const FIRST_STAGES: Course[] = [
             'When you cannot solve it, bring the XionERP team in with the screen, what the customer did and what they expected.',
           ] },
           { t: 'img', src: '/academy/help-center.webp', alt: 'The Help Center, with a search box and a card for each module' },
-          { t: 'p', text: 'Be accurate about what the product does today. For example, Fawtara is Oman\'s e-invoicing scheme. XionERP turns each sales invoice into the standard e-invoice file (UBL 2.1) for the customer\'s accredited provider to pass to the tax authority. Sending the file to the provider automatically is not built yet.' },
+          { t: 'p', text: 'Be accurate about what the product does today. For example, Oman has a national e-invoicing scheme. XionERP turns each sales invoice into the standard e-invoice file (UBL 2.1) for the customer\'s accredited provider to pass to the tax authority. Sending the file to the provider automatically is not built yet.' },
           { t: 'tip', text: 'When a customer asks for something XionERP does not do yet, say so plainly and tell us. An honest answer keeps the customer\'s trust.' },
         ],
         remember: ['You are first line; the XionERP team is behind you.', 'Say plainly what the product does today, including what is not built yet.'],
@@ -304,7 +304,7 @@ const FIRST_STAGES: Course[] = [
       { id: 'p7', q: 'Who gives first-line support to the customers you bring?', options: ['Always the XionERP team directly', 'Nobody: XionERP is self-service', 'You, with the XionERP team behind you for anything deeper', 'The customer\'s bank'] },
       { id: 'p8', q: 'What does it cost to apply as a partner?', options: ['A one-time fee paid on approval', 'A fee for every customer', 'A monthly subscription', 'Nothing: applying is free and commits neither side'] },
       { id: 'p9', q: 'Where do you download brochures and posters that carry your own logo and contacts?', options: ['By emailing the XionERP team each time', 'From the partner portal, after you sign in', 'From the public Help Center', 'You design them yourself'] },
-      { id: 'p10', q: 'A customer in Oman asks about e-invoicing (Fawtara). What is accurate to say today?', options: ['XionERP sends every invoice to the tax authority automatically', 'XionERP does not support e-invoicing', 'XionERP creates the standard e-invoice file (UBL 2.1) for each sales invoice; sending it to the provider automatically is not built yet', 'E-invoicing is only for retail shops'] },
+      { id: 'p10', q: 'A customer in Oman asks about e-invoicing. What is accurate to say today?', options: ['XionERP sends every invoice to the tax authority automatically', 'XionERP does not support e-invoicing', 'XionERP creates the standard e-invoice file (UBL 2.1) for each sales invoice; sending it to the provider automatically is not built yet', 'E-invoicing is only for retail shops'] },
     ],
   },
 ];

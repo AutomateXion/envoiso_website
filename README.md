@@ -10,7 +10,7 @@ CRM/ERP `WelcomePage_v5.tsx`.
 |---------------|---------|
 | `/`           | Home — hero, problem/solution, module constellation, compliance teaser, final CTA |
 | `/pricing`    | Seat-based pricing, seasonal 50%-off promo, feature comparison, FAQ |
-| `/compliance` | Fawtara / OTA e-invoicing explainer with rollout timeline |
+| `/compliance` | OTA e-invoicing explainer with rollout timeline |
 | `/about`      | Company story, values, regions (Oman + Sri Lanka) |
 | `/contact`    | Contact info + lead form (front-end only — see note below) |
 
@@ -59,7 +59,7 @@ These are placeholders — search for them and update:
   mockup (no external screenshot dependency). Swap it for a real product
   screenshot once the app UI is ready — drop an image in `public/` and
   replace `<HeroMockup />` in `Home.tsx` with an `<img>` tag.
-- **Fawtara timeline** (`src/pages/Compliance.tsx`) — Phase 1 (Aug 2026) is
+- **e-invoicing timeline** (`src/pages/Compliance.tsx`) — Phase 1 (Aug 2026) is
   OTA-confirmed; Phases 2–4 are the currently communicated plan and are
   labelled "(expected)". Update this page as the OTA finalizes later phases.
 - **Favicon / OG image** — `public/favicon.svg` is a simple placeholder mark;

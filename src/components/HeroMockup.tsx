@@ -64,7 +64,7 @@ export default function HeroMockup() {
         <text x="718" y="222" fontFamily="Fraunces, Georgia, serif" fontWeight="600" fontSize="15" fill="#103080">Recent invoices</text>
         {[
           { n: 'INV-2026-0847', s: 'Paid', c: '#1E7D4F', bg: '#E8F3EC' },
-          { n: 'INV-2026-0846', s: 'Fawtara sent', c: '#5090F1', bg: '#E9F1F8' },
+          { n: 'INV-2026-0846', s: 'E-invoice sent', c: '#5090F1', bg: '#E9F1F8' },
           { n: 'INV-2026-0845', s: 'Overdue', c: '#B4590A', bg: '#FDEFE3' },
           { n: 'INV-2026-0844', s: 'Paid', c: '#1E7D4F', bg: '#E8F3EC' },
         ].map((row, i) => (
@@ -77,7 +77,7 @@ export default function HeroMockup() {
 
         {/* bottom strip: module chips */}
         <rect x="116" y="440" width="904" height="1" fill="#EEF3F8" />
-        {['Accounting', 'CRM', 'Inventory', 'Projects', 'Fawtara'].map((m, i) => (
+        {['Accounting', 'CRM', 'Inventory', 'Projects', 'E-invoicing'].map((m, i) => (
           <g key={i} transform={`translate(${116 + i * 186}, 466)`}>
             <rect width="170" height="60" rx="12" fill="#F7F9FB" stroke="#EEF3F8" />
             <circle cx="26" cy="30" r="9" fill="#fff" stroke="#7DACF4" />

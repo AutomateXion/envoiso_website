@@ -204,22 +204,22 @@
     {
       "slug": "e-invoicing-software",
       "kind": "module",
-      "title": "E-Invoicing Software for Oman Fawtara & GCC | XionERP",
-      "description": "E-invoicing software ready for Oman's Fawtara mandate: UBL 2.1 e-invoices on Peppol BIS 3.0 and PINT-OM, produced from the invoices you already raise.",
+      "title": "E-Invoicing Software for Oman & GCC | XionERP",
+      "description": "E-invoicing software ready for Oman's e-invoicing mandate: UBL 2.1 e-invoices on Peppol BIS 3.0 and PINT-OM, produced from the invoices you already raise.",
       "eyebrow": "E-invoicing software",
-      "h1": "E-invoicing software ready for Oman's Fawtara mandate",
-      "intro": "Oman's Fawtara programme requires VAT-registered businesses to issue structured e-invoices instead of paper or PDF. XionERP produces them from the invoices you already raise, in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification.",
+      "h1": "E-invoicing software ready for Oman's e-invoicing mandate",
+      "intro": "Oman's e-invoicing programme requires VAT-registered businesses to issue structured e-invoices instead of paper or PDF. XionERP produces them from the invoices you already raise, in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification.",
       "groups": [
         { "heading": "Format", "blurb": "The data shape the tax authority expects.", "items": ["UBL 2.1 structured e-invoices", "Peppol BIS 3.0 alignment", "Omani PINT-OM specification", "Credit notes as e-invoices", "Buyer and seller VAT numbers checked"] },
         { "heading": "Day to day", "blurb": "No second system to learn.", "items": ["E-invoice produced from the normal sales invoice", "Invoice QR code on the PDF", "Status of each e-invoice", "Multi-currency with OMR to three decimals"] },
-        { "heading": "Ready for the next phases", "blurb": "Built for the rollout.", "items": ["Phase dates explained in our Fawtara guide", "Ready to adapt as UAE and Qatar publish their rules", "Same ledger for sales, purchases and VAT return"] }
+        { "heading": "Ready for the next phases", "blurb": "Built for the rollout.", "items": ["Phase dates explained in our e-invoicing guide", "Ready to adapt as UAE and Qatar publish their rules", "Same ledger for sales, purchases and VAT return"] }
       ],
       "faqs": [
-        { "q": "What is Fawtara?", "a": "Fawtara is the Oman Tax Authority's e-invoicing programme. VAT-registered businesses issue structured, machine-readable e-invoices that are validated and reported through a Peppol-based network." },
+        { "q": "What is Oman's e-invoicing programme?", "a": "It is the Oman Tax Authority's e-invoicing programme. VAT-registered businesses issue structured, machine-readable e-invoices that are validated and reported through a Peppol-based network." },
         { "q": "When does e-invoicing start in Oman?", "a": "The rollout is in phases, starting with the largest taxpayers. Our compliance guide keeps the phases and dates up to date." },
         { "q": "Which format does XionERP use?", "a": "UBL 2.1, aligned with Peppol BIS 3.0 and the Omani PINT-OM specification." },
         { "q": "Do I need a separate e-invoicing system?", "a": "No. The e-invoice comes from the same sales invoice you raise today, so there is nothing to re-key." },
-        { "q": "Does XionERP support Saudi ZATCA e-invoicing?", "a": "Not yet. XionERP is built for Oman's Fawtara first. Contact us if you need ZATCA so we can tell you the timeline." }
+        { "q": "Does XionERP support Saudi ZATCA e-invoicing?", "a": "Not yet. XionERP is built for Oman's e-invoicing first. Contact us if you need ZATCA so we can tell you the timeline." }
       ],
       "related": ["accounting-and-e-invoicing", "billing-and-invoicing-software", "erp-software-oman"]
     },
@@ -394,24 +394,24 @@
     {
       "slug": "erp-software-oman",
       "kind": "country",
-      "title": "ERP Software in Oman | Cloud ERP with Fawtara | XionERP",
-      "description": "Cloud ERP software for businesses in Oman: OMR to three decimals, 5% VAT returns, Fawtara e-invoicing, inventory, POS, HR and payroll. Head office in Muscat.",
+      "title": "ERP Software in Oman | Cloud ERP with e-invoicing | XionERP",
+      "description": "Cloud ERP software for businesses in Oman: OMR to three decimals, 5% VAT returns, e-invoicing, inventory, POS, HR and payroll. Head office in Muscat.",
       "eyebrow": "ERP software in Oman",
       "h1": "Cloud ERP software for businesses in Oman",
-      "intro": "XionERP is a cloud ERP from a Muscat-based company, made for Omani businesses. Accounting works in OMR to three decimals, VAT returns come straight from your invoices, and e-invoicing is built for the Oman Tax Authority's Fawtara programme. Sales, stock, purchasing, POS, HR and payroll run in the same system, with support from our team in Muscat.",
+      "intro": "XionERP is a cloud ERP from a Muscat-based company, made for Omani businesses. Accounting works in OMR to three decimals, VAT returns come straight from your invoices, and e-invoicing is built for the Oman Tax Authority's e-invoicing programme. Sales, stock, purchasing, POS, HR and payroll run in the same system, with support from our team in Muscat.",
       "groups": [
-        { "heading": "Tax and compliance in Oman", "blurb": "Built around how the Oman Tax Authority works.", "items": ["5% VAT on sales and purchases", "VAT return report", "Fawtara e-invoicing in UBL 2.1 and PINT-OM format", "VAT number on every tax invoice", "Arabic-ready invoice layouts"] },
+        { "heading": "Tax and compliance in Oman", "blurb": "Built around how the Oman Tax Authority works.", "items": ["5% VAT on sales and purchases", "VAT return report", "e-invoicing in UBL 2.1 and PINT-OM format", "VAT number on every tax invoice", "Arabic-ready invoice layouts"] },
         { "heading": "Finance in OMR", "blurb": "Three-decimal Omani rial throughout.", "items": ["Chart of accounts and general ledger", "OMR to three decimals", "Multi-currency with exchange gain and loss", "Bank reconciliation", "Post-dated cheques (PDC)", "Profit and loss, balance sheet, cash flow"] },
         { "heading": "ERP system for the whole business", "blurb": "One system instead of separate tools.", "items": ["Quotations, invoices and receipts", "Inventory across branches and warehouses", "Point of sale for showrooms", "Purchasing and supplier bills", "HR, attendance and payroll", "WhatsApp invoices and reminders"] }
       ],
       "faqs": [
-        { "q": "Is XionERP ready for Oman's Fawtara e-invoicing?", "a": "Yes. XionERP produces structured e-invoices in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification. Our compliance guide explains the Fawtara phases and dates." },
+        { "q": "Is XionERP ready for Oman's e-invoicing?", "a": "Yes. XionERP produces structured e-invoices in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification. Our compliance guide explains the e-invoicing phases and dates." },
         { "q": "Does XionERP handle OMR to three decimals?", "a": "Yes. Amounts, the general ledger and the trial balance all work in Omani rial to three decimals, and you can also invoice in USD, AED, QAR or other currencies." },
         { "q": "Can XionERP prepare my Oman VAT return?", "a": "Yes. VAT at 5% is applied on sales and purchases as you work, and the VAT return report totals output and input VAT for the period." },
         { "q": "Where is XionERP support based?", "a": "Our head office is in Muscat, Oman, with an engineering team in Sri Lanka. You can reach us on +968 97696968 or by WhatsApp." },
         { "q": "How much does XionERP cost in Oman?", "a": "Plans are priced per user in OMR and every plan includes every module. You can start with a 30-day free trial with no credit card." },
         { "q": "Do you serve businesses outside Muscat?", "a": "Yes. XionERP is cloud software, so businesses in Muscat, Sohar, Salalah, Nizwa, Sur and across Oman use it from a browser or phone. Our team in Muscat does training and support online or on site." },
-        { "q": "What ERP software does XionERP offer in Muscat?", "a": "XionERP is a cloud ERP system with head office in Muscat. Accounting in OMR, VAT returns, Fawtara e-invoicing, inventory, POS, HR and payroll run in one system, and the team in Muscat trains and supports you online or on site." },
+        { "q": "What ERP software does XionERP offer in Muscat?", "a": "XionERP is a cloud ERP system with head office in Muscat. Accounting in OMR, VAT returns, e-invoicing, inventory, POS, HR and payroll run in one system, and the team in Muscat trains and supports you online or on site." },
         { "q": "Do you have VAT software for Oman?", "a": "Yes. VAT at 5% is applied on sales and purchases and the VAT return report totals output and input VAT. See our VAT software for Oman page for the details." }
       ],
       "related": ["accounting-and-e-invoicing", "inventory-and-warehouse-management", "hr-payroll-and-recruitment", "vat-software-oman", "e-invoicing-software"]
@@ -537,17 +537,17 @@
       "slug": "odoo-alternative",
       "kind": "compare",
       "title": "Odoo Alternative for GCC & Sri Lanka | XionERP",
-      "description": "Looking for an Odoo alternative? XionERP is a cloud ERP with every module in every plan, built for GCC VAT, Fawtara e-invoicing and WhatsApp.",
+      "description": "Looking for an Odoo alternative? XionERP is a cloud ERP with every module in every plan, built for GCC VAT, e-invoicing and WhatsApp.",
       "eyebrow": "Odoo alternative",
       "h1": "A simpler Odoo alternative with every module included",
       "intro": "Odoo is flexible, but many businesses end up paying partners to configure apps and localise them. XionERP comes ready for the GCC and Sri Lanka: every module is included, VAT and three-decimal currencies work out of the box, and our own team supports you.",
       "groups": [
         { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
-        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
         { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
       ],
       "faqs": [
-        { "q": "Why choose XionERP over Odoo?", "a": "Every XionERP plan includes every module, the regional setup (VAT, three-decimal currencies, Fawtara e-invoicing, WhatsApp) is built in, and support comes from the team that builds the product." },
+        { "q": "Why choose XionERP over Odoo?", "a": "Every XionERP plan includes every module, the regional setup (VAT, three-decimal currencies, e-invoicing, WhatsApp) is built in, and support comes from the team that builds the product." },
         { "q": "Can I move from Odoo to XionERP?", "a": "Yes. Export customers, suppliers, items and open balances to Excel and import them into XionERP. Our team helps with the move." },
         { "q": "Is XionERP open source?", "a": "No. XionERP is a cloud service, so there is no server to host or upgrade." },
         { "q": "How do I compare them on my own data?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
@@ -564,7 +564,7 @@
       "intro": "Many businesses start on Tally for accounts, then add separate tools for POS, CRM, payroll and field sales. XionERP runs all of them in one cloud system you open from any browser or phone, with VAT and e-invoicing built in.",
       "groups": [
         { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
-        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
         { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
       ],
       "faqs": [
@@ -585,7 +585,7 @@
       "intro": "Zoho Books is good accounting software. When you also need warehouses, a POS, manufacturing, van sales, payroll and service in the same system, XionERP gives you all of them in one plan, with one ledger behind them.",
       "groups": [
         { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
-        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
         { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
       ],
       "faqs": [
@@ -603,14 +603,14 @@
       "description": "Looking for a QuickBooks alternative in the Gulf or Sri Lanka? XionERP is cloud ERP with VAT, 3-decimal currencies, inventory, POS and payroll built in.",
       "eyebrow": "QuickBooks alternative",
       "h1": "A QuickBooks alternative made for the GCC and Sri Lanka",
-      "intro": "QuickBooks is built around other markets. XionERP is built for businesses in Oman, Qatar, the UAE and Sri Lanka, with three-decimal currencies, GCC VAT, Fawtara e-invoicing, WhatsApp and local support, plus stock, POS and payroll in the same system.",
+      "intro": "QuickBooks is built around other markets. XionERP is built for businesses in Oman, Qatar, the UAE and Sri Lanka, with three-decimal currencies, GCC VAT, e-invoicing, WhatsApp and local support, plus stock, POS and payroll in the same system.",
       "groups": [
         { "heading": "Everything included", "blurb": "One price, every module.", "items": ["Accounting, sales, purchase and stock", "POS and online store", "CRM, field sales and van sales", "HR and payroll", "Manufacturing and service", "No paid add-ons per module"] },
-        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "Fawtara e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
+        { "heading": "Built for the region", "blurb": "Not adapted later.", "items": ["OMR and other currencies to three decimals", "VAT, TRN and tax invoice types", "e-invoicing (UBL 2.1, PINT-OM)", "WhatsApp built in", "Support teams in Oman and Sri Lanka"] },
         { "heading": "Easy to switch", "blurb": "Bring your data across.", "items": ["Import customers, suppliers and items from Excel", "Opening balances and open invoices", "Free 30-day trial on your own data", "Training through XionERP Academy"] }
       ],
       "faqs": [
-        { "q": "Why choose XionERP over QuickBooks?", "a": "Regional needs are built in (three-decimal currencies, GCC VAT, Fawtara e-invoicing, WhatsApp) and the ERP covers stock, POS, CRM, HR and payroll as well as accounts." },
+        { "q": "Why choose XionERP over QuickBooks?", "a": "Regional needs are built in (three-decimal currencies, GCC VAT, e-invoicing, WhatsApp) and the ERP covers stock, POS, CRM, HR and payroll as well as accounts." },
         { "q": "Can I move my QuickBooks data?", "a": "Yes. Export customers, suppliers, items and balances and import them into XionERP." },
         { "q": "Is XionERP more expensive?", "a": "Plans are priced per user and include every module. See the pricing page for OMR, QAR, LKR and USD prices." },
         { "q": "How do I try it?", "a": "Start a 30-day free trial with no credit card, or contact us for a demo on your own data. Every plan includes every module." }
@@ -620,19 +620,19 @@
     {
       "slug": "vat-software-oman",
       "kind": "module",
-      "title": "VAT Software in Oman | 5% VAT Returns & Fawtara | XionERP",
-      "description": "VAT software for Oman: 5% VAT on sales and purchases, a VAT return report from your invoices, VAT number on every tax invoice and Fawtara e-invoicing.",
+      "title": "VAT Software in Oman | 5% VAT Returns & E-Invoicing | XionERP",
+      "description": "VAT software for Oman: 5% VAT on sales and purchases, a VAT return report from your invoices, VAT number on every tax invoice and e-invoicing.",
       "eyebrow": "VAT software in Oman",
       "h1": "VAT software for businesses in Oman",
-      "intro": "XionERP applies 5% VAT as you raise sales invoices and enter purchase bills, so the VAT return comes straight from the ledger instead of a spreadsheet. Every tax invoice carries your VAT number, and structured e-invoices for the Oman Tax Authority's Fawtara programme are produced from the same invoice.",
+      "intro": "XionERP applies 5% VAT as you raise sales invoices and enter purchase bills, so the VAT return comes straight from the ledger instead of a spreadsheet. Every tax invoice carries your VAT number, and structured e-invoices for the Oman Tax Authority's e-invoicing programme are produced from the same invoice.",
       "groups": [
         { "heading": "VAT as you work", "blurb": "No separate VAT workbook.", "items": ["5% VAT on sales and purchases", "VAT number on every tax invoice", "Arabic-ready invoice layouts", "Credit notes that reverse VAT", "OMR to three decimals"] },
         { "heading": "VAT return", "blurb": "Totals from real transactions.", "items": ["VAT return report for the period", "Output VAT and input VAT totals", "Same ledger as sales, purchases and stock", "Profit and loss, balance sheet, cash flow"] },
-        { "heading": "Fawtara e-invoicing", "blurb": "Built for Oman's e-invoicing programme.", "items": ["UBL 2.1 structured e-invoices", "Peppol BIS 3.0 alignment and the Omani PINT-OM specification", "E-invoice produced from the normal sales invoice", "Status of each e-invoice"] }
+        { "heading": "e-invoicing", "blurb": "Built for Oman's e-invoicing programme.", "items": ["UBL 2.1 structured e-invoices", "Peppol BIS 3.0 alignment and the Omani PINT-OM specification", "E-invoice produced from the normal sales invoice", "Status of each e-invoice"] }
       ],
       "faqs": [
         { "q": "Can XionERP prepare my Oman VAT return?", "a": "Yes. VAT at 5% is applied on sales and purchases as you work, and the VAT return report totals output and input VAT for the period." },
-        { "q": "Is this VAT software ready for Fawtara?", "a": "Yes. XionERP produces structured e-invoices in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification, from the invoice you already raise." },
+        { "q": "Is this VAT software ready for Oman e-invoicing?", "a": "Yes. XionERP produces structured e-invoices in UBL 2.1 format aligned with Peppol BIS 3.0 and the Omani PINT-OM specification, from the invoice you already raise." },
         { "q": "Does the VAT number appear on every invoice?", "a": "Yes. Your VAT number is printed on every tax invoice, with Arabic-ready invoice layouts." },
         { "q": "Do amounts work in Omani rial?", "a": "Yes. Amounts, the general ledger and the trial balance all work in OMR to three decimals." },
         { "q": "Is VAT software included in the ERP price?", "a": "Yes. Plans are priced per user and every plan includes every module. You can start with a 30-day free trial with no credit card." }
