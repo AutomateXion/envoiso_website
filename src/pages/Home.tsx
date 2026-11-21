@@ -21,6 +21,7 @@ const TRUST_LOGOS = [
   { src: '/logo-sabaragamuwa.png', alt: 'Sabaragamuwa Enterprises' },
   { src: '/logo-trichy.png', alt: 'Trichy Trading' },
   { src: '/logo-newcitypoint.png', alt: 'New City Point Private Limited', cls: 'logo-img logo-img--badge' },
+  { src: '/logo-technocity.png', alt: 'Technocity Dubai', cls: 'logo-img logo-img--badge' },
 ];
 
 export default function Home() {
