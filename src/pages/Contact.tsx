@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="wrap">
           <span className="eyebrow"><span className="dot" />Contact</span>
           <h1 className="page-h">Let's talk about your business</h1>
-          <p className="page-sub">Questions about pricing, a custom plan for a larger team, or your Fawtara timeline? Reach out and we'll get back to you within one business day.</p>
+          <p className="page-sub">Questions about pricing, a custom plan for a larger team, or your e-invoicing timeline? Reach out and we'll get back to you within one business day.</p>
         </div>
       </section>
 

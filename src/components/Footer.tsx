@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
           <div className="foot-col">
             <h4>Resources</h4>
-            <Link to="/compliance">Fawtara guide</Link>
+            <Link to="/compliance">e-invoicing guide</Link>
             <a href="mailto:info@automatexion.com">Help centre</a>
             <a href="mailto:info@automatexion.com">API docs</a>
           </div>

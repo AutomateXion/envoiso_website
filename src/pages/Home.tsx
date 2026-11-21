@@ -37,8 +37,8 @@ export default function Home() {
             <Link className="btn btn-ghost btn-lg" to="/pricing" onClick={() => trackClick('hero_see_pricing', 'See pricing')}>See pricing</Link>
           </div>
           <div className="hero-note"><Check />30-day free trial &middot; No credit card required</div>
-          <div className="hero-fawtara">
-            <span className="ff-badge"><Check />Fawtara e-invoice files</span>
+          <div className="hero-einvoice">
+            <span className="ff-badge"><Check />E-invoice files</span>
             Built for Oman e-invoicing (UBL 2.1) ahead of the OTA rollout
           </div>
           <div className="hero-shot">
@@ -125,13 +125,13 @@ export default function Home() {
             <h2>Compliant in the GCC, by default</h2>
             <p>Xion ERP speaks the language of regional finance &mdash; Arabic e-invoicing, OMR to three decimals, multi-currency, and IFRS-standard reporting out of the box. No bolt-ons, no scramble before a deadline.</p>
             <div className="badge-row">
-              <div className="cbadge"><Check />E-invoicing ready (Fawtara / UBL 2.1)</div>
+              <div className="cbadge"><Check />E-invoicing ready (UBL 2.1)</div>
               <div className="cbadge"><Check />IFRS financials</div>
               <div className="cbadge"><Check />Multi-currency</div>
               <div className="cbadge"><Check />VAT &amp; tax reporting</div>
             </div>
             <div style={{ marginTop: 28 }}>
-              <Link className="btn btn-white" to="/compliance" onClick={() => trackClick('home_fawtara_timeline', 'See the Fawtara timeline')}>See the Fawtara timeline &rarr;</Link>
+              <Link className="btn btn-white" to="/compliance" onClick={() => trackClick('home_fawtara_timeline', 'See the e-invoicing timeline')}>See the e-invoicing timeline &rarr;</Link>
             </div>
           </div>
           <div className="comp-stat">

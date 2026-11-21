@@ -26,7 +26,7 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
     title: 'Invoicing & Billing',
     icon: MODULE_ICONS['Invoicing'],
     blurb: 'From quote to cash, fully connected to the ledger.',
-    features: ['Quotations', 'Sales invoices', 'Receipts', 'Sales returns', 'GCC e-invoicing (Fawtara / UBL 2.1)'],
+    features: ['Quotations', 'Sales invoices', 'Receipts', 'Sales returns', 'GCC e-invoicing (UBL 2.1)'],
   },
   {
     title: 'Financial Reporting',
@@ -129,7 +129,7 @@ export const FEATURE_CATEGORIES: FeatureCategory[] = [
   {
     title: 'Compliance & E-Invoicing',
     icon: MODULE_ICONS['Compliance'],
-    blurb: 'Built for Oman\u2019s Fawtara mandate, not retrofitted.',
+    blurb: 'Built for Oman\u2019s e-invoicing mandate, not retrofitted.',
     features: ['UBL 2.1 / PINT-OM structured invoices', 'Peppol-ready architecture', 'VAT reporting'],
   },
   {
